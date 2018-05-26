@@ -19,7 +19,7 @@
 # retrieved on May 26, 2018 from http://www.ncdc.noaa.gov/cag/
 
 # Set working directory:
-setwd("/Users/jhelvy/Documents/github/viz/charts/climateChangeBarcode")
+setwd("/Users/jhelvy/Documents/github/charts/climateChangeBarcode")
 
 # Load libraries and plot colors
 library(ggplot2)
@@ -59,9 +59,11 @@ noaa_us = ggplot(data = noaa_us, aes(x = group, y = as.factor(Date))) +
 
 # Save using laptop screen aspect ratio (2560 X 1600)
 ggsave('./nasa_global.pdf', nasa_global, width=4, height=2.5)
-ggsave('./nasa_global.png', nasa_global, width=4, height=2.5)
 ggsave('./noaa_global.pdf', noaa_global, width=4, height=2.5)
 ggsave('./noaa_us.pdf',     noaa_us,     width=4, height=2.5)
 
+ggsave('./nasa_global_preview.png', nasa_global, width=4, height=2.5)
+ggsave('./noaa_global_preview.png', noaa_global, width=4, height=2.5)
+ggsave('./noaa_us_preview.png',     noaa_us,     width=4, height=2.5)
 
 
