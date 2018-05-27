@@ -38,19 +38,22 @@ noaa_global$group = "group"
 noaa_us$group     = "group"
 
 # Make plots
-nasa_global = ggplot(data = nasa_global, aes(x = group, y = as.factor(year))) +
+nasa_global_plot = ggplot(data = nasa_global,
+    aes(x = group, y = as.factor(year))) +
     geom_tile(aes(fill = meanTempCelsius)) +
     scale_fill_gradientn(colours = plotColors) +
     coord_flip() +
     theme_void() +
     theme(legend.position="none")
-noaa_global = ggplot(data = noaa_global, aes(x = group, y = as.factor(Year))) +
+noaa_global_plot = ggplot(data = noaa_global,
+    aes(x = group, y = as.factor(Year))) +
     geom_tile(aes(fill = Value)) +
     scale_fill_gradientn(colours = plotColors) +
     coord_flip() +
     theme_void() +
     theme(legend.position="none")
-noaa_us = ggplot(data = noaa_us, aes(x = group, y = as.factor(Date))) +
+noaa_us_plot = ggplot(data = noaa_us,
+    aes(x = group, y = as.factor(Date))) +
     geom_tile(aes(fill = Anomaly)) +
     scale_fill_gradientn(colours = plotColors) +
     coord_flip() +
@@ -58,12 +61,12 @@ noaa_us = ggplot(data = noaa_us, aes(x = group, y = as.factor(Date))) +
     theme(legend.position="none")
 
 # Save using laptop screen aspect ratio (2560 X 1600)
-ggsave('./nasa_global.pdf', nasa_global, width=4, height=2.5)
-ggsave('./noaa_global.pdf', noaa_global, width=4, height=2.5)
-ggsave('./noaa_us.pdf',     noaa_us,     width=4, height=2.5)
+ggsave('./nasa_global.pdf', nasa_global_plot, width=4, height=2.5)
+ggsave('./noaa_global.pdf', noaa_global_plot, width=4, height=2.5)
+ggsave('./noaa_us.pdf',     noaa_us_plot,     width=4, height=2.5)
 
-ggsave('./nasa_global_preview.png', nasa_global, width=4, height=2.5)
-ggsave('./noaa_global_preview.png', noaa_global, width=4, height=2.5)
-ggsave('./noaa_us_preview.png',     noaa_us,     width=4, height=2.5)
+ggsave('./nasa_global_preview.png', nasa_global_plot, width=4, height=2.5)
+ggsave('./noaa_global_preview.png', noaa_global_plot, width=4, height=2.5)
+ggsave('./noaa_us_preview.png',     noaa_us_plot,     width=4, height=2.5)
 
 
