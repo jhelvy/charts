@@ -5,17 +5,17 @@ A repo of reproducible charts
 
 # Table of Contents
 
-  - [Climate Change Barcodes](#climate-change-barcodes)
+  - [climateChangeBarcode](#climateChangeBarcode)
 
-## Climate Change Barcodes
+## climateChangeBarcode
 
 “Barcode” plots showing the long term rise in global and US
-temperatures. Each vertical stripe represents the temperature of a
-single year, ordered from the earliest available data to the present.
+temperatures. Each vertical stripe represents the average temperature of
+a single year, ordered from the earliest available data to the present.
 Original figures by [Ed
 Hawkins](http://www.climate-lab-book.ac.uk/2018/warming-stripes/#more-5516).
 
-Example: Global temperatures from 1880 - 2017, NASA
+**Example**: Global temperatures from 1880 - 2017, NASA
 ![](README_files/figure-gfm/barcodePlot-1.png)<!-- -->
 
 # Author and License
