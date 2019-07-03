@@ -21,35 +21,38 @@
 # Load libraries and plot colors
 library(ggplot2)
 library(RColorBrewer)
+library(here)
+
 plotColors = rev(brewer.pal(10, "RdBu"))
 
-# Load data (urls may be outdated - see original data sources for updates)
-nasa_global = read.table("https://climate.nasa.gov/system/internal_resources/details/original/647_Global_Temperature_Data_File.txt",
-                         col.names=c('year', 'meanTempCelsius', 'smoothTempCelsius'), skip=5)
-noaa_global = read.csv("https://www.ncdc.noaa.gov/cag/global/time-series/globe/land_ocean/1/4/1880-2018.csv",
-    skip = 4, header=T)
-noaa_us = read.csv("https://www.ncdc.noaa.gov/cag/national/time-series/110-tavg-12-12-1895-2018.csv?base_prd=true&begbaseyear=1895&endbaseyear=2017",
-    skip = 4, header=T)
-nasa_global$group = "group"
-noaa_global$group = "group"
-noaa_us$group     = "group"
+# Load data
+nasa_global <- read.table(here('climateChangeBarcode', 'data',
+    'nasa_global_data.txt'),
+    col.names = c('year', 'meanTempCelsius', 'smoothTempCelsius'), skip=5)
+noaa_global <- read.csv(here('climateChangeBarcode', 'data',
+    'noaa_global_data.csv'), skip = 4, header=T)
+noaa_us <- read.csv(here('climateChangeBarcode', 'data',
+    'noaa_us_data.csv'), skip = 4, header=T)
+nasa_global$group <- "group"
+noaa_global$group <- "group"
+noaa_us$group     <- "group"
 
 # Make plots
-nasa_global_plot = ggplot(data = nasa_global,
+nasa_global_plot <- ggplot(data = nasa_global,
     aes(x = group, y = as.factor(year))) +
     geom_tile(aes(fill = meanTempCelsius)) +
     scale_fill_gradientn(colours = plotColors) +
     coord_flip() +
     theme_void() +
     theme(legend.position="none", axis.ticks.length = unit(0, "pt"))
-noaa_global_plot = ggplot(data = noaa_global,
+noaa_global_plot <- ggplot(data = noaa_global,
     aes(x = group, y = as.factor(Year))) +
     geom_tile(aes(fill = Value)) +
     scale_fill_gradientn(colours = plotColors) +
     coord_flip() +
     theme_void() +
     theme(legend.position="none", axis.ticks.length = unit(0, "pt"))
-noaa_us_plot = ggplot(data = noaa_us,
+noaa_us_plot <- ggplot(data = noaa_us,
     aes(x = group, y = as.factor(Date))) +
     geom_tile(aes(fill = Anomaly)) +
     scale_fill_gradientn(colours = plotColors) +
@@ -58,12 +61,16 @@ noaa_us_plot = ggplot(data = noaa_us,
     theme(legend.position="none", axis.ticks.length = unit(0, "pt"))
 
 # Save using laptop screen aspect ratio (2560 X 1600)
-ggsave('./nasa_global.pdf', nasa_global_plot, width=8, height=5, dpi=150)
-ggsave('./noaa_global.pdf', noaa_global_plot, width=8, height=5, dpi=150)
-ggsave('./noaa_us.pdf',     noaa_us_plot,     width=8, height=5, dpi=150)
+ggsave(here('climateChangeBarcode', 'plots', 'nasa_global.pdf'), 
+       nasa_global_plot, width=8, height=5, dpi=150)
+ggsave(here('climateChangeBarcode', 'plots', 'noaa_global.pdf'),
+       noaa_global_plot, width=8, height=5, dpi=150)
+ggsave(here('climateChangeBarcode', 'plots', 'noaa_us.pdf'),
+       noaa_us_plot, width=8, height=5, dpi=150)
 
-ggsave('./nasa_global_preview.png', nasa_global_plot, width=8,height=5,dpi=150)
-ggsave('./noaa_global_preview.png', noaa_global_plot, width=8,height=5,dpi=150)
-ggsave('./noaa_us_preview.png',     noaa_us_plot,     width=8,height=5,dpi=150)
-
-
+ggsave(here('climateChangeBarcode', 'plots', 'nasa_global_preview.png'), 
+       nasa_global_plot, width=8,height=5,dpi=150)
+ggsave(here('climateChangeBarcode', 'plots', 'noaa_global_preview.png'), 
+       noaa_global_plot, width=8,height=5,dpi=150)
+ggsave(here('climateChangeBarcode', 'plots', 'noaa_us_preview.png'),
+       noaa_us_plot, width=8,height=5,dpi=150)

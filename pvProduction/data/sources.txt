@@ -1,0 +1,27 @@
+# ----------------------------------------------------------------------
+Annual Solar Photovoltaics Cell Production by Country, 2005-2018:
+Jäger-Waldau, A. (2019). Snapshot of Photovoltaics—February 2019. Energies, 12(5), 769. https://www.mdpi.com/1996-1073/12/5/769
+
+The paper and main figure (Figure 1) are these files:
+- energies-12-00769.pdf
+- energies-12-00769-g001.png
+
+Raw data was measured from Figure 1 using WebPlotDigitizer
+(https://automeris.io/WebPlotDigitizer/)
+and output to the following files:
+- productionTotal.csv
+- productionChina.csv
+- productionUS1.csv
+- productionUS0.csv
+
+The "productionUS0.csv" and "productionUS1.csv" files were measurements from
+the top and bottom of the bars, so the US production is the difference
+between these two
+
+# ----------------------------------------------------------------------
+Annual Solar Photovoltaics Cell Production by Country, 1995-2013:
+http://www.earth-policy.org/data_center/C23
+
+The following files were downloaded from the earth policy website:
+- book_tgt_solar_9.xlsx
+- book_tgt_solar_8.xlsx
