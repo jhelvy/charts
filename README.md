@@ -15,11 +15,10 @@ a single year, ordered from the earliest available data to the present.
 Original figures by [Ed
 Hawkins](http://www.climate-lab-book.ac.uk/2018/warming-stripes/#more-5516).
 
-**Example**: Global temperatures from 1880 - 2017, NASA
-![](README_files/figure-gfm/barcodePlot-1.png)<!-- -->
+![Global temperatures from 1880 - 2017,
+NASA](./charts/climateChangeBarcode/plots/nasa_global_preview.png)
 
 # Author and License
 
   - Author: John Paul Helveston (www.jhelvy.com)
-  - Date First Written: Saturday, May 26, 2018
   - License: GPL-3

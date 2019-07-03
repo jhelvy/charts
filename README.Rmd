@@ -5,7 +5,8 @@ output: github_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-knitr::read_chunk('./climateChangeBarcode/preview.R')
+library(here)
+# knitr::read_chunk('./climateChangeBarcode/preview.R')
 ```
 
 A repo of reproducible charts
@@ -16,11 +17,8 @@ A repo of reproducible charts
 ## climateChangeBarcode
 "Barcode" plots showing the long term rise in global and US temperatures. Each vertical stripe represents the average temperature of a single year, ordered from the earliest available data to the present. Original figures by [Ed Hawkins](http://www.climate-lab-book.ac.uk/2018/warming-stripes/#more-5516).
 
-**Example**: Global temperatures from 1880 - 2017, NASA
-```{r barcodePlot, echo=F}
-```
+![Global temperatures from 1880 - 2017, NASA](./charts/climateChangeBarcode/plots/nasa_global_preview.png)
 
 # Author and License
 * Author: John Paul Helveston (www.jhelvy.com)
-* Date First Written: Saturday, May 26, 2018
 * License: GPL-3
