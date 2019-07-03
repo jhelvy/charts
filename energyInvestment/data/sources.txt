@@ -1,2 +1,15 @@
 Clean energy investment by Bloomberg New Energy Finance:
 https://about.bnef.com/clean-energy-investment/
+
+Raw data was measured using WebPlotDigitizer
+(https://automeris.io/WebPlotDigitizer/)
+The following images were analyzed:
+- chinaBySector.png
+- europeBySector.png
+- usBySector.png
+- worldBySector.png
+Data was saved to the following files:
+- chinaBySector.csv
+- europeBySector.csv
+- usBySector.csv
+- worldBySector.csv
