@@ -87,3 +87,14 @@ ggsave(here('solarPvProduction', 'plots', 'solarPlot.pdf'),
 
 ggsave(here('solarPvProduction', 'plots', 'solarPlot.png'), 
        solarPlot, width=8, height=5, dpi=150)
+
+# Summary of China's production: Since joining the WTO in 2001, 
+# China went from producing 1% to 40% of the world’s solar panels
+solarDf %>% 
+    spread(Country, Production) %>% 
+    mutate(
+        world = China + `Rest of World` + `United States`,
+        chinaPercent = 100*(China / world)
+    ) %>% 
+    select(Year, chinaPercent) %>% 
+    as.data.frame()
