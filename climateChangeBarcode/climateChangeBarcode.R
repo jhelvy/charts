@@ -1,14 +1,15 @@
+# Author: John Paul Helveston
+# Date: First written on Saturday, May 26, 2018
+#
+# Description:
 # "Barcode" plots showing the long term rise in global and US temperatures.
 # Each vertical stripe represents the temperature of a single year, ordered
 # from the earliest available data to the present.
 #
-# First written by John Paul Helveston
-# on Saturday, May 26, 2018
-#
 # Original figures by Ed Hawkins:
 # http://www.climate-lab-book.ac.uk/2018/warming-stripes/#more-5516
 #
-# Data Sources:
+# Data Sources: See "sources.txt" in "data" folder for details
 #
 # NASA (2018) "Goddard Institute for Space Studies (GISS)".
 # retrieved from
@@ -26,13 +27,15 @@ library(here)
 plotColors = rev(brewer.pal(10, "RdBu"))
 
 # Load data
-nasa_global <- read.table(here('charts', 'climateChangeBarcode', 'data',
-    'nasa_global_data.txt'),
+nasa_global <- read.table(
+    here('climateChangeBarcode', 'data', 'nasa_global_data.txt'),
     col.names = c('year', 'meanTempCelsius', 'smoothTempCelsius'), skip=5)
-noaa_global <- read.csv(here('charts', 'climateChangeBarcode', 'data',
-    'noaa_global_data.csv'), skip = 4, header=T)
-noaa_us <- read.csv(here('charts', 'climateChangeBarcode', 'data',
-    'noaa_us_data.csv'), skip = 4, header=T)
+noaa_global <- read.csv(
+    here('climateChangeBarcode', 'data', 'noaa_global_data.csv'),
+    skip = 4, header=T)
+noaa_us <- read.csv(
+    here('climateChangeBarcode', 'data', 'noaa_us_data.csv'),
+    skip = 4, header=T)
 nasa_global$group <- "group"
 noaa_global$group <- "group"
 noaa_us$group     <- "group"
@@ -61,19 +64,16 @@ noaa_us_plot <- ggplot(data = noaa_us,
     theme(legend.position="none", axis.ticks.length = unit(0, "pt"))
 
 # Save using laptop screen aspect ratio (2560 X 1600)
-ggsave(here('charts', 'climateChangeBarcode', 'plots', 'nasa_global.pdf'), 
+ggsave(here('climateChangeBarcode', 'plots', 'nasa_global.pdf'),
        nasa_global_plot, width=8, height=5, dpi=150)
-ggsave(here('charts', 'climateChangeBarcode', 'plots', 'noaa_global.pdf'),
+ggsave(here('climateChangeBarcode', 'plots', 'noaa_global.pdf'),
        noaa_global_plot, width=8, height=5, dpi=150)
-ggsave(here('charts', 'climateChangeBarcode', 'plots', 'noaa_us.pdf'),
+ggsave(here('climateChangeBarcode', 'plots', 'noaa_us.pdf'),
        noaa_us_plot, width=8, height=5, dpi=150)
 
-ggsave(here('charts', 'climateChangeBarcode', 'plots', 
-            'nasa_global_preview.png'), nasa_global_plot, 
-       width=8, height=5, dpi=150)
-ggsave(here('charts', 'climateChangeBarcode', 'plots', 
-            'noaa_global_preview.png'), noaa_global_plot, 
-       width=8, height=5, dpi=150)
-ggsave(here('charts', 'climateChangeBarcode', 'plots', 
-            'noaa_us_preview.png'), noaa_us_plot, 
-       width=8, height=5, dpi=150)
+ggsave(here('climateChangeBarcode', 'plots', 'nasa_global_preview.png'),
+       nasa_global_plot, width=8, height=5, dpi=150)
+ggsave(here('climateChangeBarcode', 'plots', 'noaa_global_preview.png'),
+       noaa_global_plot, width=8, height=5, dpi=150)
+ggsave(here('climateChangeBarcode', 'plots', 'noaa_us_preview.png'),
+       noaa_us_plot, width=8, height=5, dpi=150)

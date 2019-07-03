@@ -16,14 +16,19 @@ a single year, ordered from the earliest available data to the present.
 Original figures by [Ed
 Hawkins](http://www.climate-lab-book.ac.uk/2018/warming-stripes/#more-5516).
 
-Global temperatures from 1880 - 2017, NASA
-![](README_files/figure-gfm/climateChangeBarcode-1.png)<!-- -->
+*Global temperatures, 1880 - 2018,
+NASA*
+
+<img src="./climateChangeBarcode/plots/nasa_global_preview.png" alt="climateChangeBarcode" width="300"/>
 
 ## solarPvProduction
 
-Annual Solar Voltaic Cell Production (GW)
+Barplot of global annual solar photovoltaic cell production by country.
 
-    ## [1] 42
+*Annual Solar Voltaic Cell Production (GW), 2000 -
+2018*
+
+<img src="./solarPvProduction/plots/solarPlot.png" alt="solarPvProduction" width="300"/>
 
 # Author and License
 
