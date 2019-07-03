@@ -6,6 +6,7 @@ A repo of reproducible charts
 # Table of Contents
 
   - [climateChangeBarcode](#climateChangeBarcode)
+  - [solarPvProduction](#solarPvProduction)
 
 ## climateChangeBarcode
 
@@ -15,8 +16,14 @@ a single year, ordered from the earliest available data to the present.
 Original figures by [Ed
 Hawkins](http://www.climate-lab-book.ac.uk/2018/warming-stripes/#more-5516).
 
-![Global temperatures from 1880 - 2017,
-NASA](./charts/climateChangeBarcode/plots/nasa_global_preview.png)
+Global temperatures from 1880 - 2017, NASA
+![](README_files/figure-gfm/climateChangeBarcode-1.png)<!-- -->
+
+## solarPvProduction
+
+Annual Solar Voltaic Cell Production (GW)
+
+    ## [1] 42
 
 # Author and License
 

@@ -4,20 +4,28 @@ output: github_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
 library(here)
-# knitr::read_chunk('./climateChangeBarcode/preview.R')
+knitr::opts_chunk$set(echo = TRUE)
+knitr::read_chunk(here('charts', 'previews.R'))
 ```
 
 A repo of reproducible charts
 
 # Table of Contents
 * [climateChangeBarcode](#climateChangeBarcode)
+* [solarPvProduction](#solarPvProduction)
 
 ## climateChangeBarcode
 "Barcode" plots showing the long term rise in global and US temperatures. Each vertical stripe represents the average temperature of a single year, ordered from the earliest available data to the present. Original figures by [Ed Hawkins](http://www.climate-lab-book.ac.uk/2018/warming-stripes/#more-5516).
 
-![Global temperatures from 1880 - 2017, NASA](./charts/climateChangeBarcode/plots/nasa_global_preview.png)
+Global temperatures from 1880 - 2017, NASA
+```{r climateChangeBarcode, echo=F, message=FALSE, warning=FALSE}
+```
+
+## solarPvProduction
+Annual Solar Voltaic Cell Production (GW)
+```{r solarPvProduction, echo=F, message=FALSE, warning=FALSE}
+```
 
 # Author and License
 * Author: John Paul Helveston (www.jhelvy.com)
