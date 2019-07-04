@@ -7,6 +7,7 @@ A repo of reproducible charts
 
   - [climateChangeBarcode](#climateChangeBarcode)
   - [solarPvProduction](#solarPvProduction)
+  - [newEnergyInvestment](#newEnergyInvestment)
 
 ## climateChangeBarcode
 
@@ -28,7 +29,16 @@ Barplot of global annual solar photovoltaic cell production by country.
 *Annual Solar Voltaic Cell Production (GW), 2000 -
 2018*
 
-<img src="./solarPvProduction/plots/solarPlot.png" alt="solarPvProduction" width="300"/>
+<img src="./solarPvProduction/plots/solarPlot.png" alt="solarPvProduction" width="400"/>
+
+## newEnergyInvestment
+
+Barplots of new clean energy investment by country and type.
+
+*New Investment in Clean Energy ($USD Billion), 2005 -
+2018*
+
+<img src="./newEnergyInvestment/plots/facetPlot.png" alt="newEnergyInvestment" width="600"/>
 
 # Author and License
 
