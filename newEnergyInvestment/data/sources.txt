@@ -1,31 +1,39 @@
 Clean energy investment by Bloomberg New Energy Finance:
 https://about.bnef.com/clean-energy-investment/
 
-Raw data was measured using WebPlotDigitizer
-(https://automeris.io/WebPlotDigitizer/)
-
-The following images were analyzed:
+The following images were analyzed to collect data:
 - chinaBySector.png
 - europeBySector.png
 - usBySector.png
 - worldBySector.png
 
-Data was saved to the following files:
-- chinaSolar.csv
-- chinaSolarWind.csv
-- chinaSolarWindOther.csv
-- europeWindon.csv
-- europeWindonWindoff.csv
-- europeWindonWindoffSolar.csv
-- europeWindonWindoffSolarOther.csv
-- usWind.csv
-- usWindSolar.csv
-- usWindSolarOther.csv
+Data for the following files were directly copied from the images:
+- china_total.csv
+- europe_total.csv
+- us_total.csv
+- world_wind.csv
+- world_solar.csv
+- world_other.csv
+
+Data for the following files were not able to be directly copied from the
+images. As a result, data were measured using
+WebPlotDigitizer: https://automeris.io/WebPlotDigitizer/
+- china_solar.csv
+- china_solar_wind.csv
+- europe_windon.csv
+- europe_windon_windoff.csv
+- europe_windon_windoff_solar.csv
+- us_wind.csv
+- us_wind_solar.csv
+- world_total.csv
+
+For the measured data:
 
 The data in each file mark the point (in $USD Billion) of each bar
-in each figure. For example, "chinaSolar.csv" marks the investment in China
-in solar energy, while the "chinaSolarWind.csv" marks the investment in China
+in each figure. For example, "china_solar.csv" marks the investment in China
+in solar energy, while the "china_solar_wind.csv" marks the investment in China
 in solar + wind energy. So to get the wind energy investment, you need to
-subtract the values in "chinaSolar.csv" from "chinaSolarWind.csv".
+subtract the values in "china_solar.csv" from "china_solar_wind.csv".
+
 The first column in each data file are a series of "Bar" values, which mark
 the year. Bar0 is 2005 and Bar13 is 2018.
