@@ -22,7 +22,7 @@ WebPlotDigitizer: https://automeris.io/WebPlotDigitizer/
 - china_solar_wind.csv
 - europe_windon.csv
 - europe_windon_windoff.csv
-- europe_windon_windoff_solar.csv
+- europe_wind_solar.csv
 - us_wind.csv
 - us_wind_solar.csv
 - world_total.csv
