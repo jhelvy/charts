@@ -3,13 +3,29 @@ https://about.bnef.com/clean-energy-investment/
 
 Raw data was measured using WebPlotDigitizer
 (https://automeris.io/WebPlotDigitizer/)
+
 The following images were analyzed:
 - chinaBySector.png
 - europeBySector.png
 - usBySector.png
 - worldBySector.png
+
 Data was saved to the following files:
-- chinaBySector.csv
-- europeBySector.csv
-- usBySector.csv
-- worldBySector.csv
+- chinaSolar.csv
+- chinaSolarWind.csv
+- chinaSolarWindOther.csv
+- europeWindon.csv
+- europeWindonWindoff.csv
+- europeWindonWindoffSolar.csv
+- europeWindonWindoffSolarOther.csv
+- usWind.csv
+- usWindSolar.csv
+- usWindSolarOther.csv
+
+The data in each file mark the point (in $USD Billion) of each bar
+in each figure. For example, "chinaSolar.csv" marks the investment in China
+in solar energy, while the "chinaSolarWind.csv" marks the investment in China
+in solar + wind energy. So to get the wind energy investment, you need to
+subtract the values in "chinaSolar.csv" from "chinaSolarWind.csv".
+The first column in each data file are a series of "Bar" values, which mark
+the year. Bar0 is 2005 and Bar13 is 2018.
