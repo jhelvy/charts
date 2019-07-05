@@ -25,8 +25,8 @@ colnames(df)[1:2] <- c('category', 'unit')
 
 # Get the row IDs for the countries and the categories
 china_i  <- which(str_detect(df$category, 'China'))
-us_i     <- chinaRowIDs + 1
-cat_i    <- chinaRowIDs - 1
+us_i     <- china_i + 1
+cat_i    <- china_i - 1
 europe_i <- which(str_detect(df$category, 'Europe'))
 world_i  <- europe_i + 1
 
@@ -85,3 +85,8 @@ ggsave(here('electricityEIA', 'plots', 'windCapacity.pdf'),
 
 ggsave(here('electricityEIA', 'plots', 'windCapacity.png'),
        windCapacity, width=11, height=5, dpi=150)
+
+# Print summary of 2016 wind capacity
+electricityDf %>% 
+    filter(type == 'Capacity', category == 'Wind', year == 2016) %>% 
+    mutate(percent = value / sum(value))
