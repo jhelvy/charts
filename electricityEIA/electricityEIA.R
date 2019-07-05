@@ -75,7 +75,7 @@ windCapacity <- ggplot(electricityDf %>%
     background_grid(major = "xy", minor = "none") +
     labs(x       = 'Year',
          y       = 'Installed Power Capacity (GW)',
-         title   = 'Installed Win Power Capacity by Country / Region',
+         title   = 'Installed Wind Power Capacity by Country / Region',
          fill    = 'Country / Region',
          caption = 'Data Source: U.S. Energy Information Administration')
 

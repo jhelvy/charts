@@ -8,6 +8,7 @@ A repo of reproducible charts
   - [climateChangeBarcode](#climateChangeBarcode)
   - [solarPvProduction](#solarPvProduction)
   - [newEnergyInvestment](#newEnergyInvestment)
+  - [electricityEIA](#electricityEIA)
 
 ## climateChangeBarcode
 
@@ -39,6 +40,16 @@ Barplots of new clean energy investment by country and type.
 2018*
 
 <img src="./newEnergyInvestment/plots/facetPlot.png" alt="newEnergyInvestment" width="600"/>
+
+## electricityEIA
+
+Barplots of energy capacity and generation by country / region using EIA
+data.
+
+*Installed Wind Power Capacity by Country / Region, 2000 -
+2016*
+
+<img src="./electricityEIA/plots/windCapacity.png" alt="electricityEIA" width="600"/>
 
 # Author and License
 
