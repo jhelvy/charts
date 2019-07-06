@@ -1,13 +1,10 @@
-library(tidyverse)
-library(cowplot)
-library(here)
-library(jhelvyr)
-
-# ----------------------------------------------------------------------------
 # Data source:
 # U.S. Energy Information Administration (EIA)
 # Official Energy Statistics from the U.S. Government
 # https://www.eia.gov/beta/international/data/browser/
+
+library(tidyverse)
+library(here)
 
 # Read in raw data
 china_us <- read_csv(
@@ -55,38 +52,12 @@ electricityDf <- rbind(chinaDf, europeDf, usDf, worldDf) %>%
     mutate(
         value = ifelse(is.na(value), 0, value),
         value = ifelse(value %in% c('-', '--'), 0, value),
-        value = parse_number(value)) %>% 
-    spread(country, value) %>% 
-    mutate(Other = World - China - Europe - USA) %>% 
-    select(-World) %>% 
-    gather(country, value, China:Other) 
+        value = parse_number(value)) %>%
+    spread(country, value) %>%
+    mutate(Other = World - China - Europe - USA) %>%
+    select(-World) %>%
+    gather(country, value, China:Other)
 
 # Reorder factors for plotting
-electricityDf$country <- factor(electricityDf$country, 
+electricityDf$country <- factor(electricityDf$country,
                                 c('Other', 'Europe', 'USA', 'China'))
-
-# Make plots 
-windCapacity <- ggplot(electricityDf %>% 
-    filter(type == 'Capacity', category == 'Wind', year > 1999, year < 2017),
-    aes(x = year, y = value)) +
-    geom_bar(aes(fill = country), position = 'stack', stat = 'identity') +
-    scale_fill_manual(
-        values = jColors('extended', c('gray', 'yellow', 'blue', 'red'))) +
-    background_grid(major = "xy", minor = "none") +
-    labs(x       = 'Year',
-         y       = 'Installed Power Capacity (GW)',
-         title   = 'Installed Wind Power Capacity by Country / Region',
-         fill    = 'Country / Region',
-         caption = 'Data Source: U.S. Energy Information Administration')
-
-# Save using laptop screen aspect ratio (2560 X 1600)
-ggsave(here('electricityEIA', 'plots', 'windCapacity.pdf'),
-       windCapacity, width=11, height=5, dpi=150)
-
-ggsave(here('electricityEIA', 'plots', 'windCapacity.png'),
-       windCapacity, width=11, height=5, dpi=150)
-
-# Print summary of 2016 wind capacity
-electricityDf %>% 
-    filter(type == 'Capacity', category == 'Wind', year == 2016) %>% 
-    mutate(percent = value / sum(value))
