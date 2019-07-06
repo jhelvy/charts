@@ -6,9 +6,10 @@ A repo of reproducible charts
 # Table of Contents
 
   - [climateChangeBarcode](#climateChangeBarcode)
-  - [solarPvProduction](#solarPvProduction)
-  - [newEnergyInvestment](#newEnergyInvestment)
   - [electricityEIA](#electricityEIA)
+  - [newEnergyInvestment](#newEnergyInvestment)
+  - [solarPvProduction](#solarPvProduction)
+  - [worldNuclearAssociation](#worldNuclearAssociation)
 
 ## climateChangeBarcode
 
@@ -23,14 +24,22 @@ NASA*
 
 <img src="./climateChangeBarcode/plots/nasa_global_preview.png" alt="climateChangeBarcode" width="300"/>
 
-## solarPvProduction
+## electricityEIA
 
-Barplot of global annual solar photovoltaic cell production by country.
+Barplots of energy capacity and generation by country / region using EIA
+data.
 
-*Annual Solar Voltaic Cell Production (GW), 2000 -
-2018*
+<figure>
 
-<img src="./solarPvProduction/plots/solarPlot.png" alt="solarPvProduction" width="400"/>
+<img src="./electricityEIA/plots/windCapacity.png" alt="electricityEIA" width="600"/>
+
+<figcaption>
+
+Installed Wind Power Capacity by Country / Region, 2000 - 2016.
+
+</figcaption>
+
+</figure>
 
 ## newEnergyInvestment
 
@@ -41,15 +50,23 @@ Barplots of new clean energy investment by country and type.
 
 <img src="./newEnergyInvestment/plots/facetPlot.png" alt="newEnergyInvestment" width="600"/>
 
-## electricityEIA
+## solarPvProduction
 
-Barplots of energy capacity and generation by country / region using EIA
-data.
+Barplot of global annual solar photovoltaic cell production by country.
 
-*Installed Wind Power Capacity by Country / Region, 2000 -
-2016*
+*Annual Solar Voltaic Cell Production (GW), 2000 -
+2018*
 
-<img src="./electricityEIA/plots/windCapacity.png" alt="electricityEIA" width="600"/>
+<img src="./solarPvProduction/plots/solarPlot.png" alt="solarPvProduction" width="400"/>
+
+## worldNuclearAssociation
+
+Barplots of nuclear energy capacity by country.
+
+*New Nuclear Energy Capacity (GW) by Country, 2008 -
+2019*
+
+<img src="./worldNuclearAssociation/plots/newCapacity.png" alt="newCapacity" width="400"/>
 
 # Author and License
 

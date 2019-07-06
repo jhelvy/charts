@@ -1,18 +1,21 @@
-library(tidyverse)
-library(cowplot)
-library(here)
-library(jhelvyr)
-library(readxl)
-
-# ----------------------------------------------------------------------------
-# Nuclear energy
-
+# Author: John Paul Helveston
+# Date: First written on Friday, July 5, 2019
+#
+# Description:
+# Barplots of nuclear energy capacity by country
+#
 # Data sources:
 # Webscraped data from the World Nuclear Association
 # http://www.world-nuclear.org/information-library/facts-and-figures/world-nuclear-power-reactors-and-uranium-requireme.aspx
 
-nuclearDf <- read_csv(here('data', 'nuclear', 'nuclearDf.csv'))
-nuclearDf <- nuclearDf %>%
+library(tidyverse)
+library(cowplot)
+library(here)
+library(jhelvyr)
+
+# Read in and format data
+nuclearDf <- read_csv(
+    here('worldNuclearAssociation', 'data', 'nuclearDf.csv')) %>%
     mutate(capacity = operable_mw / 10^3) %>%
     select(country, year, month, capacity) %>%
     filter(country %in% c('China', 'Usa', 'World')) %>%
@@ -34,7 +37,7 @@ nuclearDf$country <- factor(nuclearDf$country,
                           c('Rest of World', 'China', 'United States'))
 
 # Current operating capacity plot
-nuclearPlot_currentCap <- ggplot(nuclearDf,
+currentCapacity <- ggplot(nuclearDf,
     aes(x=year, y=capacity)) +
     geom_bar(aes(fill = country), position = 'stack', stat = 'identity') +
     scale_fill_manual(values = jColors('extended', c('gray', 'red', 'blue'))) +
@@ -44,7 +47,7 @@ nuclearPlot_currentCap <- ggplot(nuclearDf,
          fill = 'Country')
 
 # New capacity plot
-nuclearPlot_newCap <- ggplot(nuclearDf %>% filter(year > 2007),
+newCapacity <- ggplot(nuclearDf %>% filter(year > 2007),
     aes(x=year, y=newCapacity)) +
     geom_bar(aes(fill = country), position = 'stack', stat = 'identity') +
     scale_fill_manual(values = jColors('extended', c('gray', 'red', 'blue'))) +
@@ -53,3 +56,14 @@ nuclearPlot_newCap <- ggplot(nuclearDf %>% filter(year > 2007),
     labs(x = 'Date',
          y = 'New Nuclear Energy Capacity (GW)',
          fill = 'Country')
+
+# Save using laptop screen aspect ratio (2560 X 1600)
+ggsave(here('worldNuclearAssociation', 'plots', 'currentCapacity.pdf'),
+       currentCapacity, width=11, height=5, dpi=150)
+ggsave(here('worldNuclearAssociation', 'plots', 'newCapacity.pdf'),
+       newCapacity, width=7, height=5, dpi=150)
+
+ggsave(here('worldNuclearAssociation', 'plots', 'currentCapacity.png'),
+       currentCapacity, width=11, height=5, dpi=150)
+ggsave(here('worldNuclearAssociation', 'plots', 'newCapacity.png'),
+       newCapacity, width=7, height=5, dpi=150)
