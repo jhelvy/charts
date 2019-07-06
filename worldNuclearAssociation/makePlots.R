@@ -43,7 +43,7 @@ currentCapacity <- ggplot(nuclearDf,
     scale_fill_manual(values = jColors('extended', c('gray', 'red', 'blue'))) +
     background_grid(major = "xy", minor = "none") +
     labs(x = 'Date',
-         y = 'Nuclear Energy Production (GW)',
+         y = 'Nuclear Energy Capacity (GW)',
          fill = 'Country')
 
 # New capacity plot
