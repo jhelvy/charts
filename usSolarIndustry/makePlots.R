@@ -1,12 +1,17 @@
 # Author: John Paul Helveston
-# Date: First written on Friday, July 5, 2019
+# Date: First written on Friday, October 11, 2019
 #
 # Description:
-# Barplots of nuclear energy capacity by country
+# Summary plots of the US solar industry, including total module deployment
+# and job growth pre and post the Trump administration tariffs.
 #
 # Data sources:
-# Webscraped data from the World Nuclear Association
-# http://www.world-nuclear.org/information-library/facts-and-figures/world-nuclear-power-reactors-and-uranium-requireme.aspx
+# Jobs data from The Solar Foundation (2019 is forecasted)
+# Copied from this article:
+# https://www.bloomberg.com/news/articles/2019-02-12/trump-s-tariffs-took-a-bite-out-of-once-booming-solar-job-market
+#
+# PV Solar module data from the US EIA:
+# https://www.eia.gov/renewable/monthly/solar_photo/
 
 library(tidyverse)
 library(cowplot)
@@ -14,56 +19,19 @@ library(here)
 library(jhelvyr)
 
 # Read in and format data
-nuclearDf <- read_csv(
-    here('worldNuclearAssociation', 'data', 'nuclearDf.csv')) %>%
-    mutate(capacity = operable_mw / 10^3) %>%
-    select(country, year, month, capacity) %>%
-    filter(country %in% c('China', 'Usa', 'World')) %>%
-    distinct() %>%
-    spread(country, capacity) %>%
-    mutate('Rest of World' = World - China - Usa) %>%
-    select(-World) %>%
-    gather(country, capacity, China:'Rest of World') %>%
-    mutate(country = ifelse(country == 'Usa',
-        as.character('United States'), country)) %>%
-    group_by(country, year) %>%
-    summarise(capacity = mean(capacity)) %>%
-    mutate(
-        newCapacity = capacity - lag(capacity, 1),
-        newCapacity = ifelse(newCapacity < 0, 0, newCapacity))
+jobs <- read_csv(here('usSolarIndustry', 'data', 'jobs.csv'))
+# Modules units:
+# total_shipments = peak kilowatts
+# value           = thousand dollars
+# ave_value       = dollars per peak watt
+modules <- read_csv(here('usSolarIndustry', 'data', 'pv_table3.csv'))
 
-# Reorder factors for plotting
-nuclearDf$country <- factor(nuclearDf$country,
-                          c('Rest of World', 'China', 'United States'))
 
-# Current operating capacity plot
-currentCapacity <- ggplot(nuclearDf,
-    aes(x=year, y=capacity)) +
-    geom_bar(aes(fill = country), position = 'stack', stat = 'identity') +
-    scale_fill_manual(values = jColors('extended', c('gray', 'red', 'blue'))) +
-    background_grid(major = "xy", minor = "none") +
-    labs(x = 'Date',
-         y = 'Nuclear Energy Capacity (GW)',
-         fill = 'Country')
 
-# New capacity plot
-newCapacity <- ggplot(nuclearDf %>% filter(year > 2007),
-    aes(x=year, y=newCapacity)) +
-    geom_bar(aes(fill = country), position = 'stack', stat = 'identity') +
-    scale_fill_manual(values = jColors('extended', c('gray', 'red', 'blue'))) +
-    scale_x_continuous(breaks=c(2008, 2012, 2016, 2019)) +
-    background_grid(major = "xy", minor = "none") +
-    labs(x = 'Date',
-         y = 'New Nuclear Energy Capacity (GW)',
-         fill = 'Country')
 
-# Save using laptop screen aspect ratio (2560 X 1600)
-ggsave(here('worldNuclearAssociation', 'plots', 'currentCapacity.pdf'),
-       currentCapacity, width=11, height=5, dpi=150)
-ggsave(here('worldNuclearAssociation', 'plots', 'newCapacity.pdf'),
-       newCapacity, width=7, height=5, dpi=150)
+library(readxl)
+df <- read_excel(here('usSolarIndustry', 'data', 'pv_table3.xlsx'))
 
-ggsave(here('worldNuclearAssociation', 'plots', 'currentCapacity.png'),
-       currentCapacity, width=11, height=5, dpi=150)
-ggsave(here('worldNuclearAssociation', 'plots', 'newCapacity.png'),
-       newCapacity, width=7, height=5, dpi=150)
+
+ggsave(here('usSolarIndustry', 'plots', 'plots.pdf'),
+       jobs, width=7, height=5, dpi=150)
