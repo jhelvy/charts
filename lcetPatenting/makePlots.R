@@ -12,18 +12,7 @@ library(ggrepel)
 library(readxl)
 
 # Read in and format data
-mainDfDataPath <- here::here('lcetPatenting', 'data', 'fig06-45.xlsx')
-chinaDfDataPath <- here::here('lcetPatenting', 'data', 'fig06-46.xlsx')
-df <- read_excel(mainDfDataPath, skip = 3)
-chinaDf <- read_excel(chinaDfDataPath, skip = 3) %>%
-    select(-Year) 
-df <- df %>% 
-    bind_cols(chinaDf) %>% 
-    mutate(
-        Other = ROW - China, 
-        year = as.numeric(Year)) %>% 
-    select(-c(Taiwan, India, ROW, Year)) %>% 
-    gather(country, numPatents, `United States`:Other) 
+source(here('lcetPatenting', 'formatData.R'))
 
 patentPlot <- df %>% 
     ggplot(aes(x = year, y = numPatents, color = country)) +
@@ -47,8 +36,6 @@ patentPlot <- df %>%
     background_grid(major = "y", minor = "none", 
                     color.major = rgb(0.5, 0.5, 0.5, alpha = 0.2)) +
     theme(legend.position = 'none')
-
-patentPlot
 
 # Save using laptop screen aspect ratio (2560 X 1600)
 ggsave(here('lcetPatenting', 'plots', 'patentPlot.pdf'),
