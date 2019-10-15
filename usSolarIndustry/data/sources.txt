@@ -1,9 +1,0 @@
-https://www.bloomberg.com/news/articles/2019-02-12/trump-s-tariffs-took-a-bite-out-of-once-booming-solar-job-market
-
-jobs.csv:
-The Solar Foundation (2019 is forecasted)
-
-In early 2018, President Donald Trump imposed 30 percent tariffs on imported solar panels to boost domestic manufacturing
-
-pv_tables (US solar installations):
-https://www.eia.gov/renewable/monthly/solar_photo/
