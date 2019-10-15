@@ -1,15 +1,4 @@
 year,country,numPatents
-2006,United States,1950
-2007,United States,1837
-2008,United States,1880
-2009,United States,2187
-2010,United States,3049
-2011,United States,3453
-2012,United States,4187
-2013,United States,4689
-2014,United States,5055
-2015,United States,4746
-2016,United States,4725
 2006,Japan,966
 2007,Japan,910
 2008,Japan,915
@@ -54,3 +43,14 @@ year,country,numPatents
 2014,China,248
 2015,China,295
 2016,China,311
+2006,USA,1950
+2007,USA,1837
+2008,USA,1880
+2009,USA,2187
+2010,USA,3049
+2011,USA,3453
+2012,USA,4187
+2013,USA,4689
+2014,USA,5055
+2015,USA,4746
+2016,USA,4725

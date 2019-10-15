@@ -15,7 +15,7 @@ dfPath <- here::here('newEnergyInvestment', 'data', 'formattedData.csv')
 df <- read_csv(dfPath)
 
 # Reorder factors for plotting
-df$country <- factor(df$country, c('ROW', 'Europe', 'USA', 'China'))
+df$country <- factor(df$country, c('ROW', 'EU', 'USA', 'China'))
 df$type <- factor(df$type, c('Solar', 'Wind', 'Other'))
 
 # Summary line plot of investment by country 
