@@ -11,12 +11,18 @@ library(jhelvyr)
 library(ggrepel)
 
 # Read in and format data
-source(here('newEnergyInvestment', 'formatData.R'))
+dfPath <- here::here('newEnergyInvestment', 'data', 'formattedData.csv')
+df <- read_csv(dfPath)
 
+# Reorder factors for plotting
+df$country <- factor(df$country, c('Other', 'Europe', 'USA', 'China'))
+df$type <- factor(df$type, c('Solar', 'Wind', 'Other'))
+
+# Summary line plot of investment by country 
 countrySummaryDf <- df %>% 
     group_by(year, country) %>% 
     summarise(investment = sum(investment))
-countryLinePlot <- countrySummaryDf %>% 
+countryLines <- countrySummaryDf %>% 
     ggplot(aes(x = year, y = investment)) + 
     geom_line(aes(color = country), size = 0.8) +
     geom_text_repel(aes(label = country, color = country),
@@ -40,7 +46,7 @@ countryLinePlot <- countrySummaryDf %>%
     theme(legend.position = 'none')
 
 # Plot of solar, wind, and other investments
-facetPlot <- ggplot(df,
+countryTechBars <- ggplot(df,
     aes(x = year, y = investment)) +
     geom_bar(aes(fill = country), position = 'stack', stat = 'identity') +
     facet_wrap(~ type) +
@@ -59,7 +65,7 @@ facetPlot <- ggplot(df,
         legend.background = element_rect(
             fill = 'white', size = 0.5, linetype = 'solid', colour = 'black'))
 
-solarPlot <- ggplot(df %>% filter(type == 'Solar'),
+countrySolarBars <- ggplot(df %>% filter(type == 'Solar'),
     aes(x = year, y = investment)) +
     geom_bar(aes(fill = country), position = 'stack', stat = 'identity') +
     scale_x_continuous(limits = c(2004, 2019), breaks = seq(2005, 2018, 4)) +
@@ -73,7 +79,7 @@ solarPlot <- ggplot(df %>% filter(type == 'Solar'),
          fill    = 'Country / Region',
          caption = 'Data Source: Bloomberg New Energy Finance')
 
-windPlot <- ggplot(df %>% filter(type == 'Wind'),
+countryWindBars <- ggplot(df %>% filter(type == 'Wind'),
     aes(x = year, y = investment)) +
     geom_bar(aes(fill = country), position = 'stack', stat = 'identity') +
     scale_x_continuous(limits = c(2004, 2019), breaks = seq(2005, 2018, 4)) +
@@ -87,7 +93,7 @@ windPlot <- ggplot(df %>% filter(type == 'Wind'),
          fill    = 'Country / Region',
          caption = 'Data Source: Bloomberg New Energy Finance')
 
-otherPlot <- ggplot(df %>% filter(type == 'Other'),
+countryOtherBars <- ggplot(df %>% filter(type == 'Other'),
     aes(x = year, y = investment)) +
     geom_bar(aes(fill = country), position = 'stack', stat = 'identity') +
     scale_x_continuous(limits = c(2004, 2019), breaks = seq(2005, 2018, 4)) +
@@ -102,24 +108,24 @@ otherPlot <- ggplot(df %>% filter(type == 'Other'),
          caption = 'Data Source: Bloomberg New Energy Finance')
 
 # Save using laptop screen aspect ratio (2560 X 1600)
-ggsave(here('newEnergyInvestment', 'plots', 'countryLinePlot.pdf'),
-       countryLinePlot, width=7, height=5, dpi=150)
-ggsave(here('newEnergyInvestment', 'plots', 'facetPlot.pdf'),
-       facetPlot, width=11, height=5, dpi=150)
-ggsave(here('newEnergyInvestment', 'plots', 'solarPlot.pdf'),
-       solarPlot, width=7, height=5, dpi=150)
-ggsave(here('newEnergyInvestment', 'plots', 'windPlot.pdf'),
-       windPlot, width=7, height=5, dpi=150)
-ggsave(here('newEnergyInvestment', 'plots', 'otherPlot.pdf'),
-       otherPlot, width=7, height=5, dpi=150)
+ggsave(here::here('newEnergyInvestment', 'plots', 'countryLines.pdf'),
+       countryLines, width=7, height=5, dpi=150)
+ggsave(here::here('newEnergyInvestment', 'plots', 'countryTechBars.pdf'),
+       countryTechBars, width=11, height=5, dpi=150)
+ggsave(here::here('newEnergyInvestment', 'plots', 'countrySolarBars.pdf'),
+       countrySolarBars, width=7, height=5, dpi=150)
+ggsave(here::here('newEnergyInvestment', 'plots', 'countryWindBars.pdf'),
+       countryWindBars, width=7, height=5, dpi=150)
+ggsave(here::here('newEnergyInvestment', 'plots', 'countryOtherBars.pdf'),
+       countryOtherBars, width=7, height=5, dpi=150)
 
-ggsave(here('newEnergyInvestment', 'plots', 'countryLinePlot.png'),
-       countryLinePlot, width=7, height=5, dpi=150)
-ggsave(here('newEnergyInvestment', 'plots', 'facetPlot.png'),
-       facetPlot, width=11, height=5, dpi=150)
-ggsave(here('newEnergyInvestment', 'plots', 'solarPlot.png'),
-       solarPlot, width=7, height=5, dpi=150)
-ggsave(here('newEnergyInvestment', 'plots', 'windPlot.png'),
-       windPlot, width=7, height=5, dpi=150)
-ggsave(here('newEnergyInvestment', 'plots', 'otherPlot.png'),
-       otherPlot, width=7, height=5, dpi=150)
+ggsave(here::here('newEnergyInvestment', 'plots', 'countryLines.png'),
+       countryLines, width=7, height=5, dpi=150)
+ggsave(here::here('newEnergyInvestment', 'plots', 'countryTechBars.png'),
+       countryTechBars, width=11, height=5, dpi=150)
+ggsave(here::here('newEnergyInvestment', 'plots', 'countrySolarBars.png'),
+       countrySolarBars, width=7, height=5, dpi=150)
+ggsave(here::here('newEnergyInvestment', 'plots', 'countryWindBars.png'),
+       countryWindBars, width=7, height=5, dpi=150)
+ggsave(here::here('newEnergyInvestment', 'plots', 'countryOtherBars.png'),
+       countryOtherBars, width=7, height=5, dpi=150)

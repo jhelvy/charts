@@ -1,4 +1,4 @@
-# Data Sources: See "sources.txt" in "data" folder for details
+# Data Sources: See "data_sources.txt" for details
 #
 # Clean energy investment by Bloomberg New Energy Finance:
 # https://about.bnef.com/clean-energy-investment/
@@ -35,7 +35,7 @@ world_total <- read(
 world_other <- read(
     here('newEnergyInvestment', 'data', 'world_other.csv'))
 
-# Create data frame
+# Create main data frame merging all the data
 df <- data.frame(
     year         = seq(2005, 2018),
     China_Solar  = china_solar,
@@ -59,6 +59,5 @@ df <- data.frame(
     separate(country_type, c('country', 'type'), sep='_') %>%
     filter(country != 'World')
 
-# Reorder factors for plotting
-df$country <- factor(df$country, c('Other', 'Europe', 'USA', 'China'))
-df$type <- factor(df$type, c('Solar', 'Wind', 'Other'))
+# Export formatted data to "data" folder:
+write_csv(df, here::here('newEnergyInvestment', 'data', 'formattedData.csv'))
