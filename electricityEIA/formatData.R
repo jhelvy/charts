@@ -1,4 +1,7 @@
 # Data source:
+#
+# Data Sources: See "data_sources.txt" for details
+#
 # U.S. Energy Information Administration (EIA)
 # Official Energy Statistics from the U.S. Government
 # https://www.eia.gov/beta/international/data/browser/
@@ -8,10 +11,10 @@ library(here)
 
 # Read in raw data
 china_us <- read_csv(
-    here('electricityEIA', 'data', 'international_data_china_us.csv'),
+    here::here('electricityEIA', 'data', 'international_data_china_us.csv'),
     skip = 4)
 europe_world <- read_csv(
-    here('electricityEIA', 'data', 'international_data_europe_world.csv'),
+    here::here('electricityEIA', 'data', 'international_data_europe_world.csv'),
     skip = 4)
 
 # Drop non-informative columnes and rename first two columnes
@@ -47,7 +50,7 @@ europeDf$country <- 'Europe'
 worldDf$country  <- 'World'
 
 # Merge into one data frame
-electricityDf <- rbind(chinaDf, europeDf, usDf, worldDf) %>%
+df <- rbind(chinaDf, europeDf, usDf, worldDf) %>%
     gather(year, value, `1980`:`2017`) %>%
     mutate(
         value = ifelse(is.na(value), 0, value),
@@ -58,6 +61,5 @@ electricityDf <- rbind(chinaDf, europeDf, usDf, worldDf) %>%
     select(-World) %>%
     gather(country, value, China:Other)
 
-# Reorder factors for plotting
-electricityDf$country <- factor(electricityDf$country,
-                                c('Other', 'Europe', 'USA', 'China'))
+# Export formatted data to "data" folder:
+write_csv(df, here::here('electricityEIA', 'data', 'formattedData.csv'))

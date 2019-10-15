@@ -9,7 +9,7 @@
 # Original figures by Ed Hawkins:
 # http://www.climate-lab-book.ac.uk/2018/warming-stripes/#more-5516
 #
-# Data Sources: See "sources.txt" in "data" folder for details
+# Data Sources: See "data_sources.txt" for details
 #
 # NASA (2018) "Goddard Institute for Space Studies (GISS)".
 # retrieved from
