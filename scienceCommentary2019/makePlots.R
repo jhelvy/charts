@@ -22,25 +22,24 @@ dfPath <- here::here('newEnergyInvestment', 'data', 'formattedData.csv')
 df <- read_csv(dfPath)
 
 # Reorder factors for plotting
-df$country <- factor(df$country, c('Other', 'Europe', 'USA', 'China'))
+df$country <- factor(df$country, c('ROW', 'EU', 'USA', 'China'))
 df$type <- factor(df$type, c('Solar', 'Wind', 'Other'))
 
 # Make the plot 
 countrySummaryDf <- df %>% 
     group_by(year, country) %>% 
-    summarise(investment = sum(investment)) %>% 
-    mutate(country = ifelse(country == 'Europe', 'EU', as.character(country)))
+    summarise(investment = sum(investment))
 investmentPlot <- countrySummaryDf %>% 
     ggplot(aes(x = year, y = investment, color = country)) + 
     geom_line(size = 0.8) +
     geom_point() +
     geom_text_repel(aes(label = country, color = country),
-                    data          = subset(countrySummaryDf, year == max(year)),
-                    size          = 5,
-                    hjust         = 0,
-                    nudge_x       = 0.5,
-                    nudge_y       = 2,
-                    segment.color = NA) +
+        data          = subset(countrySummaryDf, year == max(year)),
+        size          = 5,
+        hjust         = 0,
+        nudge_x       = 0.5,
+        nudge_y       = 2,
+        segment.color = NA) +
     scale_x_continuous(limits = c(2006, 2020), breaks = seq(2006, 2018, 4)) +
     scale_y_continuous(limits = c(0, 150), breaks=seq(0, 150, 50)) +
     scale_color_manual(
@@ -57,19 +56,8 @@ investmentPlot <- countrySummaryDf %>%
 # Clean energy patenting plot
 
 # Read in and format data
-mainDfDataPath <- here::here('lcetPatenting', 'data', 'fig06-45.xlsx')
-chinaDfDataPath <- here::here('lcetPatenting', 'data', 'fig06-46.xlsx')
-df <- read_excel(mainDfDataPath, skip = 3)
-chinaDf <- read_excel(chinaDfDataPath, skip = 3) %>%
-    select(-Year) 
-df <- df %>% 
-    bind_cols(chinaDf) %>% 
-    mutate(
-        USA = `United States`,
-        Other = ROW - China + `South Korea`, 
-        year = as.numeric(Year)) %>% 
-    select(-c(Taiwan, India, ROW, Year, `South Korea`, `United States`)) %>% 
-    gather(country, numPatents, Japan:Other) 
+dfPath <- here::here('lcetPatenting', 'data', 'formattedData.csv')
+df <- read_csv(dfPath)
 
 # Make the plot 
 patentPlot <- df %>% 

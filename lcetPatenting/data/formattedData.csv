@@ -32,17 +32,17 @@ year,country,numPatents
 2014,EU,1970
 2015,EU,1909
 2016,EU,1797
-2006,South Korea,101
-2007,South Korea,145
-2008,South Korea,160
-2009,South Korea,241
-2010,South Korea,442
-2011,South Korea,473
-2012,South Korea,537
-2013,South Korea,725
-2014,South Korea,950
-2015,South Korea,1096
-2016,South Korea,1014
+2006,ROW,416
+2007,ROW,451
+2008,ROW,484
+2009,ROW,591
+2010,ROW,930
+2011,ROW,1062
+2012,ROW,1281
+2013,ROW,1581
+2014,ROW,1851
+2015,ROW,2087
+2016,ROW,1942
 2006,China,24
 2007,China,26
 2008,China,27
@@ -54,14 +54,3 @@ year,country,numPatents
 2014,China,248
 2015,China,295
 2016,China,311
-2006,Other,315
-2007,Other,306
-2008,Other,324
-2009,Other,350
-2010,Other,488
-2011,Other,589
-2012,Other,744
-2013,Other,856
-2014,Other,901
-2015,Other,991
-2016,Other,928

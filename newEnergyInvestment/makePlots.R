@@ -15,7 +15,7 @@ dfPath <- here::here('newEnergyInvestment', 'data', 'formattedData.csv')
 df <- read_csv(dfPath)
 
 # Reorder factors for plotting
-df$country <- factor(df$country, c('Other', 'Europe', 'USA', 'China'))
+df$country <- factor(df$country, c('ROW', 'Europe', 'USA', 'China'))
 df$type <- factor(df$type, c('Solar', 'Wind', 'Other'))
 
 # Summary line plot of investment by country 
@@ -54,7 +54,8 @@ countryTechBars <- ggplot(df,
     scale_y_continuous(limits = c(0, 200), breaks=seq(0, 200, 50)) +
     scale_fill_manual(
         values = jColors('extended', c('gray', 'yellow', 'blue', 'red'))) +
-    background_grid(major = "xy", minor = "none") +
+    theme_cowplot() +
+    background_grid(major = "y", minor = "none") +
     labs(x       = 'Year',
          y       = '$USD Billion',
          title   = 'New Investment in Clean Energy',
@@ -72,7 +73,8 @@ countrySolarBars <- ggplot(df %>% filter(type == 'Solar'),
     scale_y_continuous(limits = c(0, 200), breaks=seq(0, 200, 50)) +
     scale_fill_manual(
         values = jColors('extended', c('gray', 'yellow', 'blue', 'red'))) +
-    background_grid(major = "xy", minor = "none") +
+    theme_cowplot() +
+    background_grid(major = "y", minor = "none") +
     labs(x       = 'Year',
          y       = '$USD Billion',
          title   = 'New Investment in Solar Energy',
@@ -86,7 +88,8 @@ countryWindBars <- ggplot(df %>% filter(type == 'Wind'),
     scale_y_continuous(limits = c(0, 200), breaks=seq(0, 200, 50)) +
     scale_fill_manual(
         values = jColors('extended', c('gray', 'yellow', 'blue', 'red'))) +
-    background_grid(major = "xy", minor = "none") +
+    theme_cowplot() +
+    background_grid(major = "y", minor = "none") +
     labs(x       = 'Year',
          y       = '$USD Billion',
          title   = 'New Investment in Wind Energy',
@@ -100,7 +103,8 @@ countryOtherBars <- ggplot(df %>% filter(type == 'Other'),
     scale_y_continuous(limits = c(0, 200), breaks=seq(0, 200, 50)) +
     scale_fill_manual(
         values = jColors('extended', c('gray', 'yellow', 'blue', 'red'))) +
-    background_grid(major = "xy", minor = "none") +
+    theme_cowplot() +
+    background_grid(major = "y", minor = "none") +
     labs(x       = 'Year',
          y       = '$USD Billion',
          title   = 'New Investment in Other Clean Energy',

@@ -14,11 +14,11 @@ china_solar_wind <- read(
     here('newEnergyInvestment', 'data', 'china_solar_wind.csv'))
 china_total <- read(
     here('newEnergyInvestment', 'data', 'china_total.csv'))
-europe_wind <- read(
+eu_wind <- read(
     here('newEnergyInvestment', 'data', 'europe_windon_windoff.csv'))
-europe_wind_solar <- read(
+eu_wind_solar <- read(
     here('newEnergyInvestment', 'data', 'europe_wind_solar.csv'))
-europe_total <- read(
+eu_total <- read(
     here('newEnergyInvestment', 'data', 'europe_total.csv'))
 us_wind <- read(
     here('newEnergyInvestment', 'data', 'us_wind.csv'))
@@ -37,25 +37,25 @@ world_other <- read(
 
 # Create main data frame merging all the data
 df <- data.frame(
-    year         = seq(2005, 2018),
-    China_Solar  = china_solar,
-    China_Wind   = china_solar_wind - china_solar,
-    China_Other  = china_total - china_solar_wind,
-    Europe_Solar = europe_wind_solar - europe_wind,
-    Europe_Wind  = europe_wind,
-    Europe_Other = europe_total - europe_wind_solar,
-    USA_Solar     = us_wind_solar - us_wind,
-    USA_Wind      = us_wind,
-    USA_Other     = us_total - us_wind_solar,
-    World_Solar  = world_solar,
-    World_Wind   = world_wind,
-    World_Other  = world_total - world_solar - world_wind) %>%
+    year        = seq(2005, 2018),
+    China_Solar = china_solar,
+    China_Wind  = china_solar_wind - china_solar,
+    China_Other = china_total - china_solar_wind,
+    EU_Solar    = eu_wind_solar - eu_wind,
+    EU_Wind     = eu_wind,
+    EU_Other    = eu_total - eu_wind_solar,
+    USA_Solar   = us_wind_solar - us_wind,
+    USA_Wind    = us_wind,
+    USA_Other   = us_total - us_wind_solar,
+    World_Solar = world_solar,
+    World_Wind  = world_wind,
+    World_Other = world_total - world_solar - world_wind) %>%
     mutate(
-        Other_Solar = World_Solar - China_Solar - USA_Solar - Europe_Solar,
-        Other_Wind  = World_Wind - China_Wind - USA_Wind - Europe_Wind,
-        Other_Other = World_Other - China_Other - USA_Other - Europe_Other,
+        ROW_Solar = World_Solar - China_Solar - USA_Solar - EU_Solar,
+        ROW_Wind  = World_Wind - China_Wind - USA_Wind - EU_Wind,
+        ROW_Other = World_Other - China_Other - USA_Other - EU_Other,
     ) %>%
-    gather(country_type, investment, China_Solar:Other_Other) %>%
+    gather(country_type, investment, China_Solar:ROW_Other) %>%
     separate(country_type, c('country', 'type'), sep='_') %>%
     filter(country != 'World')
 

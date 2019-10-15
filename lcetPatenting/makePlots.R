@@ -26,8 +26,8 @@ patentPlot <- df %>%
         nudge_y       = 2,
         segment.color = NA) +
     scale_x_continuous(limits = c(2006, 2019), breaks = seq(2006, 2016, 2)) +
-    # scale_color_manual(
-    # values = jColors('extended', c('gray', 'yellow', 'blue', 'red'))) +
+    scale_color_manual(
+    values = jColors('extended', c('red', 'green', 'yellow', 'gray', 'blue'))) +
     theme_cowplot() +
     labs(x       = 'Year',
          y       = 'Number of Patents',

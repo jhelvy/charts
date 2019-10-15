@@ -17,10 +17,10 @@ chinaDf <- read_excel(chinaDfDataPath, skip = 3) %>%
 df <- df %>% 
     bind_cols(chinaDf) %>% 
     mutate(
-        Other = ROW - China, 
+        ROW  = ROW - China + `South Korea`, 
         year = as.numeric(Year)) %>% 
-    select(-c(Taiwan, India, ROW, Year)) %>% 
-    gather(country, numPatents, `United States`:Other) 
+    select(-c(Taiwan, India, `South Korea`, Year)) %>% 
+    gather(country, numPatents, `United States`:China) 
 
 # Export formatted data to "data" folder:
 write_csv(df, here::here('lcetPatenting', 'data', 'formattedData.csv'))
