@@ -14,23 +14,8 @@ library(here)
 library(jhelvyr)
 
 # Read in and format data
-nuclearDf <- read_csv(
-    here('worldNuclearAssociation', 'data', 'nuclearDf.csv')) %>%
-    mutate(capacity = operable_mw / 10^3) %>%
-    select(country, year, month, capacity) %>%
-    filter(country %in% c('China', 'Usa', 'World')) %>%
-    distinct() %>%
-    spread(country, capacity) %>%
-    mutate('Rest of World' = World - China - Usa) %>%
-    select(-World) %>%
-    gather(country, capacity, China:'Rest of World') %>%
-    mutate(country = ifelse(country == 'Usa',
-        as.character('United States'), country)) %>%
-    group_by(country, year) %>%
-    summarise(capacity = mean(capacity)) %>%
-    mutate(
-        newCapacity = capacity - lag(capacity, 1),
-        newCapacity = ifelse(newCapacity < 0, 0, newCapacity))
+dfPath <- here::here('worldNuclearAssociation', 'data', 'formattedData.csv')
+nuclearDf <- read_csv(dfPath)
 
 # Reorder factors for plotting
 nuclearDf$country <- factor(nuclearDf$country,
@@ -40,8 +25,12 @@ nuclearDf$country <- factor(nuclearDf$country,
 currentCapacity <- ggplot(nuclearDf,
     aes(x=year, y=capacity)) +
     geom_bar(aes(fill = country), position = 'stack', stat = 'identity') +
+    scale_x_continuous(limits = c(2006, 2020),
+                       breaks = seq(2007, 2019, 2)) +
+    scale_y_continuous(limits = c(0, 400), breaks=seq(0, 400, 100)) +
     scale_fill_manual(values = jColors('extended', c('gray', 'red', 'blue'))) +
-    background_grid(major = "xy", minor = "none") +
+    theme_cowplot() +
+    background_grid(major = "y", minor = "none") +
     labs(x = 'Date',
          y = 'Nuclear Energy Capacity (GW)',
          fill = 'Country')
@@ -50,20 +39,22 @@ currentCapacity <- ggplot(nuclearDf,
 newCapacity <- ggplot(nuclearDf %>% filter(year > 2007),
     aes(x=year, y=newCapacity)) +
     geom_bar(aes(fill = country), position = 'stack', stat = 'identity') +
-    scale_fill_manual(values = jColors('extended', c('gray', 'red', 'blue'))) +
     scale_x_continuous(breaks=c(2008, 2012, 2016, 2019)) +
-    background_grid(major = "xy", minor = "none") +
+    scale_y_continuous(limits = c(0, 8), breaks=seq(0, 8, 2)) +
+    scale_fill_manual(values = jColors('extended', c('gray', 'red', 'blue'))) +
+    theme_cowplot() +
+    background_grid(major = "y", minor = "none") +
     labs(x = 'Date',
          y = 'New Nuclear Energy Capacity (GW)',
          fill = 'Country')
 
 # Save using laptop screen aspect ratio (2560 X 1600)
 ggsave(here('worldNuclearAssociation', 'plots', 'currentCapacity.pdf'),
-       currentCapacity, width=11, height=5, dpi=150)
+       currentCapacity, width=10, height=5, dpi=150)
 ggsave(here('worldNuclearAssociation', 'plots', 'newCapacity.pdf'),
        newCapacity, width=7, height=5, dpi=150)
 
 ggsave(here('worldNuclearAssociation', 'plots', 'currentCapacity.png'),
-       currentCapacity, width=11, height=5, dpi=150)
+       currentCapacity, width=10, height=5, dpi=150)
 ggsave(here('worldNuclearAssociation', 'plots', 'newCapacity.png'),
        newCapacity, width=7, height=5, dpi=150)
