@@ -1,0 +1,67 @@
+year,country,numPatents
+2006,United States,1950
+2007,United States,1837
+2008,United States,1880
+2009,United States,2187
+2010,United States,3049
+2011,United States,3453
+2012,United States,4187
+2013,United States,4689
+2014,United States,5055
+2015,United States,4746
+2016,United States,4725
+2006,Japan,966
+2007,Japan,910
+2008,Japan,915
+2009,Japan,1042
+2010,Japan,1511
+2011,Japan,1645
+2012,Japan,2039
+2013,Japan,2033
+2014,Japan,2304
+2015,Japan,2387
+2016,Japan,2237
+2006,EU,510
+2007,EU,582
+2008,EU,598
+2009,EU,629
+2010,EU,1021
+2011,EU,1096
+2012,EU,1382
+2013,EU,1658
+2014,EU,1970
+2015,EU,1909
+2016,EU,1797
+2006,South Korea,101
+2007,South Korea,145
+2008,South Korea,160
+2009,South Korea,241
+2010,South Korea,442
+2011,South Korea,473
+2012,South Korea,537
+2013,South Korea,725
+2014,South Korea,950
+2015,South Korea,1096
+2016,South Korea,1014
+2006,China,24
+2007,China,26
+2008,China,27
+2009,China,47
+2010,China,87
+2011,China,98
+2012,China,171
+2013,China,191
+2014,China,248
+2015,China,295
+2016,China,311
+2006,Other,315
+2007,Other,306
+2008,Other,324
+2009,Other,350
+2010,Other,488
+2011,Other,589
+2012,Other,744
+2013,Other,856
+2014,Other,901
+2015,Other,991
+2016,Other,928

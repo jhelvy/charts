@@ -1,3 +1,13 @@
+# Data Sources: See "data_sources.txt" for details
+# 
+# Patenting in clean energy technologies from 2018 U.S. National Science 
+# Foundation Science & Engineering Indicators:
+# https://www.nsf.gov/statistics/2018/nsb20181/report/sections/industry-technology-and-the-global-marketplace/global-trends-in-sustainable-energy-research-and-technologies
+
+library(tidyverse)
+library(here)
+library(readxl)
+
 # Read in and format data
 mainDfDataPath <- here::here('lcetPatenting', 'data', 'fig06-45.xlsx')
 chinaDfDataPath <- here::here('lcetPatenting', 'data', 'fig06-46.xlsx')
@@ -11,3 +21,6 @@ df <- df %>%
         year = as.numeric(Year)) %>% 
     select(-c(Taiwan, India, ROW, Year)) %>% 
     gather(country, numPatents, `United States`:Other) 
+
+# Export formatted data to "data" folder:
+write_csv(df, here::here('lcetPatenting', 'data', 'formattedData.csv'))

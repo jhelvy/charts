@@ -9,13 +9,14 @@ library(cowplot)
 library(here)
 library(jhelvyr)
 library(ggrepel)
-library(readxl)
 
 # Read in and format data
-source(here('lcetPatenting', 'formatData.R'))
+dfPath <- here::here('lcetPatenting', 'data', 'formattedData.csv')
+df <- read_csv(dfPath)
 
 patentPlot <- df %>% 
     ggplot(aes(x = year, y = numPatents, color = country)) +
+    geom_point() + 
     geom_line(size = 0.8) + 
     geom_text_repel(aes(label = country, color = country),
         data          = subset(df, year == max(year)),
