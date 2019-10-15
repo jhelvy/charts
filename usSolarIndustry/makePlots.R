@@ -45,6 +45,10 @@ jobsPlot <- jobs %>%
 
 ggsave(here('usSolarIndustry', 'plots', 'moduleShipments.pdf'),
         moduleShipments, width=7, height=5, dpi=150)
+ggsave(here('usSolarIndustry', 'plots', 'moduleShipments.png'),
+       moduleShipments, width=7, height=5, dpi=150)
 
 ggsave(here('usSolarIndustry', 'plots', 'jobsPlot.pdf'),
         jobsPlot, width=7, height=5, dpi=150)
+ggsave(here('usSolarIndustry', 'plots', 'jobsPlot.png'),
+       jobsPlot, width=7, height=5, dpi=150)
