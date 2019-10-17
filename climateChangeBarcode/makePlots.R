@@ -1,6 +1,9 @@
 # Author: John Paul Helveston
 # Date: First written on Saturday, May 26, 2018
 #
+# To generate the plots in the "plots" folder, go back and follow the
+# instructions in the "README.md" file in the parent directory.
+#
 # Description:
 # "Barcode" plots showing the long term rise in global and US temperatures.
 # Each vertical stripe represents the temperature of a single year, ordered

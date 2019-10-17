@@ -1,6 +1,9 @@
 # Author: John Paul Helveston
 # Date: First written on Monday, October 14, 2019
 #
+# To generate the plots in the "plots" folder, go back and follow the
+# instructions in the "README.md" file in the parent directory.
+#
 # Description:
 # Plots of patenting in clean energy technologies by country and over time
 
@@ -14,10 +17,10 @@ library(ggrepel)
 dfPath <- here::here('lcetPatenting', 'data', 'formattedData.csv')
 df <- read_csv(dfPath)
 
-patentPlot <- df %>% 
+patentPlot <- df %>%
     ggplot(aes(x = year, y = numPatents, color = country)) +
-    geom_point() + 
-    geom_line(size = 0.8) + 
+    geom_point() +
+    geom_line(size = 0.8) +
     geom_text_repel(aes(label = country, color = country),
         data          = subset(df, year == max(year)),
         size          = 5,
@@ -34,7 +37,7 @@ patentPlot <- df %>%
          title   = 'Annual USPTO Patents in Clean Energy Technologies',
          caption = paste('Data Source: 2018 U.S. National Science Foundation',
                         '\nScience & Engineering Indicators', sep = '')) +
-    background_grid(major = "y", minor = "none", 
+    background_grid(major = "y", minor = "none",
                     color.major = rgb(0.5, 0.5, 0.5, alpha = 0.2)) +
     theme(legend.position = 'none')
 

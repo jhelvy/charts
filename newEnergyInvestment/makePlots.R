@@ -1,6 +1,9 @@
 # Author: John Paul Helveston
 # Date: First written on Thursday, July 4, 2019
 #
+# To generate the plots in the "plots" folder, go back and follow the
+# instructions in the "README.md" file in the parent directory.
+#
 # Description:
 # Barplots of clean energy investment by country and type
 
@@ -18,12 +21,12 @@ df <- read_csv(dfPath)
 df$country <- factor(df$country, c('ROW', 'EU', 'USA', 'China'))
 df$type <- factor(df$type, c('Solar', 'Wind', 'Other'))
 
-# Summary line plot of investment by country 
-countrySummaryDf <- df %>% 
-    group_by(year, country) %>% 
+# Summary line plot of investment by country
+countrySummaryDf <- df %>%
+    group_by(year, country) %>%
     summarise(investment = sum(investment))
-countryLines <- countrySummaryDf %>% 
-    ggplot(aes(x = year, y = investment)) + 
+countryLines <- countrySummaryDf %>%
+    ggplot(aes(x = year, y = investment)) +
     geom_line(aes(color = country), size = 0.8) +
     geom_text_repel(aes(label = country, color = country),
         data          = subset(countrySummaryDf, year == max(year)),

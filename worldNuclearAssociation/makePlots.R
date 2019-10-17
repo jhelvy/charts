@@ -1,6 +1,9 @@
 # Author: John Paul Helveston
 # Date: First written on Friday, July 5, 2019
 #
+# To generate the plots in the "plots" folder, go back and follow the
+# instructions in the "README.md" file in the parent directory.
+#
 # Description:
 # Barplots of nuclear energy capacity by country
 #

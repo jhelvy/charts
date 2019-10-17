@@ -1,6 +1,9 @@
 # Author: John Paul Helveston
 # Date: First written on Tuesday, July 2, 2019
 #
+# To generate the plots in the "plots" folder, go back and follow the
+# instructions in the "README.md" file in the parent directory.
+#
 # Description:
 # Barplot of global annual solar photovoltaic cell production by country
 #

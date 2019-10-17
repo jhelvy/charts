@@ -1,6 +1,9 @@
 # Author: John Paul Helveston
 # Date: First written on Friday, July 5, 2019
 #
+# To generate the plots in the "plots" folder, go back and follow the
+# instructions in the "README.md" file in the parent directory.
+#
 # Description:
 # Barplots of energy capacity and generation by country / region using
 # EIA data.
@@ -31,7 +34,7 @@ windNuclearCapacityCompare <- ggplot(electricityDf %>%
     scale_x_discrete(breaks=seq(2000, 2016, 2)) +
     scale_y_continuous(limits=c(0, 500), breaks=seq(0, 500, 100)) +
     theme_cowplot() +
-    background_grid(major = "y", minor = "none", 
+    background_grid(major = "y", minor = "none",
                     color.major = rgb(0.5, 0.5, 0.5, alpha = 0.2)) +
     labs(x       = 'Year',
          y       = 'Installed Power Capacity (GW)',
@@ -49,7 +52,7 @@ windCapacity <- ggplot(electricityDf %>%
     scale_x_discrete(breaks=seq(2000, 2016, 2)) +
     scale_y_continuous(limits=c(0, 500), breaks=seq(0, 500, 100)) +
     theme_cowplot() +
-    background_grid(major = "y", minor = "none", 
+    background_grid(major = "y", minor = "none",
                     color.major = rgb(0.5, 0.5, 0.5, alpha = 0.2)) +
     labs(x       = 'Year',
          y       = 'Installed Power Capacity (GW)',
@@ -66,7 +69,7 @@ windCapacity_lines <- ggplot(electricityDf %>%
         values = jColors('extended', c('gray', 'yellow', 'blue', 'red'))) +
     scale_x_continuous(breaks=seq(2000, 2016, 2)) +
     theme_cowplot() +
-    background_grid(major = "y", minor = "none", 
+    background_grid(major = "y", minor = "none",
                     color.major = rgb(0.5, 0.5, 0.5, alpha = 0.2)) +
     labs(x       = 'Year',
          y       = 'Installed Power Capacity (GW)',
@@ -84,7 +87,7 @@ nuclearCapacity_current <- ggplot(electricityDf %>%
     scale_x_discrete(breaks=seq(1980, 2016, 4)) +
     scale_y_continuous(limits=c(0, 400), breaks=seq(0, 400, 100)) +
     theme_cowplot() +
-    background_grid(major = "y", minor = "none", 
+    background_grid(major = "y", minor = "none",
                     color.major = rgb(0.5, 0.5, 0.5, alpha = 0.2)) +
     labs(x       = 'Date',
          y = 'Nuclear Energy Capacity (GW)',

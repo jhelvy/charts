@@ -1,6 +1,9 @@
 # Author: John Paul Helveston
 # Date: First written on Friday, October 11, 2019
 #
+# To generate the plots in the "plots" folder, go back and follow the
+# instructions in the "README.md" file in the parent directory.
+#
 # Description:
 # Summary plots of the US solar industry, including total module deployment
 # and job growth pre and post the Trump administration tariffs.
