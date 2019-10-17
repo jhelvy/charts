@@ -8,7 +8,7 @@ To reproduce any of these charts, follow these steps:
 1. Fork or download all of the files in this repository.
 2. If you haven't already, [install R](https://cloud.r-project.org/) and [install RStudio](https://www.rstudio.com/products/rstudio/download/preview/) on your computer.
 3. Open the "charts.Rproj" file, which will open RStudio and set the working directory to the local folder on your computer containing the files in this repository.
-4. Open and run the "makePlots.R" file in any of the folders to produce the plots, which will be saved in the corresponding "plots folder".
+4. Open and run the "makePlots.R" file in any of the folders to produce the plots, which will be saved in the corresponding "plots" folder.
 
 | Description | Example Plot |
 | :----------- | :------------: |
