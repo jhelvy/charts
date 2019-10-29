@@ -20,8 +20,8 @@ df <- read_csv(dfPath)
 
 patentPlot <- df %>%
     ggplot(aes(x = year, y = numPatents, color = country)) +
-    # geom_point() +
-    geom_line(size = 0.8) +
+    geom_point() +
+    geom_line(size = 1.2) +
     geom_text_repel(aes(label = country, color = country),
         data          = subset(df, year == max(year)),
         size          = 5,

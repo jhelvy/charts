@@ -29,7 +29,8 @@ countrySummaryDf <- df %>%
     summarise(investment = sum(investment))
 countryLines <- countrySummaryDf %>%
     ggplot(aes(x = year, y = investment)) +
-    geom_line(aes(color = country), size = 0.8) +
+    geom_point(aes(color = country)) +
+    geom_line(aes(color = country), size = 1.2) +
     geom_text_repel(aes(label = country, color = country),
         data          = subset(countrySummaryDf, year == max(year)),
         size          = 5,
