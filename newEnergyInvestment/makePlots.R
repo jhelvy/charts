@@ -13,6 +13,8 @@ library(here)
 library(jhelvyr)
 library(ggrepel)
 
+plotColors = c("grey70", "#8FC977FF", "#80C5DCFF", "#980000FF")
+
 # Read in and format data
 dfPath <- here::here('newEnergyInvestment', 'data', 'formattedData.csv')
 df <- read_csv(dfPath)
@@ -38,11 +40,11 @@ countryLines <- countrySummaryDf %>%
     scale_x_continuous(limits = c(2004, 2020), breaks = seq(2006, 2018, 4)) +
     scale_y_continuous(limits = c(0, 150), breaks=seq(0, 150, 50)) +
     scale_color_manual(
-        values = jColors('extended', c('gray', 'yellow', 'blue', 'red'))) +
+        values = plotColors) +
     theme_cowplot() +
     labs(x       = 'Year',
          y       = 'Billions of U.S. Dollars',
-         title   = 'New Annual Investment in Clean Energy Industries',
+         title   = 'New Investment in Clean Energy',
          fill    = 'Country / Region',
          caption = 'Data Source: Bloomberg New Energy Finance') +
     background_grid(major = "y", minor = "none") +

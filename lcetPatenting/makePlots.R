@@ -10,8 +10,9 @@
 library(tidyverse)
 library(cowplot)
 library(here)
-library(jhelvyr)
 library(ggrepel)
+
+plotColors = c("#980000FF", "#8FC977FF", "#E8BF4DFF", "grey70", "#80C5DCFF")
 
 # Read in and format data
 dfPath <- here::here('lcetPatenting', 'data', 'formattedData.csv')
@@ -20,6 +21,7 @@ df <- read_csv(dfPath)
 patentPlot <- df %>%
     ggplot(aes(x = year, y = numPatents, color = country)) +
     geom_point() +
+    # geom_point() +
     geom_line(size = 0.8) +
     geom_text_repel(aes(label = country, color = country),
         data          = subset(df, year == max(year)),
@@ -30,15 +32,15 @@ patentPlot <- df %>%
         segment.color = NA) +
     scale_x_continuous(limits = c(2006, 2019), breaks = seq(2006, 2016, 2)) +
     scale_color_manual(
-    values = jColors('extended', c('red', 'green', 'yellow', 'gray', 'blue'))) +
+    values = plotColors) +
     theme_cowplot() +
     labs(x       = 'Year',
          y       = 'Number of Patents',
-         title   = 'Annual USPTO Patents in Clean Energy Technologies',
+         title   = 'USPTO Patents in Clean Energy Technologies',
          caption = paste('Data Source: 2018 U.S. National Science Foundation',
                         '\nScience & Engineering Indicators', sep = '')) +
     background_grid(major = "y", minor = "none",
-                    color.major = rgb(0.5, 0.5, 0.5, alpha = 0.2)) +
+                    color.major = rgb(0.5, 0.5, 0.5, alpha = 0.1)) +
     theme(legend.position = 'none')
 
 # Save using laptop screen aspect ratio (2560 X 1600)
