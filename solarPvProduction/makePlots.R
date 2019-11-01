@@ -13,11 +13,14 @@
 library(tidyverse)
 library(cowplot)
 library(here)
-library(jhelvyr)
+library(ggrepel)
+
+plotColors <- c("grey70", "#e3394a", "#399ee3")
 
 # Read in and format data
 dfPath <- here::here('solarPvProduction', 'data', 'formattedData.csv')
-solarDf <- read_csv(dfPath)
+solarDf <- read_csv(dfPath) %>% 
+    mutate(Country = if_else(Country == "ROW", "Rest of World", Country))
 
 # Reorder factors for plotting
 solarDf$Country <- factor(solarDf$Country,
@@ -29,8 +32,8 @@ solarBars <- ggplot(solarDf %>% filter(Year > 2000),
     geom_bar(aes(fill = Country), position = 'stack', stat = 'identity') +
     scale_x_continuous(limits = c(1999, 2019),
                        breaks = c(seq(2000, 2015, 5), 2018)) +
-    scale_y_continuous(limits = c(0, 200), breaks=seq(0, 200, 50)) +
-    scale_fill_manual(values = jColors('extended', c('gray', 'red', 'blue'))) +
+    scale_y_continuous(limits = c(0, 120), breaks=seq(0, 120, 30)) +
+    scale_fill_manual(values = plotColors) +
     theme_cowplot() +
     background_grid(major = "y", minor = "none") +
     labs(x = 'Year',
@@ -52,8 +55,8 @@ solarLines <- ggplot(solarDf %>% filter(Year > 2000),
         segment.color = NA) +
     scale_x_continuous(limits = c(2000, 2022),
                        breaks = c(seq(2000, 2015, 5), 2018)) +
-    scale_y_continuous(limits = c(0, 150), breaks=seq(0, 150, 50)) +
-    scale_color_manual(values = jColors('extended', c('gray', 'red', 'blue'))) +
+    scale_y_continuous(limits = c(0, 90), breaks=seq(0, 90, 30)) +
+    scale_color_manual(values = plotColors) +
     theme_cowplot() +
     background_grid(major = "y", minor = "none") +
     theme(legend.position = 'none') +

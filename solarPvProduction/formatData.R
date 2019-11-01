@@ -20,14 +20,19 @@ solar95_13 <- read_excel(
 
 # Drop first two (blank) rows,
 solar95_13 <- solar95_13[-c(1:2), ] %>%
-    # Drop summary rows past year 2012
+    # Drop summary rows past year 2013
     filter(Year <= 2013) %>%
     # Select focal columns
     select(Year, China, `United States`, World) %>%
     # Replace NAs with 0
-    mutate(China = ifelse(China == 'n.a.', 0, China)) %>%
+    mutate(
+        China = as.numeric(China),
+        China = if_else(is.na(China), 0, China)) %>% 
+    # Compute ROW from World 
+    mutate(ROW = World - China - `United States`) %>% 
+    select(-World) %>% 
     # Convert to tidy format for plotting
-    gather('Country', 'Production', 'China':'World') %>%
+    gather('Country', 'Production', 'China':'ROW') %>%
     # Convert from MW to GW
     mutate(Production = as.numeric(Production) / 10^3)
 
@@ -44,15 +49,14 @@ solar05_18 <- tibble(
     Year            = c(2005, 2008, seq(2010, 2018)),
     China           = china,
     `United States` = us1 - us0,
-    World           = total) %>%
+    ROW             = total - China - `United States`) %>%
     # Convert to tidy format for plotting
-    gather('Country', 'Production', 'China':'World')
+    gather('Country', 'Production', 'China':'ROW')
 
 # Merge and gather for plotting
 solarDf <- rbind(solar95_13, filter(solar05_18, Year > 2013)) %>%
-    mutate(
-        Year = as.numeric(Year),
-        Country = ifelse(Country == 'World', 'Rest of World', Country))
+    mutate(Year = as.numeric(Year)) %>% 
+    arrange(Year, Country)
 
 # Export formatted data to "data" folder:
 write_csv(solarDf, here::here('solarPvProduction', 'data', 'formattedData.csv'))
