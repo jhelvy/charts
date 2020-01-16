@@ -27,7 +27,21 @@ library(ggplot2)
 library(RColorBrewer)
 library(here)
 
+# Set plot colors
 plotColors = rev(brewer.pal(10, "RdBu"))
+
+# Create theme to remove all margins and nont-data elements
+theme_collapse <- function() {
+    theme(
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        axis.ticks = element_blank(),
+        axis.ticks.length = unit(0, "cm"),
+        axis.text = element_blank(),
+        axis.title = element_blank(),
+        legend.position = "none", 
+        plot.margin = margin(-2, 0, -2, 0, "cm"))
+}
 
 # Load data
 nasa_global <- read.table(
@@ -49,22 +63,21 @@ nasa_global_plot <- ggplot(data = nasa_global,
     geom_tile(aes(fill = meanTempCelsius)) +
     scale_fill_gradientn(colours = plotColors) +
     coord_flip() +
-    theme_void() +
-    theme(legend.position="none", axis.ticks.length = unit(0, "pt"))
+    theme_collapse()
+
 noaa_global_plot <- ggplot(data = noaa_global,
     aes(x = group, y = as.factor(Year))) +
     geom_tile(aes(fill = Value)) +
     scale_fill_gradientn(colours = plotColors) +
     coord_flip() +
-    theme_void() +
-    theme(legend.position="none", axis.ticks.length = unit(0, "pt"))
+    theme_collapse() 
+
 noaa_us_plot <- ggplot(data = noaa_us,
     aes(x = group, y = as.factor(Date))) +
     geom_tile(aes(fill = Anomaly)) +
     scale_fill_gradientn(colours = plotColors) +
     coord_flip() +
-    theme_void() +
-    theme(legend.position="none", axis.ticks.length = unit(0, "pt"))
+    theme_collapse() 
 
 # Save using laptop screen aspect ratio (2560 X 1600)
 ggsave(here('climateChangeBarcode', 'plots', 'nasa_global.pdf'),
