@@ -16,4 +16,4 @@ Some of the benefits I've found from this approach include:
 
 Watch the video here:
 
-[![](http://img.youtube.com/vi/l9yUGFelT5c/0.jpg)](http://www.youtube.com/watch?v=l9yUGFelT5c "ggxaringan"){target = "_blank"}
+[![](http://img.youtube.com/vi/l9yUGFelT5c/0.jpg)](http://www.youtube.com/watch?v=l9yUGFelT5c "ggxaringan"){target="_blank"}
