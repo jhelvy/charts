@@ -58,7 +58,7 @@ Watch video here:
 
 ## lcetPatenting
 
-**Description**: The chart in our [2019 Science Policy Forum article](https://science.sciencemag.org/content/366/6467/794) - patenting in clean energy technologies by country and over time.
+**Description**: Patenting in clean energy technologies by country and over time.
 
 **Data**: [2018 U.S. NSF Science & Engineering Indicators](https://www.nsf.gov/statistics/2018/nsb20181/report/sections/industry-technology-and-the-global-marketplace/global-trends-in-sustainable-energy-research-and-technologies)
 
@@ -74,7 +74,7 @@ Watch video here:
 
 ## scienceCommentary2019
 
-**Description**: Plots of investment and patenting in clean energy technologies by country and over time.
+**Description**: The chart in our [2019 Science Policy Forum article](https://science.sciencemag.org/content/366/6467/794) - investment and patenting in clean energy technologies by country and over time.
 
 **Data**: Clean energy investment by [Bloomberg New Energy Finance](https://about.bnef.com/clean-energy-investment/); Patenting by [2018 U.S. NSF Science & Engineering Indicators](https://www.nsf.gov/statistics/2018/nsb20181/report/sections/industry-technology-and-the-global-marketplace/global-trends-in-sustainable-energy-research-and-technologies)
 
