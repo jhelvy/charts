@@ -52,9 +52,9 @@ To reproduce any of these charts, follow these steps:
 
 This folder contains the files used to create [this short screen recording](https://youtu.be/c436_dfk9-E) demonstrating how I use the infinite_moon_reader() function from the xaringan package to achieve continuous integration while creating and customizing a ggplot2 plot.
 
-Watch video here:
+Watch the video here:
 
-[![](http://img.youtube.com/vi/l9yUGFelT5c/0.jpg)](http://www.youtube.com/watch?v=l9yUGFelT5c "ggxaringan")
+[![](http://img.youtube.com/vi/l9yUGFelT5c/0.jpg)](http://www.youtube.com/watch?v=l9yUGFelT5c "ggxaringan"){target = "_blank"}
 
 ## lcetPatenting
 

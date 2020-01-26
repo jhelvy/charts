@@ -13,3 +13,7 @@ Some of the benefits I've found from this approach include:
 - A .png file of the plot is automatically created in the `_files` -> `figure-html` folder, so I don't need to call `ggsave()`.
 - If I name the chunk, the saved .png file takes that chunk name (+ .png).
 - Helps with de-bugging as the slide won't render if there's an error.
+
+Watch the video here:
+
+[![](http://img.youtube.com/vi/l9yUGFelT5c/0.jpg)](http://www.youtube.com/watch?v=l9yUGFelT5c "ggxaringan"){target = "_blank"}
