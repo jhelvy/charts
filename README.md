@@ -22,6 +22,8 @@ To reproduce any of these charts, follow these steps:
 | **usSolarIndustry**:<br><br>Summary plots of the US solar industry, including total module deployment and job growth pre and post the 2018 Trump administration tariffs.<br><br>Data: Jobs data from (Solar Foundation)[https://www.bloomberg.com/news/articles/2019-02-12/trump-s-tariffs-took-a-bite-out-of-once-booming-solar-job-market]; modules data from (US EIA)[https://www.eia.gov/renewable/monthly/solar_photo/] | *U.S. Solar Photovoltaic Module Shipments, 2006 - 2018* <img src="./usSolarIndustry/plots/moduleShipments.png" alt="usSolarIndustry" width="400"/> |
 | **worldNuclearAssociation**:<br><br>Barplots of nuclear energy capacity by country.<br><br>Data: Webscraped data from the [World Nuclear Association](http://www.world-nuclear.org/information-library/facts-and-figures/world-nuclear-power-reactors-and-uranium-requireme.aspx) | *New Nuclear Energy Capacity (GW) by Country, 2008 - 2019* <img src="./worldNuclearAssociation/plots/newCapacity.png" alt="newCapacity" width="400"/> |
 
+Finally, the folder `ggxaringan` contains the files used to create [this short screen recording](https://youtu.be/c436_dfk9-E) demonstrating how I use the [xaringan](https://github.com/yihui/xaringan) package to achieve continuous integration while creating and customizing a ggplot2 plot.
+
 # Author and License
 * Author: John Paul Helveston (www.jhelvy.com)
 * License: GPL-3

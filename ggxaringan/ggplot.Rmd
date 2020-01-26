@@ -1,0 +1,28 @@
+---
+title: "Continuous integration of ggplot2 plot"
+author: "John Paul Helveston"
+date: January 25, 2020
+output:
+  xaringan::moon_reader:
+    css: 'default'
+    nature:
+      highlightStyle: github
+      ratio: "16:9"
+    seal: false
+---
+
+class: title-slide, center, middle, inverse
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, fig.height=4, fig.width=6}
+library(tidyverse)
+library(cowplot)
+
+mtcars %>% 
+  ggplot(aes(x = mpg, y = hp, color = as.factor(cyl))) + 
+  geom_point() +
+  theme_half_open() +
+  labs(
+    x = 'Fuel economy (mpg)', 
+    y = 'Power (hp)',
+    color = '# Cylinders')
+```
