@@ -1,7 +1,7 @@
 ---
 title: "Continuous integration of ggplot2 plot"
 author: "John Paul Helveston"
-date: January 25, 2020
+date: January 26, 2020
 output:
   xaringan::moon_reader:
     css: 'default'
@@ -11,18 +11,37 @@ output:
     seal: false
 ---
 
-class: title-slide, center, middle, inverse
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+    warning    = FALSE,
+    message    = FALSE,
+    fig.retina = 3)
+```
 
-```{r echo=FALSE, message=FALSE, warning=FALSE, fig.height=4, fig.width=6}
+class: center, middle, inverse
+
+```{r mtcars_scatterplot, echo=FALSE, fig.height=4, fig.width=6}
 library(tidyverse)
 library(cowplot)
 
 mtcars %>% 
-  ggplot(aes(x = mpg, y = hp, color = as.factor(cyl))) + 
-  geom_point() +
-  theme_half_open() +
+  ggplot(aes(x = mpg, y = hp, color = as.factor(cyl))) +
+  geom_point() + 
+  theme_half_open() + 
   labs(
-    x = 'Fuel economy (mpg)', 
-    y = 'Power (hp)',
-    color = '# Cylinders')
+    x = 'Fuel economy (mpg)',
+    y = 'Engine power (hp)',
+    color = '# Cylinders'
+  )
 ```
+
+---
+class: center, middle, inverse
+
+```{r mtcars_barplot, echo=FALSE, fig.height=4, fig.width=4}
+mtcars %>% 
+  ggplot(aes(x = as.factor(cyl))) +
+  geom_bar(width = 0.7) + 
+  theme_half_open() 
+```
+
