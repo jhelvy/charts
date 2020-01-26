@@ -10,9 +10,21 @@ To reproduce any of these charts, follow these steps:
 3. Open the "charts.Rproj" file, which will open RStudio and set the working directory to the local folder on your computer containing the files in this repository.
 4. Open and run the "makePlots.R" file in any of the folders to produce the plots, which will be saved in the corresponding "plots" folder.
 
+**Note**: Most of these plots require additional libraries - read the top of each "makePlots.R" file to see which ones you should install.
+
+# List of charts
+- [challengerOrings](#challengerOrings)
+
+# challengerOrings
+
+**Description**: Scatterplot of rocket o-ring damage vs. launch temperature for test launches prior to Jan. 28, 1986 Challenger launch. Original figure in [Tufte](https://www.edwardtufte.com/), E.R. 1997. Visual Explanations. Graphics Press, Cheshire, Connecticut, U.S.A.
+
+**Data**: Presidential Commission on the Space Shuttle Challenger Accident, Vol. 1, 1986: 129-131.
+
+<img src="./challengerOrings/plots/challengerOrings.png" alt="Scatterplot of rocket o-ring damage vs. launch temperature" width="500"/>
+
 | Description | Example Plot |
 | :----------- | :------------: |
-| **challengerOrings**:<br><br>Scatterplot of rocket o-ring damage vs. launch temperature for test launches prior to Jan. 28, 1986 Challenger launch. Original figure in Tufte, E. R. 1997. Visual Explanations. Graphics Press, Cheshire, Connecticut, U.S.A.<br><br>Data: Presidential Commission on the Space Shuttle Challenger Accident, Vol. 1, 1986: 129-131. | *Scatterplot of rocket o-ring damage vs. launch temperature* <img src="./challengerOrings/plots/challengerOrings.png" alt="challengerOrings" width="1000"/> |
 | **climateChangeBarcode**:<br><br>"Barcode" plots showing the long term rise in global and US temperatures. Each vertical stripe represents the average temperature of a single year, ordered from the earliest available data to the present. Original figures by [Ed Hawkins](http://www.climate-lab-book.ac.uk/2018/warming-stripes/\#more-5516).<br><br>Data: 1) [NASA (2018) "Goddard Institute for Space Studies (GISS)"](https://climate.nasa.gov/vital-signs/global-temperature/); 2) [NOAA National Centers for Environmental information](http://www.ncdc.noaa.gov/cag/). | *Global temperatures, 1880 - 2018, NASA* <img src="./climateChangeBarcode/plots/nasa_global_preview.png" alt="climateChangeBarcode" width="1000"/> |
 | **electricityEIA**:<br><br>Barplots of energy capacity and generation by country / region using EIA data.<br><br>Data: [U.S. Energy Information Administration (EIA)](https://www.eia.gov/beta/international/data/browser/) | *Installed Wind and Nuclear Power Capacity by Country / Region, 2000 - 2016.* <img src="./electricityEIA/plots/windNuclearCapacityCompare.png" alt="electricityEIA" width="600"/> |
 | **lcetPatenting**:<br><br>Plots of patenting in clean energy technologies by country and over time.<br><br>Data: (2018 U.S. NSF Science & Engineering Indicators)[https://www.nsf.gov/statistics/2018/nsb20181/report/sections/industry-technology-and-the-global-marketplace/global-trends-in-sustainable-energy-research-and-technologies] | *Annual USPTO Patents in Clean Energy Technologies, 2006 - 2016* <img src="./lcetPatenting/plots/patentPlot.png" alt="lcetPatenting" width="600"/> |
