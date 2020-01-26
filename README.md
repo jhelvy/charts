@@ -54,7 +54,7 @@ This folder contains the files used to create [this short screen recording](http
 
 Watch the video here:
 
-[![](http://img.youtube.com/vi/l9yUGFelT5c/0.jpg)](http://www.youtube.com/watch?v=l9yUGFelT5c "ggxaringan"){target = "_blank"}
+<img src="http://img.youtube.com/vi/l9yUGFelT5c/0.jpg" href="http://www.youtube.com/watch?v=l9yUGFelT5c" target="_blank"></img>
 
 ## lcetPatenting
 
