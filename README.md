@@ -97,7 +97,7 @@ Watch the video here:
 
 **Data**: [Status of the Highway Trust Fund, Fiscal Years 1957-2015](https://www.fhwa.dot.gov/policyinformation/statistics/2015/fe210.cfm)
 
-<img src="./usHighwayFund/plots/usHighwayFund.png" alt="Federal highway fund revenues and expenditures in real dollars, 1980 - 2015" width="400"/>
+<img src="./usHighwayFund/plots/usHighwayFund2015.png" alt="Federal highway fund revenues and expenditures in real dollars, 1980 - 2015" width="400"/>
 
 ## usSolarIndustry
 
