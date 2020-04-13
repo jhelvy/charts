@@ -21,6 +21,7 @@ To reproduce any of these charts, follow these steps:
 - [newEnergyInvestment](#newEnergyInvestment)
 - [scienceCommentary2019](#scienceCommentary2019)
 - [solarPvProduction](#solarPvProduction)
+- [usHighwayFund](#usHighwayFund)
 - [usSolarIndustry](#usSolarIndustry)
 - [worldNuclearAssociation](#worldNuclearAssociation)
 
@@ -89,6 +90,14 @@ Watch the video here:
 **Data**: 1995 to 2013: [Earth Policy Institute](http://www.earth-policy.org/data_center/C23); 2014 to 2018: [Jäger-Waldau, A. (2019). Snapshot of Photovoltaics—February 2019. Energies, 12(5), 769](https://www.mdpi.com/1996-1073/12/5/769). Data reverse engineered from Figure 1 using [WebPlotDigitizer](https://automeris.io/WebPlotDigitizer/).
 
 <img src="./solarPvProduction/plots/solarBars.png" alt="Annual Solar Voltaic Cell Production (GW), 2000 - 2018" width="400"/>
+
+## usHighwayFund
+
+**Description**: The chart in my 2017 article: ["Perspective: Navigating an Uncertain Future for US Roads,” Issues in Science and Technology 34, no. 1 (Fall 2017)"](http://issues.org/34-1/perspective-navigating-an-uncertain-future-for-us-roads/). The chart shows federal highway fund revenues and expenditures in real dollars from 1980 to 2015.
+
+**Data**: [Status of the Highway Trust Fund, Fiscal Years 1957-2015](https://www.fhwa.dot.gov/policyinformation/statistics/2015/fe210.cfm)
+
+<img src="./usHighwayFund/plots/usHighwayFund.png" alt="Federal highway fund revenues and expenditures in real dollars, 1980 - 2015" width="400"/>
 
 ## usSolarIndustry
 
