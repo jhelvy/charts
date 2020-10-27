@@ -1,0 +1,11 @@
+Download formatted data here:
+https://docs.google.com/spreadsheets/d/1w2R6Ij8z57nFjFOerpUONPjL9c1pOuI3oFGXfgd4Ctw/edit?usp=sharing
+
+"scotus.csv"
+
+Original source - Wikipedia:
+https://en.wikipedia.org/wiki/List_of_nominations_to_the_Supreme_Court_of_the_United_States
+
+"elections.csv"
+
+Original source - Wikipedia:

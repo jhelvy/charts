@@ -1,0 +1,165 @@
+number,nominee,nomineeAge,justiceToReplace,seat,president,presidentParty,senateControl,dateOfNomination,dateOfResult,result,vote,daysUntilResult
+1,John Jay,43,Inaugural,CJ,Washington,None,PA,9/24/1789,9/26/1789,confirmed,voice,2
+2,John Rutledge,50,Inaugural,1,Washington,None,PA,9/24/1789,9/26/1789,confirmed,voice,2
+3,William Cushing,57,Inaugural,2,Washington,None,PA,9/24/1789,9/26/1789,confirmed,voice,2
+4,Robert H. Harrison,44,Inaugural,5,Washington,None,PA,9/24/1789,9/26/1789,declined,NA,2
+5,James Wilson,47,Inaugural,3,Washington,None,PA,9/24/1789,9/26/1789,confirmed,voice,2
+6,John Blair Jr.,57,Inaugural,4,Washington,None,PA,9/24/1789,9/26/1789,confirmed,voice,2
+7,James Iredell,38,Inaugural,5,Washington,None,PA,2/8/1790,2/10/1790,confirmed,voice,2
+8,Thomas Johnson,57,Rutledge,1,Washington,None,PA,11/1/1791,11/7/1791,confirmed,voice,6
+9,William Paterson,47,Johnson,1,Washington,None,PA,2/27/1793,2/28/1793,withdrawn,NA,1
+10,William Paterson (2),47,Johnson,1,Washington,None,PA,3/4/1793,3/4/1793,confirmed,voice,0
+11,John Rutledge (CJ),56,Jay,CJ,Washington,None,Fed,12/10/1795,12/15/1795,rejected,10–14,5
+12,William Cushing (CJ),63,Rutledge,CJ,Washington,None,Fed,1/26/1796,1/27/1796,declined,NA,1
+13,Samuel Chase,55,Blair,4,Washington,None,Fed,1/26/1796,1/27/1796,confirmed,voice,1
+14,Oliver Ellsworth,51,Rutledge,CJ,Washington,None,Fed,3/3/1796,3/4/1796,confirmed,21–1,1
+15,Bushrod Washington,36,Wilson,3,J. Adams,Fed,Fed,12/19/1798,12/20/1798,confirmed,voice,1
+16,Alfred Moore,44,Iredell,5,J. Adams,Fed,Fed,12/4/1799,12/10/1799,confirmed,voice,6
+17,John Jay (2),55,Ellsworth,CJ,J. Adams,Fed,Fed,12/18/1800,12/19/1800,declined,NA,1
+18,John Marshall,45,Ellsworth,CJ,J. Adams,Fed,Fed,1/20/1801,1/27/1801,confirmed,voice,7
+19,William Johnson,32,Moore,5,Jefferson,D-R,D-R,3/22/1804,3/24/1804,confirmed,voice,2
+20,Henry B. Livingston,49,Paterson,1,Jefferson,D-R,D-R,12/13/1806,12/17/1806,confirmed,voice,4
+21,Thomas Todd,42,Inaugural,6,Jefferson,D-R,D-R,2/28/1807,3/2/1807,confirmed,voice,2
+22,Levi Lincoln Sr.,61,Cushing,2,Madison,D-R,D-R,1/2/1811,1/3/1811,declined,NA,1
+23,Alexander Wolcott,52,Cushing,2,Madison,D-R,D-R,2/4/1811,2/13/1811,rejected,9–24,9
+24,John Quincy Adams,43,Cushing,2,Madison,D-R,D-R,2/21/1811,2/22/1811,declined,NA,1
+25,Joseph Story,32,Cushing,2,Madison,D-R,D-R,11/15/1811,11/18/1811,confirmed,voice,3
+26,Gabriel Duvall,58,Chase,4,Madison,D-R,D-R,11/15/1811,11/18/1811,confirmed,voice,3
+27,Smith Thompson,55,Livingston,1,Monroe,D-R,D-R,12/5/1823,12/9/1823,confirmed,voice,4
+28,Robert Trimble,49,Todd,6,J. Q. Adams,D-R,D-R,4/11/1826,5/9/1826,confirmed,27–5,28
+29,John J. Crittenden,41,Trimble,6,J. Q. Adams,D-R,D-R,12/17/1828,2/12/1829,postponed,23–17,57
+30,John McLean,43,Trimble,6,Jackson,Dem,Dem,3/6/1829,3/7/1829,confirmed,voice,1
+31,Henry Baldwin,49,Washington,3,Jackson,Dem,Dem,1/4/1830,1/6/1830,confirmed,41–2,2
+32,James Moore Wayne,44,Johnson,5,Jackson,Dem,NR,1/6/1835,1/9/1835,confirmed,voice,3
+33,Roger B. Taney,57,Duvall,4,Jackson,Dem,NR,1/15/1835,3/3/1835,postponed,24–21,47
+34,Roger B. Taney (CJ),58,Marshall,CJ,Jackson,Dem,Dem,12/28/1835,3/15/1836,confirmed,29–15,78
+35,Philip P. Barbour,52,Duvall,4,Jackson,Dem,Dem,12/28/1835,3/15/1836,confirmed,30–11,78
+36,John Catron,51,Inaugural,7,Jackson,Dem,Dem,3/3/1837,3/8/1837,confirmed,28–15,5
+37,William Smith,74,Inaugural,8,Jackson,Dem,Dem,3/3/1837,3/8/1837,declined,23–18,5
+38,John McKinley,57,Inaugural,8,Van Buren,Dem,Dem,9/18/1837,9/25/1837,confirmed,voice,7
+39,Peter Vivian Daniel,56,Barbour,4,Van Buren,Dem,Dem,2/26/1841,3/2/1841,confirmed,25–5,4
+40,John C. Spencer,56,Thompson,1,Tyler,None,Whig,1/9/1844,1/31/1844,rejected,21–26,22
+41,Reuben Walworth,55,Thompson,1,Tyler,None,Whig,3/13/1844,6/17/1844,withdrawn,27–20,4
+42,Edward King,50,Baldwin,3,Tyler,None,Whig,6/5/1844,6/15/1844,postponed,29–18,10
+43,John C. Spencer (2),56,Thompson,1,Tyler,None,Whig,6/17/1844,6/17/1844,withdrawn,NA,0
+44,Reuben Walworth (2),55,Thompson,1,Tyler,None,Whig,6/17/1844,6/17/1844,no action,NA,NA
+45,Edward King (2),50,Baldwin,3,Tyler,None,Whig,12/4/1844,2/7/1845,withdrawn,NA,65
+46,Reuben Walworth (3),56,Thompson,1,Tyler,None,Whig,12/4/1844,2/4/1845,withdrawn,NA,62
+47,Samuel Nelson,52,Thompson,1,Tyler,None,Whig,2/4/1845,2/14/1845,confirmed,voice,10
+48,John M. Read,47,Baldwin,3,Tyler,None,Whig,2/7/1845,NA,no action,NA,NA
+49,George Woodward,36,Baldwin,3,Polk,Dem,Dem,12/23/1845,1/22/1846,rejected,20–29,30
+50,Levi Woodbury,56,Story,2,Polk,Dem,Dem,12/23/1845,1/31/1846,confirmed,voice,39
+51,Robert Cooper Grier,52,Baldwin,3,Polk,Dem,Dem,8/3/1846,8/4/1846,confirmed,voice,1
+52,Benjamin R. Curtis,42,Woodbury,2,Fillmore,Whig,Dem,12/11/1851,12/20/1851,confirmed,voice,9
+53,Edward A. Bradford,38,McKinley,8,Fillmore,Whig,Dem,8/16/1852,NA,no action,NA,NA
+54,George E. Badger,57,McKinley,8,Fillmore,Whig,Dem,1/3/1853,2/14/1853,withdrawn,NA,42
+55,William C. Micou,46,McKinley,8,Fillmore,Whig,Dem,2/14/1853,NA,no action,NA,NA
+56,John A. Campbell,41,McKinley,8,Pierce,Dem,Dem,3/21/1853,3/22/1853,confirmed,voice,1
+57,Nathan Clifford,54,Curtis,2,Buchanan,Dem,Dem,12/9/1857,1/12/1858,confirmed,26–23,34
+58,Jeremiah S. Black,51,Daniel,4,Buchanan,Dem,Dem,2/5/1861,2/21/1861,no action,25–26,NA
+59,Noah Haynes Swayne,57,McLean,6,Lincoln,Rep,Rep,1/21/1862,1/24/1862,confirmed,38–1,3
+60,Samuel Freeman Miller,48,Daniel,4,Lincoln,Rep,Rep,7/16/1862,7/16/1862,confirmed,voice,0
+61,David Davis,47,Campbell,8,Lincoln,Rep,Rep,12/1/1862,12/8/1862,confirmed,voice,7
+62,Stephen Johnson Field,46,Inaugural,9,Lincoln,Rep,Rep,3/6/1863,3/10/1863,confirmed,voice,4
+63,Salmon P. Chase,56,Taney,CJ,Lincoln,Rep,Rep,12/6/1864,12/6/1864,confirmed,voice,0
+64,Henry Stanbery,63,Catron,7,A. Johnson,None,Rep,4/16/1866,NA,no action,NA,NA
+65,Ebenezer R. Hoar,53,Inaugural,10,Grant,Rep,Rep,12/14/1869,2/3/1870,rejected,24–33,51
+66,Edwin M. Stanton,54,Grier,3,Grant,Rep,Rep,12/20/1869,12/20/1869,confirmed,46–11,0
+67,William Strong,61,Grier,3,Grant,Rep,Rep,2/7/1870,2/18/1870,confirmed,NA,1
+68,Joseph P. Bradley,56,Inaugural,10,Grant,Rep,Rep,2/7/1870,3/21/1870,confirmed,46–9,42
+69,Ward Hunt,62,Nelson,1,Grant,Rep,Rep,12/3/1872,12/11/1872,confirmed,voice,8
+70,George Henry Williams,50,Chase,CJ,Grant,Rep,Rep,12/1/1873,1/8/1874,withdrawn,NA,38
+71,Caleb Cushing,73,Chase,CJ,Grant,Rep,Rep,1/9/1874,1/13/1874,withdrawn,NA,4
+72,Morrison Waite,58,Chase,CJ,Grant,Rep,Rep,1/19/1874,1/21/1874,confirmed,63–0,2
+73,John Marshall Harlan,44,Davis,8,Hayes,Rep,Rep,10/16/1877,11/29/1877,confirmed,voice,44
+74,William Burnham Woods,56,Strong,3,Hayes,Rep,Dem,12/15/1880,12/21/1880,confirmed,39–8,6
+75,Stanley Matthews,57,Swayne,6,Hayes,Rep,Dem,1/26/1881,NA,no action,NA,NA
+76,Stanley Matthews (2),57,Swayne,6,Garfield,Rep,Split,3/14/1881,5/12/1881,confirmed,24–23,59
+77,Horace Gray,53,Clifford,2,Arthur,Rep,Split,12/19/1881,12/20/1881,confirmed,51–5,1
+78,Roscoe Conkling,52,Hunt,1,Arthur,Rep,Split,2/24/1882,3/2/1882,declined,39–12,6
+79,Samuel Blatchford,62,Hunt,1,Arthur,Rep,Split,3/13/1882,3/22/1882,confirmed,voice,9
+80,Lucius Q.C. Lamar,62,Woods,3,Cleveland,Dem,Rep,12/6/1887,1/16/1888,confirmed,32–28,41
+81,Melville Fuller,55,Waite,CJ,Cleveland,Dem,Rep,4/30/1888,7/20/1888,confirmed,41–20,81
+82,David Josiah Brewer,52,Matthews,6,B. Harrison,Rep,Rep,12/4/1889,12/18/1889,confirmed,53–11,14
+83,Henry Billings Brown,54,Miller,4,B. Harrison,Rep,Rep,12/23/1890,12/29/1890,confirmed,voice,6
+84,"George Shiras, Jr.",60,Bradley,10,B. Harrison,Rep,Rep,7/19/1892,7/26/1892,confirmed,voice,7
+85,Howell E. Jackson,60,Lamar,3,B. Harrison,Rep,Rep,2/2/1893,2/18/1893,confirmed,voice,16
+86,William Hornblower,42,Blatchford,1,Cleveland,Dem,Dem,9/19/1893,NA,rejected,NA,NA
+87,William Hornblower (2),42,Blatchford,1,Cleveland,Dem,Dem,12/5/1893,1/15/1894,rejected,24–30,41
+88,Wheeler H. Peckham,61,Blatchford,1,Cleveland,Dem,Dem,1/22/1894,2/16/1894,rejected,32–41,25
+89,Edward D. White,48,Blatchford,1,Cleveland,Dem,Dem,2/19/1894,2/19/1894,confirmed,voice,0
+90,Rufus W. Peckham,57,Jackson,3,Cleveland,Dem,Rep,12/3/1895,12/9/1895,confirmed,voice,6
+91,Joseph McKenna,54,Field,9,McKinley,Rep,Rep,12/16/1897,1/21/1898,confirmed,voice,36
+92,Oliver W. Holmes Jr.,61,Gray,2,T. Roosevelt,Rep,Rep,12/2/1902,12/4/1902,confirmed,voice,2
+93,William R. Day,53,Shiras,10,T. Roosevelt,Rep,Rep,2/19/1903,2/23/1903,confirmed,voice,4
+94,William Henry Moody,52,Brown,4,T. Roosevelt,Rep,Rep,12/3/1906,12/12/1906,confirmed,voice,9
+95,Horace Harmon Lurton,65,Peckham,3,Taft,Rep,Rep,12/13/1909,12/20/1909,confirmed,voice,7
+96,Charles Evans Hughes,48,Brewer,6,Taft,Rep,Rep,4/25/1910,5/2/1910,confirmed,voice,7
+97,Edward D. White (CJ),65,Fuller,CJ,Taft,Rep,Rep,12/12/1910,12/12/1910,confirmed,voice,0
+98,Willis Van Devanter,51,White,1,Taft,Rep,Rep,12/12/1910,12/15/1910,confirmed,voice,3
+99,Joseph Rucker Lamar,53,Moody,4,Taft,Rep,Rep,12/12/1910,12/15/1910,confirmed,voice,3
+100,Mahlon Pitney,54,Harlan,8,Taft,Rep,Rep,2/19/1912,3/13/1912,confirmed,50–26,23
+101,James C. McReynolds,52,Lurton,3,Wilson,Dem,Dem,8/19/1914,8/29/1914,confirmed,44–6,10
+102,Louis Brandeis,59,Lamar,4,Wilson,Dem,Dem,1/28/1916,6/1/1916,confirmed,47–22,125
+103,John Hessin Clarke,58,Hughes,6,Wilson,Dem,Dem,7/14/1916,7/24/1916,confirmed,voice,10
+104,William Howard Taft,63,White,CJ,Harding,Rep,Rep,6/30/1921,6/30/1921,confirmed,voice,0
+105,George Sutherland,60,Clarke,6,Harding,Rep,Rep,9/5/1922,9/5/1922,confirmed,voice,0
+106,Pierce Butler,56,Day,10,Harding,Rep,Rep,12/5/1922,12/21/1922,confirmed,61–8,16
+107,Edward Terry Sanford,58,Pitney,8,Harding,Rep,Rep,1/24/1923,1/29/1923,confirmed,voice,5
+108,Harlan F. Stone,52,McKenna,9,Coolidge,Rep,Rep,1/5/1925,2/5/1925,confirmed,71–6,31
+109,Charles Evans Hughes (CJ),67,Taft,CJ,Hoover,Rep,Rep,2/3/1930,2/13/1930,confirmed,52–26,10
+110,John J. Parker,44,Sanford,8,Hoover,Rep,Rep,3/21/1930,5/7/1930,rejected,39–41,47
+111,Owen Roberts,55,Sanford,8,Hoover,Rep,Rep,5/9/1930,5/20/1930,confirmed,voice,11
+112,Benjamin N. Cardozo,61,Holmes,2,Hoover,Rep,Rep,2/15/1932,2/24/1932,confirmed,voice,9
+113,Hugo Black,51,Van Devanter,1,F. Roosevelt,Dem,Dem,8/12/1937,8/17/1937,confirmed,63–16,5
+114,Stanley Forman Reed,53,Sutherland,6,F. Roosevelt,Dem,Dem,1/15/1938,1/25/1938,confirmed,voice,10
+115,Felix Frankfurter,56,Cardozo,2,F. Roosevelt,Dem,Dem,1/5/1939,1/17/1939,confirmed,voice,12
+116,William O. Douglas,40,Brandeis,4,F. Roosevelt,Dem,Dem,3/20/1939,4/4/1939,confirmed,62–4,15
+117,Frank Murphy,50,Butler,10,F. Roosevelt,Dem,Dem,1/4/1940,1/16/1940,confirmed,voice,14
+118,Harlan F. Stone (CJ),68,Hughes,CJ,F. Roosevelt,Dem,Dem,6/12/1941,6/27/1941,confirmed,voice,15
+119,James F. Byrnes,58,McReynolds,3,F. Roosevelt,Dem,Dem,6/12/1941,6/12/1941,confirmed,voice,0
+120,Robert H. Jackson,49,Stone,9,F. Roosevelt,Dem,Dem,6/12/1941,7/7/1941,confirmed,voice,25
+121,Wiley Blount Rutledge,48,Byrnes,3,F. Roosevelt,Dem,Dem,1/11/1943,2/8/1943,confirmed,voice,28
+122,Harold Hitz Burton,57,Roberts,8,Truman,Dem,Dem,9/19/1945,9/19/1945,confirmed,voice,0
+123,Fred M. Vinson,56,Stone,CJ,Truman,Dem,Dem,6/6/1946,6/20/1946,confirmed,voice,14
+124,Tom C. Clark,49,Murphy,10,Truman,Dem,Dem,8/2/1949,8/18/1949,confirmed,73–8,16
+125,Sherman Minton,58,Rutledge,3,Truman,Dem,Dem,9/15/1949,10/4/1949,confirmed,48–16,19
+126,Earl Warren,62,Vinson,CJ,Eisenhower,Rep,Rep,1/11/1954,3/1/1954,confirmed,voice,49
+127,John Marshall Harlan II,55,Jackson,9,Eisenhower,Rep,Rep,11/9/1954,NA,no action,NA,NA
+128,John Marshall Harlan II (2),55,Jackson,9,Eisenhower,Rep,Rep,1/10/1955,3/16/1955,confirmed,71–11,65
+129,William J. Brennan Jr.,50,Minton,3,Eisenhower,Rep,Dem,1/14/1957,3/19/1957,confirmed,voice,64
+130,Charles Evans Whittaker,56,Reed,6,Eisenhower,Rep,Dem,3/2/1957,3/19/1957,confirmed,voice,17
+131,Potter Stewart,44,Burton,8,Eisenhower,Rep,Dem,1/17/1959,5/5/1959,confirmed,70–17,108
+132,Byron White,44,Whittaker,6,Kennedy,Dem,Dem,4/3/1962,4/11/1962,confirmed,voice,8
+133,Arthur Goldberg,54,Frankfurter,2,Kennedy,Dem,Dem,8/31/1962,9/25/1962,confirmed,voice,25
+134,Abe Fortas,55,Goldberg,2,L. Johnson,Dem,Dem,7/28/1965,8/11/1965,confirmed,voice,14
+135,Thurgood Marshall,58,Clark,10,L. Johnson,Dem,Dem,6/13/1967,8/30/1967,confirmed,69–11,78
+136,Abe Fortas (CJ),58,Warren,CJ,L. Johnson,Dem,Dem,6/26/1968,10/2/1968,withdrawn,NA,98
+137,Homer Thornberry,59,Fortas,2,L. Johnson,Dem,Dem,6/26/1968,10/2/1968,withdrawn,NA,98
+138,Warren E. Burger,61,Warren,CJ,Nixon,Rep,Dem,5/23/1969,6/9/1969,confirmed,74–3,17
+139,Clement Haynsworth,56,Fortas,2,Nixon,Rep,Dem,8/21/1969,11/21/1969,rejected,45–55,92
+140,G. Harrold Carswell,50,Fortas,2,Nixon,Rep,Dem,1/19/1970,4/8/1970,rejected,45–51,79
+141,Harry Blackmun,61,Fortas,2,Nixon,Rep,Dem,4/15/1970,5/12/1970,confirmed,94–0,27
+142,Lewis F. Powell Jr.,64,Black,1,Nixon,Rep,Dem,10/22/1971,12/6/1971,confirmed,89–1,45
+143,William Rehnquist,47,Harlan,9,Nixon,Rep,Dem,10/22/1971,12/10/1971,confirmed,68–26,49
+144,John Paul Stevens,55,Douglas,4,Ford,Rep,Dem,11/28/1975,12/17/1975,confirmed,98–0,19
+145,Sandra Day O'Connor,51,Stewart,8,Reagan,Rep,Rep,8/19/1981,9/21/1981,confirmed,99–0,33
+146,William Rehnquist (CJ),61,Burger,CJ,Reagan,Rep,Rep,6/20/1986,9/17/1986,confirmed,65–33,89
+147,Antonin Scalia,50,Rehnquist,9,Reagan,Rep,Rep,6/24/1986,9/17/1986,confirmed,98–0,85
+148,Robert Bork,60,Powell,1,Reagan,Rep,Dem,7/1/1987,10/23/1987,rejected,42–58,114
+149,Douglas Ginsburg,41,Powell,1,Reagan,Rep,Dem,10/29/1987,11/7/1987,withdrawn,na,10
+150,Anthony Kennedy,51,Powell,1,Reagan,Rep,Dem,11/30/1987,2/3/1988,confirmed,97–0,65
+151,David Souter,50,Brennan,3,G. H. W. Bush,Rep,Dem,7/25/1990,10/2/1990,confirmed,90–9,69
+152,Clarence Thomas,43,Marshall,10,G. H. W. Bush,Rep,Dem,7/8/1991,10/15/1991,confirmed,52–48,99
+153,Ruth Bader Ginsburg,60,White,6,Clinton,Dem,Dem,6/14/1993,8/3/1993,confirmed,96–3,50
+154,Stephen Breyer,55,Blackmun,2,Clinton,Dem,Dem,5/17/1994,7/29/1994,confirmed,87–9,73
+155,John Roberts,50,O'Connor,8,G. W. Bush,Rep,Rep,7/29/2005,9/6/2005,withdrawn,na,39
+156,John Roberts (CJ),50,Rehnquist,CJ,G. W. Bush,Rep,Rep,9/6/2005,9/29/2005,confirmed,78–22,23
+157,Harriet Miers,60,O'Connor,8,G. W. Bush,Rep,Rep,10/7/2005,10/28/2005,withdrawn,na,21
+158,Samuel Alito,55,O'Connor,8,G. W. Bush,Rep,Rep,11/10/2005,1/31/2006,confirmed,58–42,82
+159,Sonia Sotomayor,54,Souter,3,Obama,Dem,Dem,6/1/2009,8/6/2009,confirmed,68–31,66
+160,Elena Kagan,50,Stevens,4,Obama,Dem,Dem,5/10/2010,8/5/2010,confirmed,63–37,87
+161,Merrick Garland,63,Scalia,9,Obama,Dem,Rep,3/16/2016,1/3/2017,no action,na,293
+162,Neil Gorsuch,49,Scalia,9,Trump,Rep,Rep,2/1/2017,4/7/2017,confirmed,54-45,65
+163,Brett Kavanaugh,53,Kennedy,NA,Trump,Rep,Rep,7/10/2018,10/6/2018,confirmed,50-48,88
+164,Amy Coney Barrett,48,Ginsburg,NA,Trump,Rep,Rep,9/29/2020,10/26/2020,confirmed,52-48,27
