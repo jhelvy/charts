@@ -17,7 +17,7 @@ source(here::here('scotus', 'formatData.R'))
 plotColors <- c("blue", "red", "grey70")
 
 # Create labels and compute metrics for labels
-titleLabel <- "Senate Republicans have taken unprecedented measures to pack the SCOTUS with conservative justices"
+titleLabel <- "Senate Republicans have taken unprecedented measures\nto pack the SCOTUS with conservative justices"
 barrettLabel <- "In 2020, Senate Republicans rushed\nto confirm Judge Amy C. Barrett just\n7 days before the 2020 presidential\nelection, even as more than 60 million\nAmericans had already cast their ballot"
 garlandLabel <- 'In 2016, Senate Republicans\nblocked the confirmation of\nJudge Merrick Garland for a\nrecord-breaking 293 days,\nclaiming it was unprecedented\nto confirm a justice during\nan election year. Senate\nMajority Leader Mitch McConnell\nnotoriously withheld a floor vote\nto "give the people a voice" in\nfilling the vacancy left by the late\nJudge Antonin Scalia'
 elecLineLabel <- "Judges nominated\nduring an election year"
@@ -93,7 +93,7 @@ daysTilResult <- ggplot(scotus) +
     panel_border() +
     labs(y = NULL,
          x = "Days from nomination to result\n",
-         fill = "President\nParty",
+         fill = "President Party:",
          caption = "Data from Wikipedia, List of nominations to SCOTUS\nChart by John Paul Helveston") +
     # Add annotations
     geom_curve(data = data.frame(x = 250, xend = 292, y = 115, yend = 127),
@@ -103,19 +103,29 @@ daysTilResult <- ggplot(scotus) +
     annotate(geom = "label", x = 134, y = 103.5, label = garlandLabel,
              size = 5.5, hjust = 0, family = "Roboto Condensed")
     
-# Create the title
+# Create the title & legend
 title <- ggdraw() +
   draw_label(titleLabel, fontface = "bold", fontfamily = "Roboto Condensed",
              x = 0, hjust = 0, size = 22) + 
   theme(plot.margin = margin(0.3, 0.5, 0.3, 0.5, "cm"))
-
+legend <- get_legend(
+  daysTilResult +
+    guides(color = guide_legend(nrow = 1)) +
+    theme(legend.position = "top",
+          legend.margin = margin(6, 6, 6, 6),
+          legend.justification = "right", 
+          legend.spacing.x = unit(0.1, 'cm'), 
+          legend.title.align = 1))
+      
 # Combine into single chart
 scotus_plot <- plot_grid(daysTilNextElection, daysTilResult,
-                    labels = c('', ''), rel_widths = c(1.4, 1))
-scotus_plot <- plot_grid(title, scotus_plot, ncol = 1,
+                    labels = c('', ''), rel_widths = c(1.35, 1))
+header <- plot_grid(title, legend,
+                    labels = c('', ''), rel_widths = c(1, 1))
+scotus_plot <- plot_grid(header, scotus_plot, ncol = 1,
                          rel_heights = c(0.05, 1))
 
 ggsave(here::here('scotus', 'plots', 'scotus.pdf'),
        scotus_plot, width = 15, height = 20, device = cairo_pdf)
 ggsave(here::here('scotus', 'plots', 'scotus.png'),
-       scotus_plot, width = 15, height = 20)
+       scotus_plot, width = 15, height = 20, dpi = 300, type = "cairo")
