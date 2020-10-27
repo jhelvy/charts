@@ -15,8 +15,8 @@ scotus <- read_csv(here::here('scotus', 'data', 'scotus.csv')) %>%
   filter(! result %in% c("declined", "withdrawn", "postponed")) %>%
   mutate(
     number = row_number(),
-    nominee = ifelse(result == "rejected", paste0(nominee, "*"), nominee),
     nominee = str_to_upper(nominee),
+    nominee = ifelse(result == "rejected", paste0("*", nominee), nominee),
     dateOfNomination = mdy(dateOfNomination),
     dateOfResult = mdy(dateOfResult),
     presidentParty = case_when(

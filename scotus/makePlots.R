@@ -25,7 +25,7 @@ daysTilNextElection <- ggplot(scotus) +
     geom_segment(aes(x = 0 , xend = daysNomTilNextElection,
                      y = nominee, yend = nominee), color = "grey") +
     geom_point(aes(x = daysNomTilNextElection, y = nominee,
-                   color = presidentParty), size = 2.5) +
+                   color = presidentParty), size = 3) +
     scale_x_continuous(expand = expansion(mult = c(0, 0.05)),
                        labels = scales::comma, 
                        position = "top") +
@@ -36,7 +36,7 @@ daysTilNextElection <- ggplot(scotus) +
           plot.caption = element_text(hjust = 0, face = "italic"),
           plot.caption.position =  "plot") +
     panel_border() +
-    labs(x = "Days from nomination to next election",
+    labs(x = "Days from nomination to next election\n",
          y = "Justice nominee",
          caption = "*Nomination rejected") + 
     # Add annotations
@@ -65,7 +65,7 @@ daysTilResult <- ggplot(scotus) +
           plot.caption = element_text(hjust = 1, face = "italic")) +
     panel_border() +
     labs(y = NULL,
-         x = "Days from nomination to result",
+         x = "Days from nomination to result\n",
          color = "President\nParty",
          caption = "Data: Wikipedia, List of nominations to SCOTUS") + 
     # Add annotations
@@ -73,26 +73,20 @@ daysTilResult <- ggplot(scotus) +
       mapping = aes(x = x, y = y, xend = xend, yend = yend),
       angle = 90, curvature = 0.2, arrow = arrow(30, unit(0.1, "inches"),
       "last", "closed"), alpha = 1, inherit.aes = FALSE) + 
-    annotate(geom = "label", x = 121, y = 112, label = garlandLabel, 
+    annotate(geom = "label", x = 130, y = 112, label = garlandLabel, 
              size = 6, hjust = 0, family = "Roboto Condensed")
 
-# Create the titles
-titleLabel <- "Senate Republicans have taken extreme measures\nto pack the SCOTUS with conservative justices"
+# Create the title
+titleLabel <- "Senate Republicans have taken extreme measures to pack the SCOTUS with conservative justices"
 title <- ggdraw() +
   draw_label(titleLabel, fontface = "bold", fontfamily = "Roboto Condensed", 
              x = 0, hjust = 0, size = 20) +
   theme(plot.margin = margin(2, 0, 0, 7))
 
-# Create the legend
-legend <- get_legend(daysTilResult +
-    guides(color = guide_legend(nrow = 1)) +
-    theme(legend.position = "top"))
-
 # Combine into single chart
 scotus_plot <- plot_grid(daysTilNextElection, daysTilResult,
                     labels = c('', ''), rel_widths = c(1.4, 1))
-header <- plot_grid(title, legend, labels = c('', ''), rel_widths = c(2, 1))
-scotus_plot <- plot_grid(header, scotus_plot, ncol = 1, 
+scotus_plot <- plot_grid(title, scotus_plot, ncol = 1, 
                          rel_heights = c(0.05, 1))
 
 ggsave(here::here('scotus', 'plots', 'scotus.pdf'),
