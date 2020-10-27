@@ -42,4 +42,5 @@ scotus <- scotus %>%
   filter(!is.na(daysResTilNextElection)) %>% 
   mutate(
     nominatedInElectionYear = ifelse(
-      year(dateOfNomination) == year(dateNextElection), 1, 0))
+      year(dateOfNomination) == year(dateNextElection), 1, 0)) %>% 
+  arrange(daysNomTilNextElection)

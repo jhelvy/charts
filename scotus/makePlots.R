@@ -17,15 +17,17 @@ source(here::here('scotus', 'formatData.R'))
 plotColors <- c("blue", "red", "grey60")
 
 # Create left chart: Days from nomination to next election
-electionYearThreshold <- scotus %>% 
+barrettLabel <- "In 2020, Senate Republications\nrushed to confirm Judge Amy C.\nBarrett just 7 days before the 2020\npresidential election."
+threshold <- scotus %>% 
   filter(nominatedInElectionYear == 1) %>% 
   filter(daysNomTilNextElection == max(daysNomTilNextElection))
-barrettLabel <- "In 2020, Senate Republications\nrushed to confirm Judge Amy C.\nBarrett just 7 days before the 2020\npresidential election."
+line_y <- nrow(scotus) - which(scotus$nominee == threshold$nominee) + 0.5
 daysTilNextElection <- ggplot(scotus) +
     geom_segment(aes(x = 0 , xend = daysNomTilNextElection,
                      y = nominee, yend = nominee), color = "grey") +
     geom_point(aes(x = daysNomTilNextElection, y = nominee,
                    color = presidentParty), size = 3) +
+    geom_hline(yintercept = line_y, linetype = "dashed") +
     scale_x_continuous(expand = expansion(mult = c(0, 0.05)),
                        labels = scales::comma, 
                        position = "top") +
@@ -33,12 +35,13 @@ daysTilNextElection <- ggplot(scotus) +
     theme_minimal_vgrid(font_size = 20, font_family = 'Roboto Condensed') +
     theme(legend.position = "none",
           axis.text.y = element_text(size = 10, family = "Georgia"),
-          plot.caption = element_text(hjust = 0, face = "italic"),
+          plot.caption = element_text(hjust = 0, face = "italic", size = 12,
+                                      family = "Georgia"),
           plot.caption.position =  "plot") +
     panel_border() +
     labs(x = "Days from nomination to next election\n",
          y = "Justice nominee",
-         caption = "*Nomination rejected") + 
+         caption = "*Nomination rejected\n") + 
     # Add annotations
     geom_curve(data = data.frame(x = 900, xend = 60, y = 125, yend = 134),
       mapping = aes(x = x, y = y, xend = xend, yend = yend),
@@ -54,6 +57,7 @@ daysTilResult <- ggplot(scotus) +
                      y = nominee, yend = nominee), color = "grey") +
     geom_point(aes(x = daysUntilResult, y = nominee,
                    color = presidentParty), size = 2.5) +
+    geom_hline(yintercept = line_y, linetype = "dashed") +
     scale_x_continuous(expand = expansion(mult = c(0, 0.05)),
                        labels = scales::comma,
                        position = "top") +
@@ -62,12 +66,13 @@ daysTilResult <- ggplot(scotus) +
     theme(legend.position = "none",
           axis.text.y = element_blank(),
           axis.ticks.y = element_blank(),
-          plot.caption = element_text(hjust = 1, face = "italic")) +
+          plot.caption = element_text(hjust = 1, face = "italic", size = 12,
+                                      family = "Georgia")) +
     panel_border() +
     labs(y = NULL,
          x = "Days from nomination to result\n",
          color = "President\nParty",
-         caption = "Data: Wikipedia, List of nominations to SCOTUS") + 
+         caption = "Data from Wikipedia, List of nominations to SCOTUS\nChart by John Paul Helveston") + 
     # Add annotations
     geom_curve(data = data.frame(x = 250, xend = 292, y = 120, yend = 127),
       mapping = aes(x = x, y = y, xend = xend, yend = yend),
@@ -77,7 +82,7 @@ daysTilResult <- ggplot(scotus) +
              size = 6, hjust = 0, family = "Roboto Condensed")
 
 # Create the title
-titleLabel <- "Senate Republicans have taken extreme measures to pack the SCOTUS with conservative justices"
+titleLabel <- "Senate Republicans have taken unprecedented measures to pack the SCOTUS with conservative justices"
 title <- ggdraw() +
   draw_label(titleLabel, fontface = "bold", fontfamily = "Roboto Condensed", 
              x = 0, hjust = 0, size = 20) +
