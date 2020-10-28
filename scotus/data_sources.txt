@@ -8,4 +8,5 @@ https://en.wikipedia.org/wiki/List_of_nominations_to_the_Supreme_Court_of_the_Un
 
 "elections.csv"
 
-Original source - Wikipedia:
+Original source - The Green Papers:
+https://www.thegreenpapers.com/Hx/PresidentialElectionEvents.phtml
