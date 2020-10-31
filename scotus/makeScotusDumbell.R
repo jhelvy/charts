@@ -1,5 +1,6 @@
 # Author: John Paul Helveston
-# Date: First written on Friday, October 30, 2020
+# First written on Friday, October 30, 2020
+# Last updated on Friday, October 30, 2020
 #
 # To generate the plots in the "plots" folder, go back and follow the
 # instructions in the "README.md" file in the parent directory.
@@ -17,14 +18,25 @@ source(here::here('scotus', 'formatData.R'))
 plotColors <- c("blue", "red", "grey70")
 
 # Create labels and compute metrics for labels
-titleLabel <- "Senate Republicans have taken unprecedented measures\nto pack the SCOTUS with conservative justices"
-barrettLabel <- "In 2020, Senate Republicans rushed\nto confirm Judge Amy C. Barrett just\n7 days before the 2020 presidential\nelection, even as more than 60 million\nAmericans had already cast their ballot"
-garlandLabel <- 'In 2016, Senate Republicans\nblocked the confirmation of\nJudge Merrick Garland for a\nrecord-breaking 293 days,\nclaiming it was unprecedented\nto confirm a justice during\nan election year. Senate\nMajority Leader Mitch McConnell\nnotoriously withheld a floor vote\nto "give the people a voice" in\nfilling the vacancy left by the late\nJudge Antonin Scalia'
+titleLabel <- "Every SCOTUS Judge Nomination and Confirmation / Rejection"
+subtitleLabel <- "Between 2016 and 2020, Senate Republicans took historically unprecedented and contradictory\nmeasures to confirm conservative justices on the Supreme Court."
+barrettLabel <- "Senate Republicans rushed to confirm\nJudge Amy C. Barrett just 8 days before\nthe 2020 presidential election -- the closet\nconfirmation to an election in U.S. history"
+# barrettLabel <- "Over 60 million Americans had already cast\ntheir ballot when Judge Amy C. Barrett was\nconfirmed -- the closet confirmation to a\npresidential election in U.S. history."
+garlandLabel <- "In 2016, Senate Majority Leader Mitch\nMcConnell (R) notoriously withheld a\nfloor vote for a record-breaking\n293 days to block the confirmation of\nJudge Merrick Garland, claiming it was\nunprecedented to confirm a justice\nduring an election year."
+# garlandLabel <- 'In 2016, Senate Republicans\nblocked the confirmation of\nJudge Merrick Garland for a\nrecord-breaking 293 days,\nclaiming it was unprecedented\nto confirm a justice during\nan election year. Senate\nMajority Leader Mitch McConnell\nnotoriously withheld a floor vote\nto "give the people a voice" in\nfilling the vacancy left by the late\nJudge Antonin Scalia'
 elecLineLabel <- "Judges nominated\nduring an election year"
 threshold <- scotus %>%
   filter(nominatedInElectionYear == 1) %>%
   filter(daysNomTilNextElection == max(daysNomTilNextElection))
 elecLine <- nrow(scotus) - which(scotus$nominee == threshold$nominee) + 0.5
+
+# Create legend data frame
+legend_df <- data.frame(
+  daysNomTilNextElection = rep(600, 3),
+  daysResTilNextElection = rep(300, 3),
+  y = c(35, 30, 25),
+  presidentParty = c("D", "R", "Other")
+)
 
 # Create main chart
 scotus_dumbbell <- ggplot(scotus) +
@@ -56,60 +68,42 @@ scotus_dumbbell <- ggplot(scotus) +
         plot.caption = element_text(hjust = 0, face = "italic", size = 12,
                                     family = "Georgia"),
         plot.caption.position =  "plot",
+        plot.title.position =  "plot",
         plot.margin = margin(0.3, 0.5, 0.3, 0.5, "cm")) +
   panel_border() +
-  labs(x = "Days until next election\n",
+  labs(x = "Days until next presidential election\n",
        y = "Justice nominee",
+       title = titleLabel,
+       subtitle = subtitleLabel,
        caption = "*Nomination rejected\n") +
   # Add barrettLabel annotation
-  geom_curve(data = data.frame(x = 700, xend = 60, y = 115, yend = 134),
-    mapping = aes(x = x, y = y, xend = xend, yend = yend),
-    angle = 90, curvature = 0.5, arrow = arrow(30, unit(0.1, "inches"),
-    "last", "closed"), inherit.aes = FALSE) +
-  annotate(geom = "label", x = 550, y = 112, label = barrettLabel,
+  geom_curve(data = data.frame(x = 500, xend = 60, y = 125, yend = 134),
+             mapping = aes(x = x, y = y, xend = xend, yend = yend),
+             angle = 90, curvature = -0.2, arrow = arrow(30, unit(0.1, "inches"),
+                                                         "last", "closed"), inherit.aes = FALSE) +
+  annotate(geom = "label", x = 970, y = 127, label = barrettLabel,
            size = 5.5, hjust = 0, family = "Roboto Condensed") +
   # Add garlandLabel annotation
-  geom_curve(data = data.frame(x = 250, xend = 292, y = 115, yend = 127),
+  geom_curve(data = data.frame(x = 250, xend = 50, y = 90, yend = 127.5),
              mapping = aes(x = x, y = y, xend = xend, yend = yend),
-             angle = 90, curvature = 0.2, arrow = arrow(30, unit(0.1, "inches"),
-                                                        "last", "closed"), alpha = 1, inherit.aes = FALSE) +
-  annotate(geom = "label", x = 134, y = 103.5, label = garlandLabel,
+             angle = 90, curvature = 0.15, alpha = 1, inherit.aes = FALSE,
+             arrow = arrow(30, unit(0.1, "inches"), "last", "closed")) +
+  annotate(geom = "label", x = 470, y = 93, label = garlandLabel,
            size = 5.5, hjust = 0, family = "Roboto Condensed") +
   # Add elecLine annotation
   annotate(geom = "text", x = 1380, y = elecLine + 2.5, label = elecLineLabel,
            hjust = 0, size = 5, family = "Roboto Condensed") +
   geom_segment(aes(x = 1400, y = elecLine, xend = 1400,
-                   yend = elecLine + 6), arrow = arrow(
-                     length = unit(0.5, "cm")))
-              
+                   yend = elecLine + 6), arrow = arrow(length = unit(0.5, "cm"))) +
+  # Add custom legend
+  annotate(geom = "rect", xmin = 100, xmax = 700, ymin = 20, ymax = 40,
+           fill = "white", color = "black") +
+  geom_segment(data = legend_df,
+               aes(x = daysNomTilNextElection, xend = daysResTilNextElection,
+                   y = y, yend = y, color = presidentParty), size = 1.5)
+
 
 ggsave(here::here('scotus', 'plots', 'scotus_dumbbell.pdf'),
        scotus_dumbbell, width = 13, height = 20, device = cairo_pdf)
-
-
-# # Create the title & legend
-# title <- ggdraw() +
-#   draw_label(titleLabel, fontface = "bold", fontfamily = "Roboto Condensed",
-#              x = 0, hjust = 0, size = 22) + 
-#   theme(plot.margin = margin(0.3, 0.5, 0.3, 0.5, "cm"))
-# legend <- get_legend(
-#   daysTilResult +
-#     guides(color = guide_legend(nrow = 1)) +
-#     theme(legend.position = "top",
-#           legend.margin = margin(6, 6, 6, 6),
-#           legend.justification = "right", 
-#           legend.spacing.x = unit(0.1, 'cm'), 
-#           legend.title.align = 1))
-#       
-# # Combine into single chart
-# scotus_plot <- plot_grid(daysTilNextElection, daysTilResult,
-#                     labels = c('', ''), rel_widths = c(1.35, 1))
-# header <- plot_grid(title, legend,
-#                     labels = c('', ''), rel_widths = c(1, 1))
-# scotus_plot <- plot_grid(header, scotus_plot, ncol = 1,
-#                          rel_heights = c(0.05, 1))
-# 
-# ggsave(here::here('scotus', 'plots', 'scotus.pdf'),
-#        scotus_plot, width = 15, height = 20, device = cairo_pdf)
 # ggsave(here::here('scotus', 'plots', 'scotus.png'),
-#        scotus_plot, width = 15, height = 20, dpi = 300, type = "cairo")
+#        scotus_dumbbell, width = 13, height = 20, dpi = 300, type = "cairo")
