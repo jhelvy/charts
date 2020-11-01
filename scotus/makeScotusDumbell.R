@@ -18,11 +18,11 @@ source(here::here('scotus', 'formatData.R'))
 plotColors <- c("blue", "red", "grey70")
 
 # Create labels and compute metrics for labels
-titleLabel <- "Every SCOTUS Judge Nomination and Confirmation / Rejection"
+titleLabel <- "Nomination and Confirmation / Rejection of Every SCOTUS Justice"
 subtitleLabel <- "Between 2016 and 2020, Senate Republicans took historically unprecedented and contradictory\nmeasures to confirm conservative justices on the Supreme Court."
 barrettLabel <- "Senate Republicans rushed to confirm\nJudge Amy C. Barrett just 8 days before\nthe 2020 presidential election -- the closet\nconfirmation to an election in U.S. history"
 # barrettLabel <- "Over 60 million Americans had already cast\ntheir ballot when Judge Amy C. Barrett was\nconfirmed -- the closet confirmation to a\npresidential election in U.S. history."
-garlandLabel <- "In 2016, Senate Majority Leader Mitch\nMcConnell (R) notoriously withheld a\nfloor vote for a record-breaking\n293 days to block the confirmation of\nJudge Merrick Garland, claiming it was\nunprecedented to confirm a justice\nduring an election year."
+garlandLabel <- "In 2016, Senate Majority Leader\nMitch McConnell (R) blocked the\nconfirmation of Judge Merrick\nGarland by notoriously refusing\nto hold a vote on his nomination\nfor a record-breaking 293 days,\nclaiming it was unprecedented\nto confirm a justice during an\nelection year."
 # garlandLabel <- 'In 2016, Senate Republicans\nblocked the confirmation of\nJudge Merrick Garland for a\nrecord-breaking 293 days,\nclaiming it was unprecedented\nto confirm a justice during\nan election year. Senate\nMajority Leader Mitch McConnell\nnotoriously withheld a floor vote\nto "give the people a voice" in\nfilling the vacancy left by the late\nJudge Antonin Scalia'
 elecLineLabel <- "Judges nominated\nduring an election year"
 threshold <- scotus %>%
@@ -39,7 +39,13 @@ legend_df <- data.frame(
 )
 
 # Create main chart
-scotus_dumbbell <- ggplot(scotus) +
+scotus_dumbbell <- scotus %>%
+  mutate(nominee = case_when(
+    result == "rejected" ~ paste0(nominee, "  *"),
+    result == "no action" ~ paste0(nominee, "  †"),
+    TRUE ~ paste0(nominee, "   ")),
+    nominee = fct_reorder(nominee, -daysNomTilNextElection)) %>%
+  ggplot() +
   geom_blank(aes(x = 0 , xend = daysNomTilNextElection, y = nominee)) +
   geom_hline(yintercept = elecLine) +
   annotate(geom = "rect", xmin = -100, xmax = 1500,
@@ -49,25 +55,25 @@ scotus_dumbbell <- ggplot(scotus) +
                    y = nominee, yend = nominee, color = presidentParty),
                size = 1.5) +
   geom_vline(xintercept = 0) +
-  geom_point(aes(x = daysResTilNextElection, y = nominee,
+  geom_point(aes(x = daysNomTilNextElection, y = nominee,
                  color = presidentParty), fill = "white",
              pch = 21, size = 3.7) +
-  geom_point(aes(x = daysNomTilNextElection, y = nominee,
-                 fill = presidentParty), color = "white",
-             pch = 21, size = 3.7) +
+  geom_point(aes(x = daysResTilNextElection, y = nominee,
+                 color = presidentParty, shape = result),
+             size = 3.7, fill = 'white') +
   scale_x_reverse(labels = scales::comma,
                   position = "top",
                   expand = expansion(mult = c(0, 0)),
                   breaks = seq(1500, 0, -500), limits = c(1500, -100)) +
+  scale_shape_manual(values = c(19, 21, 21)) +
   scale_color_manual(values = plotColors) +
   scale_fill_manual(values = plotColors) +
   theme_minimal_vgrid(font_size = 20, font_family = 'Roboto Condensed') +
   theme(axis.line.y = element_blank(), # Remove y axis line
         legend.position = "none",
         axis.text.y = element_text(size = 10, family = "Georgia"),
-        plot.caption = element_text(hjust = 0, face = "italic", size = 12,
-                                    family = "Georgia"),
         plot.caption.position =  "plot",
+        plot.caption = element_text(hjust = 0, size = 12, family = "Georgia"),
         plot.title.position =  "plot",
         plot.margin = margin(0.3, 0.5, 0.3, 0.5, "cm")) +
   panel_border() +
@@ -75,7 +81,7 @@ scotus_dumbbell <- ggplot(scotus) +
        y = "Justice nominee",
        title = titleLabel,
        subtitle = subtitleLabel,
-       caption = "*Nomination rejected\n") +
+       caption = "*Rejected\n†No action") +
   # Add barrettLabel annotation
   geom_curve(data = data.frame(x = 500, xend = 60, y = 125, yend = 134),
              mapping = aes(x = x, y = y, xend = xend, yend = yend),
@@ -104,6 +110,6 @@ scotus_dumbbell <- ggplot(scotus) +
 
 
 ggsave(here::here('scotus', 'plots', 'scotus_dumbbell.pdf'),
-       scotus_dumbbell, width = 13, height = 20, device = cairo_pdf)
+       scotus_dumbbell, width = 14, height = 20, device = cairo_pdf)
 # ggsave(here::here('scotus', 'plots', 'scotus.png'),
 #        scotus_dumbbell, width = 13, height = 20, dpi = 300, type = "cairo")

@@ -2,6 +2,7 @@
 
 library(tidyverse)
 library(lubridate)
+library(ggtext)
 options(dplyr.width = Inf)
 
 pres_elections <- read_csv(
@@ -16,7 +17,6 @@ scotus <- read_csv(here::here('scotus', 'data', 'scotus.csv')) %>%
   mutate(
     number = row_number(),
     nominee = str_to_upper(nominee),
-    nominee = ifelse(result == "rejected", paste0("*", nominee), nominee),
     dateOfNomination = mdy(dateOfNomination),
     dateOfResult = mdy(dateOfResult),
     presidentParty = case_when(
@@ -37,7 +37,6 @@ scotus <- scotus %>%
   mutate(
     daysNomTilNextElection = as.numeric(dateNextElection - dateOfNomination),
     daysResTilNextElection = as.numeric(dateNextElection - dateOfResult),
-    nominee = fct_reorder(nominee, -daysNomTilNextElection),
     presidentParty = fct_relevel(presidentParty, c("D", "R", "Other"))) %>%
   filter(!is.na(daysResTilNextElection)) %>% 
   mutate(
