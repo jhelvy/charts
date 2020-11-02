@@ -20,10 +20,10 @@ scotus <- read_csv(here::here('scotus', 'data', 'scotus.csv')) %>%
     dateOfNomination = mdy(dateOfNomination),
     dateOfResult = mdy(dateOfResult),
     presidentParty = case_when(
-      presidentParty == "Dem" ~ "D",
-      presidentParty == "Rep" ~ "R",
-      TRUE ~ "Other"
-    ))
+      presidentParty == "Dem" ~ "Democrat",
+      presidentParty == "Rep" ~ "Republican",
+      TRUE ~ "Other")
+    )
 
 # Add presidential election dates to scotus data
 dateNextElection <- c()
