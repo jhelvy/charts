@@ -13,10 +13,21 @@ pres_elections <- read_csv(
 pres_elections <- as.character(pres_elections$date_vote)
 
 scotus <- read_csv(here::here('scotus', 'data', 'scotus.csv')) %>%
-  filter(! result %in% c("declined", "withdrawn", "postponed")) %>%
+  filter(! result %in% c("withdrawn", "postponed")) %>% 
+  # Remove repeated nominations
+  group_by(nominee) %>% 
+  mutate(keep = ifelse(nominationCount == max(nominationCount), 1, 0)) %>% 
+  filter(keep == 1) %>% 
+  ungroup() %>% 
   mutate(
     number = row_number(),
     nominee = str_to_upper(nominee),
+    nominee = case_when(
+      result == "rejected" ~ paste0(nominee, " *"),
+      result == "declined" ~ paste0(nominee, " †"),
+      result == "no action" ~ paste0(nominee, " ‡"),
+      TRUE ~ paste0(nominee, "   ")
+    ),
     dateOfNomination = mdy(dateOfNomination),
     dateOfResult = mdy(dateOfResult),
     presidentParty = case_when(
@@ -37,9 +48,12 @@ scotus <- scotus %>%
   mutate(
     daysNomTilNextElection = as.numeric(dateNextElection - dateOfNomination),
     daysResTilNextElection = as.numeric(dateNextElection - dateOfResult),
-    presidentParty = fct_relevel(presidentParty, c("D", "R", "Other"))) %>%
+    presidentParty = fct_relevel(presidentParty, c(
+      "Democrat", "Republican", "Other"
+    ))) %>% 
   filter(!is.na(daysResTilNextElection)) %>% 
   mutate(
     nominatedInElectionYear = ifelse(
-      year(dateOfNomination) == year(dateNextElection), 1, 0)) %>% 
+      year(dateOfNomination) == year(dateNextElection), 1, 0),
+    nominee = fct_reorder(nominee, -daysNomTilNextElection)) %>% 
   arrange(daysNomTilNextElection)
