@@ -1,0 +1,196 @@
+﻿year,winner,candidate,political_party,electoral_vote,popular_vote
+1789,1,George Washington 4,no formally organized parties,695,
+1789,0,John Adams,,34,
+1789,0,John Jay,,9,
+1789,0,R.H. Harrison,,6,
+1789,0,John Rutledge,,6,
+1789,0,John Hancock,,4,
+1789,0,George Clinton,,3,
+1789,0,Samuel Huntington,,2,
+1789,0,John Milton,,2,
+1789,0,James Armstrong,,1,
+1789,0,Benjamin Lincoln,,1,
+1789,0,Edward Telfair,,1,
+1789,0,not voted,,44,
+1792,1,George Washington ,Federalist,132,
+1792,0,John Adams,Federalist,77,
+1792,0,George Clinton,Democratic-Republican,50,
+1792,0,Thomas Jefferson,,4,
+1792,0,Aaron Burr,,1,
+1796,1,John Adams,Federalist,71,
+1796,0,Thomas Jefferson,Democratic-Republican,68,
+1796,0,Thomas Pinckney,Federalist,59,
+1796,0,Aaron Burr,Antifederalist,30,
+1796,0,Samuel Adams,Democratic-Republican,15,
+1796,0,Oliver Ellsworth,Federalist,11,
+1796,0,George Clinton,Democratic-Republican,7,
+1796,0,John Jay,Independent-Federalist,5,
+1796,0,James Iredell,Federalist,3,
+1796,0,George Washington,Federalist,2,
+1796,0,John Henry,Independent,2,
+1796,0,S. Johnston,Independent-Federalist,2,
+1796,0,Charles Cotesworth Pinckney,Independent-Federalist,1,
+1800,1,Thomas Jefferson,Democratic-Republican,736,
+1800,0,Aaron Burr,Democratic-Republican,736,
+1800,0,John Adams,Federalist,65,
+1800,0,Charles Cotesworth Pinckney,Federalist,64,
+1800,0,John Jay,Federalist,1,
+1804,1,Thomas Jefferson,Democratic-Republican,162,
+1804,0,Charles Cotesworth Pinckney,Federalist,14,
+1808,1,James Madison,Democratic-Republican,122,
+1808,0,Charles Cotesworth Pinckney,Federalist,47,
+1808,0,George Clinton,Independent-Republican,6,
+1808,0,not voted,,1,
+1812,1,James Madison,Democratic-Republican,128,
+1812,0,DeWitt Clinton,Fusion,89,
+1812,0,not voted,,1,
+1816,1,James Monroe,Democratic-Republican,183,
+1816,0,Rufus King,Federalist,34,
+1816,0,not voted,,4,
+1820,1,James Monroe,Democratic-Republican,231,
+1820,0,John Quincy Adams,Independent-Republican,1,
+1820,0,not voted,,3,
+1824,1,John Quincy Adams,no distinct party designations,847,108740
+1824,0,Andrew Jackson,,99,153544
+1824,0,Henry Clay,,37,47531
+1824,0,William H. Crawford,,41,40856
+1828,1,Andrew Jackson,Democratic,178,647286
+1828,0,John Quincy Adams,National Republican,83,508064
+1832,1,Andrew Jackson,Democratic,219,687502
+1832,0,Henry Clay,National Republican,49,530189
+1832,0,William Wirt,Anti-Masonic,7,100715
+1832,0,John Floyd,Nullifiers,11,
+1832,0,not voted,,2,
+1836,1,Martin Van Buren,Democratic,170,762678
+1836,0,William Henry Harrison,Whig,73,550816
+1836,0,Hugh L. White,Whig,26,146107
+1836,0,Daniel Webster,Whig,14,41201
+1836,0,W.P. Mangum,Anti-Jackson,11,
+1840,1,William Henry Harrison,Whig,234,1275016
+1840,0,Martin Van Buren,Democratic,60,1129102
+1844,1,James K. Polk,Democratic,170,1337243
+1844,0,Henry Clay,Whig,105,1299062
+1844,0,James Gillespie Birney,Liberty,,62103
+1848,1,Zachary Taylor,Whig,163,1360099
+1848,0,Lewis Cass,Democratic,127,1220544
+1848,0,Martin Van Buren,Free Soil,,291501
+1852,1,Franklin Pierce,Democratic,254,1601274
+1852,0,Winfield Scott,Whig,42,1386580
+1852,0,John Parker Hale,Free Soil,,155210
+1856,1,James Buchanan,Democratic,174,1838169
+1856,0,John C. Frémont,Republican,114,1341264
+1856,0,Millard Fillmore,American (Know-Nothing),8,873053
+1860,1,Abraham Lincoln,Republican,180,1866452
+1860,0,John C. Breckinridge,Southern Democratic,72,847953
+1860,0,Stephen A. Douglas,Democratic,12,1380202
+1860,0,John Bell,Constitutional Union,39,590901
+1864,1,Abraham Lincoln,Republican,212,2213665
+1864,0,George B. McClellan,Democratic,21,1805237
+1864,0,not voted,,81,
+1868,1,Ulysses S. Grant,Republican,214,3012833
+1868,0,Horatio Seymour,Democratic,80,2703249
+1868,0,not voted,,23,
+1872,1,Ulysses S. Grant,Republican,286,3597132
+1872,0,Horace Greeley 8,Democratic/Liberal Republican,,2834125
+1872,0,Thomas A. Hendricks,Independent-Democratic,42,
+1872,0,B. Gratz Brown,Democratic,18,
+1872,0,Charles J. Jenkins,Democratic,2,
+1872,0,David Davis,Democratic,1,
+1872,0,not voted,,17,
+1876,1,Rutherford B. Hayes,Republican,185,4036298
+1876,0,Samuel J. Tilden,Democratic,184,4300590
+1880,1,James A. Garfield,Republican,214,4454416
+1880,0,Winfield Scott Hancock,Democratic,155,4444952
+1880,0,James B. Weaver,Greenback,,305997
+1884,1,Grover Cleveland,Democratic,219,4874986
+1884,0,James G. Blaine,Republican,182,4851981
+1888,1,Benjamin Harrison,Republican,233,5439853
+1888,0,Grover Cleveland,Democratic,168,5540309
+1888,0,Clinton B. Fisk,Prohibition,,249819
+1892,1,Grover Cleveland,Democratic,277,5556918
+1892,0,Benjamin Harrison,Republican,145,5176108
+1892,0,James B. Weaver,People's (Populist),22,1027329
+1892,0,John Bidwell,Prohibition,,270770
+1896,1,William McKinley,Republican,271,7104779
+1896,0,William Jennings Bryan,Democratic 9,176,6502925
+1900,1,William McKinley,Republican,292,7207923
+1900,0,William Jennings Bryan,Democratic 9,155,6358133
+1904,1,Theodore Roosevelt,Republican,336,7623486
+1904,0,Alton B. Parker,Democratic,140,5077911
+1904,0,Eugene V. Debs,Socialist,,402489
+1908,1,William Howard Taft,Republican,321,7678908
+1908,0,William Jennings Bryan,Democratic,162,6409104
+1908,0,Eugene V. Debs,Socialist,,420380
+1912,1,Woodrow Wilson,Democratic,435,6293454
+1912,0,Theodore Roosevelt,Progressive (Bull Moose),88,4119207
+1912,0,William Howard Taft,Republican,8,3483922
+1912,0,Eugene V. Debs,Socialist,,900369
+1916,1,Woodrow Wilson,Democratic,277,9129606
+1916,0,Charles Evans Hughes,Republican,254,8538221
+1916,0,Allan L. Benson,Socialist,,589924
+1920,1,Warren G. Harding,Republican,404,16147249
+1920,0,James M. Cox,Democratic,127,9140864
+1920,0,Eugene V. Debs,Socialist,,897704
+1924,1,Calvin Coolidge,Republican,382,15725016
+1924,0,John W. Davis,Democratic,136,8386503
+1924,0,Robert M. La Follette,Progressive,13,4822856
+1928,1,Herbert Hoover,Republican,444,21392190
+1928,0,Alfred E. Smith,Democratic,87,15016443
+1932,1,Franklin D. Roosevelt,Democratic,472,22821857
+1932,0,Herbert Hoover,Republican,59,15761841
+1932,0,Norman Thomas,Socialist,,884781
+1936,1,Franklin D. Roosevelt,Democratic,523,27476673
+1936,0,Alfred M. Landon,Republican,8,16679583
+1940,1,Franklin D. Roosevelt,Democratic,449,27243466
+1940,0,Wendell L. Willkie,Republican,82,22304755
+1944,1,Franklin D. Roosevelt,Democratic,432,25602505
+1944,0,Thomas E. Dewey,Republican,99,22006278
+1948,1,Harry S. Truman,Democratic,303,24105695
+1948,0,Thomas E. Dewey,Republican,189,21969170
+1948,0,Strom Thurmond,States' Rights Democratic (Dixiecrat),39,1169021
+1948,0,Henry A. Wallace,Progressive,,1156103
+1952,1,Dwight D. Eisenhower,Republican,442,33778963
+1952,0,Adlai E. Stevenson,Democratic,89,27314992
+1956,1,Dwight D. Eisenhower,Republican,457,35581003
+1956,0,Adlai E. Stevenson,Democratic,73,25738765
+1956,0,Walter Jones,not a candidate,1,
+1960,1,John F. Kennedy,Democratic,303,34227096
+1960,0,Richard M. Nixon,Republican,219,34107646
+1960,0,Harry F. Byrd,not a candidate,15,
+1964,1,Lyndon B. Johnson,Democratic,486,42825463
+1964,0,Barry M. Goldwater,Republican,52,27146969
+1968,1,Richard M. Nixon,Republican,301,31710470
+1968,0,Hubert H. Humphrey,Democratic,191,30898055
+1968,0,George C. Wallace,American Independent,46,9906473
+1972,1,Richard M. Nixon,Republican,520,46740323
+1972,0,George S. McGovern,Democratic,17,28901598
+1972,0,John Hospers,Libertarian,1,3673
+1976,1,Jimmy Carter,Democratic,297,40825839
+1976,0,Gerald R. Ford,Republican,240,39147770
+1976,0,Ronald W. Reagan,not a candidate,1,
+1980,1,Ronald W. Reagan,Republican,489,43642639
+1980,0,Jimmy Carter,Democratic,49,35480948
+1980,0,John B. Anderson,Independent,,5719437
+1984,1,Ronald W. Reagan,Republican,525,54455075
+1984,0,Walter F. Mondale,Democratic,13,37577185
+1988,1,George H.W. Bush,Republican,426,48886097
+1988,0,Michael S. Dukakis,Democratic,111,41809074
+1988,0,Lloyd Bentsen,not a candidate,1,
+1992,1,Bill Clinton,Democratic,370,44909889
+1992,0,George Bush,Republican,168,39104545
+1992,0,Ross Perot,Independent,,19742267
+1996,1,Bill Clinton,Democratic,379,47402357
+1996,0,Bob Dole,Republican,159,39198755
+1996,0,Ross Perot,Reform,,8085402
+2000,1,George W. Bush,Republican,271,50456002
+2000,0,Al Gore,Democratic,26610,50999897
+2000,0,Ralph Nader,Green,,2882955
+2004,1,George W. Bush,Republican,286,62028285
+2004,0,John Kerry,Democratic,251,59028109
+2004,0,John Edwards,not a candidate,1,
+2008,1,Barack Obama,Democratic,365,69456000
+2008,0,John McCain,Republican,173,59934000
+2012,1,Barack Obama,Democratic,332,65446032
+2012,0,Mitt Romney,Republican,206,60589084
+2016,1,Donald Trump,Republican,304,62979636
+2016,0,Hillary Clinton,Democrat,227,65844610
