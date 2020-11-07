@@ -59,15 +59,17 @@ election_margins <- elections %>%
         axis.ticks.y = element_blank(),
         plot.caption.position = "plot",
         plot.caption = element_text(
-            hjust = 0, size = 12, family = "Georgia", face = "italic"
+            hjust = 1, size = 10, family = "Roboto Condensed", face = "italic"
         ),
         plot.title.position = "plot",
         plot.margin = margin(0.3, 0.5, 0.3, 0.5, "cm")
         ) +
     coord_cartesian(clip = "off") +
-    labs(title = "Popular vote margin over opponent in US presidential elections",
-         subtitle = "The Republican party has won four presidential elections while losing the popular vote",
-         fill = "President party")
+    labs(
+        title = "Popular vote margin over opponent in US presidential elections",
+        subtitle = "The Republican party has won four presidential elections while losing the popular vote",
+        caption = "Data from Encyclopaedia Britannica, United States Presidential Election Results\nChart by John Paul Helveston",
+        fill = "President party")
 
 ggsave(here::here("plots", "election_margins.pdf"),
        election_margins, width = 7, height = 10, device = cairo_pdf)
