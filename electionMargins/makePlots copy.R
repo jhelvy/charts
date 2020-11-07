@@ -23,15 +23,9 @@ annColor <- "grey33"
 annFace <- "italic"
 
 # Make the chart 
-election_margins <- elections %>% 
-    mutate(
-        candidateLabel = ifelse(margin > 0, -0.01, 0.01),
-        candidateHjust = ifelse(margin > 0, 1, 0)) %>% 
-    ggplot() +
+election_margins <- ggplot(elections) +
     geom_col(aes(x = margin, y = candidate, fill = political_party)) + 
     geom_vline(xintercept = 0) +
-    geom_text(aes(x = candidateLabel, candidate, label = candidate, 
-                  hjust = candidateHjust)) +
     scale_x_continuous(
         expand = expansion(mult = c(0, 0.05)),
         breaks = seq(-0.15, 0.3, 0.15),
@@ -49,8 +43,7 @@ election_margins <- elections %>%
         legend.margin = margin(6, 6, 6, 6),
         legend.text = element_text(size = 12),
         legend.title = element_text(size = 14),
-        axis.text.y = element_blank(),
-        axis.ticks.y = element_blank(),
+        axis.text.y = element_text(size = 10, family = "Georgia"),
         plot.caption.position = "plot",
         plot.caption = element_text(
             hjust = 0, size = 12, family = "Georgia", face = "italic"
@@ -58,7 +51,7 @@ election_margins <- elections %>%
         plot.title.position = "plot",
         plot.margin = margin(0.3, 0.5, 0.3, 0.5, "cm")
         ) +
-    coord_cartesian(clip = "off") +
+    # panel_border() +
     labs(y = NULL, 
          x = "Popular vote margin over opponent", 
          fill = "President party")
