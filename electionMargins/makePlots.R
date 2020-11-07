@@ -25,23 +25,29 @@ annFace <- "italic"
 # Make the chart 
 election_margins <- elections %>% 
     mutate(
-        candidateLabel = ifelse(margin > 0, -0.01, 0.01),
-        candidateHjust = ifelse(margin > 0, 1, 0)) %>% 
+        candidateLabelPos = ifelse(margin > 0, -0.004, 0.004),
+        candidateLabelHjust = ifelse(margin > 0, 1, 0),
+        marginLabel = scales::percent(margin, accuracy = 0.1),
+        marginLabelHjust = ifelse(margin > 0, 0, 1),
+        marginLablePos = ifelse(margin > 0, margin + 0.005, margin - 0.005)) %>% 
     ggplot() +
     geom_col(aes(x = margin, y = candidate, fill = political_party)) + 
     geom_vline(xintercept = 0) +
-    geom_text(aes(x = candidateLabel, candidate, label = candidate, 
-                  hjust = candidateHjust)) +
+    geom_text(aes(x = candidateLabelPos, y = candidate, label = candidate, 
+                  hjust = candidateLabelHjust), family = "Roboto Condensed") +
+    geom_text(aes(x = marginLablePos, y = candidate, label = marginLabel,
+                  hjust = marginLabelHjust),
+              family = "Roboto Condensed") +
     scale_x_continuous(
         expand = expansion(mult = c(0, 0.05)),
         breaks = seq(-0.15, 0.3, 0.15),
         limits = c(-0.15, 0.3),
         labels = scales::percent) +
     scale_fill_manual(values = plotColors) +
-    theme_minimal_vgrid(font_size = 20, font_family = "Roboto Condensed") +
+    theme_map(font_size = 16, font_family = "Roboto Condensed") +
     theme(
-        axis.line.x = element_blank(), # Remove y axis line
-        legend.position = c(0.65,1), 
+        axis.line = element_blank(), # Remove y axis line
+        legend.position = c(0.77, 0.995), 
         legend.justification = c(0, 1),
         legend.background = element_rect(
             fill = "white", color = "black", size = 0.2
@@ -59,8 +65,8 @@ election_margins <- elections %>%
         plot.margin = margin(0.3, 0.5, 0.3, 0.5, "cm")
         ) +
     coord_cartesian(clip = "off") +
-    labs(y = NULL, 
-         x = "Popular vote margin over opponent", 
+    labs(title = "Popular vote margin over opponent in US presidential elections",
+         subtitle = "The Republican party has won four presidential elections while losing the popular vote",
          fill = "President party")
 
 ggsave(here::here("plots", "election_margins.pdf"),
