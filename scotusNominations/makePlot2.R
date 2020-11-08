@@ -14,7 +14,7 @@ library(cowplot)
 options(dplyr.width = Inf)
 
 # Load data
-source(here::here("scotus", "formatData.R"))
+source(here::here("scotus", "formatData2.R"))
 plotColors <- c("blue", "red", "grey70")
 annFont <- "Roboto Condensed"
 annColor <- "grey33"
