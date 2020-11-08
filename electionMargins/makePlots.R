@@ -66,8 +66,8 @@ election_margins <- elections %>%
         ) +
     coord_cartesian(clip = "off") +
     labs(
-        title = "Popular vote margin over opponent in US presidential elections",
-        subtitle = "The Republican party has won four presidential elections while losing the popular vote",
+        title = "Popular vote margin of elected US presidents",
+        subtitle = "The candidate that lost the popular vote has won the presidency 5 times",
         caption = "Data from Encyclopaedia Britannica, United States Presidential Election Results\nChart by John Paul Helveston",
         fill = "President party")
 
