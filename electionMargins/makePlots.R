@@ -73,3 +73,6 @@ election_margins <- elections %>%
 
 ggsave(here::here("plots", "election_margins.pdf"),
        election_margins, width = 7, height = 10, device = cairo_pdf)
+
+ggsave(here::here("plots", "election_margins.png"),
+       election_margins, width = 7, height = 10)
