@@ -23,7 +23,7 @@ annFace <- "italic"
 # Create labels and compute metrics for labels
 titleLabel <- "Time from Nomination to Result of Every US Supreme Court Justice"
 subtitleLabel <- "Only 15 justice nominations have occured during an election year; during the two most recent (2016 & 2020), Senate Republicans\nused unprecedented measures (with contradicting justifications) to confirm more conservative justices to the court."
-captionLabel <- paste0("*Rejected", str_dup(" ", 221), "Data from Wikipedia, List of nominations to SCOTUS\n", "†Declined", str_dup(" ", 263), "Chart by John Paul Helveston\n", "‡No Action\n", "CJ = Chief Justice")
+captionLabel <- paste0("*Rejected", str_dup(" ", 222), "Data from Wikipedia, List of nominations to SCOTUS\n", "†Declined", str_dup(" ", 263), "Chart by John Paul Helveston\n", "‡No Action\n", "CJ = Chief Justice")
 barrettLabel <- "Senate Republicans rushed to confirm\nJudge Amy C. Barrett just 7 days before\nthe 2020 presidential election -- the closet\nconfirmation to an election in U.S. history.\nOver 60 million Americans had already\nvoted by the day of her confirmation."
 garlandLabel <- 'In 2016, Senate Majority Leader\nMitch McConnell (R) blocked the\nconfirmation of Obama-nominated\nJudge Merrick Garland by refusing\nto hold a confirmation vote for a\nrecord-breaking 293 days to,\n“Let the American people decide”\nwho should fill the seat left by\nthe late Justice Antonin Scalia.'
 inauguralLabel <- "The first five inaugural justices were\nnominated on September 24, 1789\nby President George Washington."
@@ -72,13 +72,12 @@ scotus_nominations <- ggplot(scotus) +
   scale_fill_manual(values = plotColors, guide = FALSE) +
   theme_minimal_vgrid(font_size = 20, font_family = "Fira Sans Condensed") +
   theme(
-    panel.border = element_rect(color = "grey85", fill = NA, size = 1),
     axis.line.y = element_blank(), # Remove y axis line
-    legend.position = c(0.626, 0.044),
+    legend.position = c(0.64, 0.037),
     legend.background = element_rect(
       fill = "white", color = "black", size = 0.2
     ),
-    legend.margin = margin(6, 6, 6, 6),
+    legend.margin = margin(6, 8, 8, 6),
     axis.text.y = element_blank(),
     axis.ticks.y = element_blank(),
     plot.caption.position = "plot",
@@ -109,7 +108,7 @@ scotus_nominations <- ggplot(scotus) +
     ), inherit.aes = FALSE
   ) +
   annotate(
-    geom = "label", x = 993, y = 132, label = barrettLabel,
+    geom = "label", x = 993, y = 133, label = barrettLabel,
     size = 5.5, hjust = 0, family = annFont, color = annColor,
     fontface = annFace
   ) +
@@ -130,13 +129,13 @@ scotus_nominations <- ggplot(scotus) +
     data = data.frame(
       x    = c(1110, 1110, 1075, 1075),
       xend = c(1075, 1075, 1075, 800),
-      y    = c(40.3, 35.5, 35.5, 37.5),
-      yend = c(40.3, 35.5, 40.3, 37.5)
+      y    = c(40.3, 35.5, 35.5, 37.9),
+      yend = c(40.3, 35.5, 40.3, 37.9)
     ),
     aes(x = x, xend = xend, y = y, yend = yend)
   ) +
   annotate(
-    geom = "label", x = 900, y = 37, label = inauguralLabel,
+    geom = "label", x = 900, y = 37.9, label = inauguralLabel,
     size = 5.5, hjust = 0, family = annFont, color = annColor,
     fontface = annFace
   ) +
@@ -154,5 +153,3 @@ ggsave(here::here("plots", "scotus_nominations.pdf"),
   scotus_nominations,
   width = 14, height = 24, device = cairo_pdf
 )
-# ggsave(here::here('plots', 'scotus_nominations.png'),
-#        scotus_nominations, width = 14, height = 20, dpi = 300, type = "cairo")
