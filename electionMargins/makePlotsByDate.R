@@ -25,7 +25,7 @@ annFace <- "italic"
 # Make the chart 
 election_margins <- elections %>% 
     mutate(
-        # candidate = fct_reorder(candidate, -year),
+        candidate = fct_reorder(candidate, -year),
         candidateLabelPos = ifelse(margin > 0, -0.004, 0.004),
         candidateLabelHjust = ifelse(margin > 0, 1, 0),
         marginLabel = scales::percent(margin, accuracy = 0.1),
@@ -72,14 +72,5 @@ election_margins <- elections %>%
         caption = "Data from Encyclopaedia Britannica, United States Presidential Election Results\nChart by John Paul Helveston",
         fill = "President party")
 
-ggsave(here::here("plots", "election_margins.pdf"),
+ggsave(here::here("plots", "election_margins_by_year.pdf"),
        election_margins, width = 7, height = 10, device = cairo_pdf)
-
-ggsave(here::here("plots", "election_margins.png"),
-       election_margins, width = 7, height = 10)
-
-# ggsave(here::here("plots", "election_margins_by_year.pdf"),
-#        election_margins, width = 7, height = 10, device = cairo_pdf)
-# 
-# ggsave(here::here("plots", "election_margins_by_year.png"),
-#        election_margins, width = 7, height = 10)
