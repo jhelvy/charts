@@ -22,19 +22,21 @@ annFont <- "Roboto Condensed"
 annColor <- "grey33"
 annFace <- "italic"
 
-# Make the chart 
-election_margins <- elections %>% 
+# Make the chart
+election_margins <- elections %>%
     mutate(
-        candidate = fct_reorder(candidate, -year),
-        candidateLabelPos = ifelse(margin > 0, -0.004, 0.004),
-        candidateLabelHjust = ifelse(margin > 0, 1, 0),
-        marginLabel = scales::percent(margin, accuracy = 0.1),
-        marginLabelHjust = ifelse(margin > 0, 0, 1),
-        marginLablePos = ifelse(margin > 0, margin + 0.005, margin - 0.005)) %>% 
+        candidate = fct_reorder(candidate, -margin_elec),
+        # candidate = fct_reorder(candidate, -year), # Add this to sort by date
+        candidateLabelPos = ifelse(margin_elec > 0, -0.004, 0.004),
+        candidateLabelHjust = ifelse(margin_elec > 0, 1, 0),
+        marginLabel = scales::percent(margin_elec, accuracy = 0.1),
+        marginLabelHjust = ifelse(margin_elec > 0, 0, 1),
+        marginLablePos = ifelse(margin_elec > 0, margin_elec + 0.005,
+                                margin_elec - 0.005)) %>%
     ggplot() +
-    geom_col(aes(x = margin, y = candidate, fill = political_party)) + 
+    geom_col(aes(x = margin_elec, y = candidate, fill = political_party)) +
     geom_vline(xintercept = 0) +
-    geom_text(aes(x = candidateLabelPos, y = candidate, label = candidate, 
+    geom_text(aes(x = candidateLabelPos, y = candidate, label = candidate,
                   hjust = candidateLabelHjust), family = "Roboto Condensed") +
     geom_text(aes(x = marginLablePos, y = candidate, label = marginLabel,
                   hjust = marginLabelHjust),
@@ -48,7 +50,7 @@ election_margins <- elections %>%
     theme_map(font_size = 16, font_family = "Roboto Condensed") +
     theme(
         axis.line = element_blank(), # Remove y axis line
-        legend.position = c(0.77, 0.995), 
+        legend.position = c(0.77, 0.995),
         legend.justification = c(0, 1),
         legend.background = element_rect(
             fill = "white", color = "black", size = 0.2
@@ -72,5 +74,14 @@ election_margins <- elections %>%
         caption = "Data from Encyclopaedia Britannica, United States Presidential Election Results\nChart by John Paul Helveston",
         fill = "President party")
 
-ggsave(here::here("plots", "election_margins_by_year.pdf"),
+ggsave(here::here("plots", "election_margins_elec.pdf"),
        election_margins, width = 7, height = 10, device = cairo_pdf)
+
+ggsave(here::here("plots", "election_margins_elec.png"),
+       election_margins, width = 7, height = 10)
+
+# ggsave(here::here("plots", "election_margins_elec_by_year.pdf"),
+#        election_margins, width = 7, height = 10, device = cairo_pdf)
+#
+# ggsave(here::here("plots", "election_margins_elec_by_year.png"),
+#        election_margins, width = 7, height = 10)
