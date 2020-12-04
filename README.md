@@ -3,23 +3,11 @@
 
 # charts
 
+by John Paul Helveston
+
+Last updated: December 04 2020
+
 A repo of reproducible charts.
-
-To reproduce any of these charts, follow these steps:
-
-1.  Fork or download all of the files in this repository.
-2.  If you haven’t already, [install R](https://cloud.r-project.org/)
-    and [install
-    RStudio](https://www.rstudio.com/products/rstudio/download/preview/)
-    on your computer.
-3.  Open the “charts.Rproj” file, which will open RStudio and set the
-    working directory to the local folder on your computer containing
-    the files in this repository.
-4.  Open and run the “makePlots.R” file in any of the folders to produce
-    the plots, which will be saved in the corresponding “plots” folder.
-
-**Note**: Most of these plots require additional libraries - read the
-top of each “makePlots.R” file to see which ones you should install.
 
 # List of charts
 
@@ -37,7 +25,7 @@ top of each “makePlots.R” file to see which ones you should install.
   - [usSolarIndustry](#usSolarIndustry)
   - [worldNuclearAssociation](#worldNuclearAssociation)
 
-## challengerOrings
+# challengerOrings
 
 **Description**: Scatterplot of rocket o-ring damage vs. launch
 temperature for test launches prior to Jan. 28, 1986 Challenger launch.
@@ -60,7 +48,7 @@ Scatterplot of rocket o-ring damage vs. launch temperature
 
 </div>
 
-## climateChangeBarcode
+# climateChangeBarcode
 
 **Description**: “Barcode” plots showing the long term rise in global
 and US temperatures. Each vertical stripe represents the average
@@ -85,7 +73,7 @@ Global temperatures, 1880 - 2018, NASA
 
 </div>
 
-## electionMargins
+# electionMargins
 
 **Description**: Bar plots of the popular vote margin by elected U.S.
 Presidents from 1824 to present.
@@ -105,7 +93,7 @@ Bar plots of the popular vote margin by elected U.S. Presidents
 
 </div>
 
-## electricityEIA
+# electricityEIA
 
 **Description**: Barplots of energy capacity and generation by country /
 region using EIA data.
@@ -126,7 +114,7 @@ Installed Wind and Nuclear Power Capacity by Country / Region, 2000 -
 
 </div>
 
-## ggxaringan
+# ggxaringan
 
 This folder contains the files used to create [this short screen
 recording](https://youtu.be/c436_dfk9-E) demonstrating how I use the
@@ -140,7 +128,7 @@ Watch the video here:
 <img alt="ggxaringan" src="http://img.youtube.com/vi/l9yUGFelT5c/0.jpg">
 </a>
 
-## lcetPatenting
+# lcetPatenting
 
 **Description**: Patenting in clean energy technologies by country and
 over time.
@@ -180,7 +168,7 @@ New Investment in Clean Energy ($USD Billion), 2005 - 2018
 
 </div>
 
-## scienceCommentary2019
+# scienceCommentary2019
 
 **Description**: The chart in our [2019 Science Policy Forum
 article](https://science.sciencemag.org/content/366/6467/794) -
@@ -205,7 +193,7 @@ over time
 
 </div>
 
-## scotusNominations
+# scotusNominations
 
 **Description**: Time from Nomination to Result of Every US Supreme
 Court Justice.
@@ -227,7 +215,7 @@ Time from Nomination to Result of Every US Supreme Court Justice
 
 </div>
 
-## solarPvProduction
+# solarPvProduction
 
 **Description**: Bar plot of global annual solar photovoltaic cell
 production by country.
@@ -251,7 +239,7 @@ Annual Solar Voltaic Cell Production (GW), 2000 - 2018
 
 </div>
 
-## usHighwayFund
+# usHighwayFund
 
 **Description**: The chart in my 2017 article: [“Perspective: Navigating
 an Uncertain Future for US Roads,” Issues in Science and Technology 34,
@@ -276,7 +264,7 @@ Federal highway fund revenues and expenditures in real dollars, 1980 -
 
 </div>
 
-## usSolarIndustry
+# usSolarIndustry
 
 **Description**: Summary plots of the US solar industry, including total
 module deployment and job growth pre- and post- the 2018 Trump
@@ -299,7 +287,7 @@ U.S. Solar Photovoltaic Module Shipments, 2006 - 2018
 
 </div>
 
-## worldNuclearAssociation
+# worldNuclearAssociation
 
 **Description**: Barplots of nuclear energy capacity by country.
 
@@ -320,7 +308,7 @@ New Nuclear Energy Capacity (GW) by Country, 2008 - 2019
 
 -----
 
-### License
+# License
 
 ![](https://i.creativecommons.org/l/by-sa/4.0/88x31.png) This work is
 licensed under a [Creative Commons Attribution-ShareAlike 4.0

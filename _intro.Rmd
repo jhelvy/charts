@@ -1,0 +1,18 @@
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  fig.retina = 3,
+  comment = "#>"
+)
+library(fontawesome)
+today <- format(Sys.Date(), format="%B %d %Y")
+```
+
+by John Paul Helveston
+
+Last updated: `r today`
+
+A repo of reproducible charts.
