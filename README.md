@@ -3,11 +3,11 @@
 
 # charts
 
+A repo of reproducible charts.
+
 by John Paul Helveston
 
-Last updated: December 07 2020
-
-A repo of reproducible charts.
+Last updated: December 08 2020
 
 # List of charts
 
