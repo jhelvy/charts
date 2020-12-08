@@ -5,7 +5,7 @@
 
 by John Paul Helveston
 
-Last updated: December 04 2020
+Last updated: December 07 2020
 
 A repo of reproducible charts.
 
@@ -148,7 +148,7 @@ Annual USPTO Patents in Clean Energy Technologies, 2006 - 2016
 
 </div>
 
-## newEnergyInvestment
+# newEnergyInvestment
 
 **Description**: Plots of new clean energy investment by country and
 type.
