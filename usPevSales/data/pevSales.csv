@@ -1,0 +1,283 @@
+type,date,category,sales
+Tesla Model 3,2017-07-01,bev,0.03
+Tesla Model 3,2017-08-01,bev,0.07
+Tesla Model 3,2017-09-01,bev,0.12
+Tesla Model 3,2017-10-01,bev,0.15
+Tesla Model 3,2017-11-01,bev,0.35
+Tesla Model 3,2017-12-01,bev,1.05
+Tesla Model 3,2018-01-01,bev,1.875
+Tesla Model 3,2018-02-01,bev,2.485
+Tesla Model 3,2018-03-01,bev,3.82
+Tesla Model 3,2018-04-01,bev,3.75
+Tesla Model 3,2018-05-01,bev,6
+Tesla Model 3,2018-06-01,bev,5.902
+Tesla Model 3,2018-07-01,bev,14.25
+Tesla Model 3,2018-08-01,bev,17.8
+Tesla Model 3,2018-09-01,bev,22.25
+Tesla Model 3,2018-10-01,bev,17.75
+Tesla Model 3,2018-11-01,bev,18.65
+Tesla Model 3,2018-12-01,bev,25.25
+Tesla Model 3,2019-01-01,bev,6.5
+Tesla Model 3,2019-02-01,bev,5.75
+Tesla Model 3,2019-03-01,bev,10.175
+Tesla Model 3,2019-04-01,bev,10.05
+Tesla Model 3,2019-05-01,bev,13.95
+Tesla Model 3,2019-06-01,bev,21.225
+Tesla Model 3,2019-07-01,bev,12.55
+Tesla Model 3,2019-08-01,bev,12.35
+Tesla Model 3,2019-09-01,bev,19.1
+Tesla Model 3,2019-10-01,bev,15.758333333333335
+Tesla Model 3,2019-11-01,bev,15.758333333333335
+Tesla Model 3,2019-12-01,bev,15.758333333333335
+Tesla Model S & X,2013-01-01,bev,1.3
+Tesla Model S & X,2013-02-01,bev,1.5
+Tesla Model S & X,2013-03-01,bev,1.95
+Tesla Model S & X,2013-04-01,bev,2.1
+Tesla Model S & X,2013-05-01,bev,2
+Tesla Model S & X,2013-06-01,bev,1.8
+Tesla Model S & X,2013-07-01,bev,1.55
+Tesla Model S & X,2013-08-01,bev,1.7
+Tesla Model S & X,2013-09-01,bev,1.1
+Tesla Model S & X,2013-10-01,bev,1.3
+Tesla Model S & X,2013-11-01,bev,1.4
+Tesla Model S & X,2013-12-01,bev,1.7
+Tesla Model S & X,2014-01-01,bev,1.3
+Tesla Model S & X,2014-02-01,bev,1.4
+Tesla Model S & X,2014-03-01,bev,1.3
+Tesla Model S & X,2014-04-01,bev,1.4
+Tesla Model S & X,2014-05-01,bev,1.4
+Tesla Model S & X,2014-06-01,bev,1.4
+Tesla Model S & X,2014-07-01,bev,1.4
+Tesla Model S & X,2014-08-01,bev,1.2
+Tesla Model S & X,2014-09-01,bev,1.3
+Tesla Model S & X,2014-10-01,bev,1.3
+Tesla Model S & X,2014-11-01,bev,1.45
+Tesla Model S & X,2014-12-01,bev,1.9
+Tesla Model S & X,2015-01-01,bev,1.3
+Tesla Model S & X,2015-02-01,bev,1.4
+Tesla Model S & X,2015-03-01,bev,2
+Tesla Model S & X,2015-04-01,bev,1.9
+Tesla Model S & X,2015-05-01,bev,2.3
+Tesla Model S & X,2015-06-01,bev,2.8
+Tesla Model S & X,2015-07-01,bev,1.8
+Tesla Model S & X,2015-08-01,bev,1.6
+Tesla Model S & X,2015-09-01,bev,2.4059999999999997
+Tesla Model S & X,2015-10-01,bev,2.11
+Tesla Model S & X,2015-11-01,bev,3.115
+Tesla Model S & X,2015-12-01,bev,3.379
+Tesla Model S & X,2016-01-01,bev,1.7000000000000002
+Tesla Model S & X,2016-02-01,bev,2.4
+Tesla Model S & X,2016-03-01,bev,4.5
+Tesla Model S & X,2016-04-01,bev,3.2
+Tesla Model S & X,2016-05-01,bev,3.5
+Tesla Model S & X,2016-06-01,bev,4.8
+Tesla Model S & X,2016-07-01,bev,3.9
+Tesla Model S & X,2016-08-01,bev,5.1
+Tesla Model S & X,2016-09-01,bev,6.699999999999999
+Tesla Model S & X,2016-10-01,bev,2.2
+Tesla Model S & X,2016-11-01,bev,3.2
+Tesla Model S & X,2016-12-01,bev,8.6
+Tesla Model S & X,2017-01-01,bev,2.2
+Tesla Model S & X,2017-02-01,bev,2.5
+Tesla Model S & X,2017-03-01,bev,5.6
+Tesla Model S & X,2017-04-01,bev,2.1
+Tesla Model S & X,2017-05-01,bev,3.5
+Tesla Model S & X,2017-06-01,bev,4.300000000000001
+Tesla Model S & X,2017-07-01,bev,2.9
+Tesla Model S & X,2017-08-01,bev,3.8
+Tesla Model S & X,2017-09-01,bev,7.9
+Tesla Model S & X,2017-10-01,bev,2
+Tesla Model S & X,2017-11-01,bev,3.2
+Tesla Model S & X,2017-12-01,bev,8.2
+Tesla Model S & X,2018-01-01,bev,1.5
+Tesla Model S & X,2018-02-01,bev,2.1
+Tesla Model S & X,2018-03-01,bev,6.2
+Tesla Model S & X,2018-04-01,bev,2.275
+Tesla Model S & X,2018-05-01,bev,2.9699999999999998
+Tesla Model S & X,2018-06-01,bev,5.3
+Tesla Model S & X,2018-07-01,bev,2.525
+Tesla Model S & X,2018-08-01,bev,5.375
+Tesla Model S & X,2018-09-01,bev,7.725
+Tesla Model S & X,2018-10-01,bev,2.575
+Tesla Model S & X,2018-11-01,bev,5.95
+Tesla Model S & X,2018-12-01,bev,7.35
+Tesla Model S & X,2019-01-01,bev,1.5
+Tesla Model S & X,2019-02-01,bev,1.525
+Tesla Model S & X,2019-03-01,bev,4.449999999999999
+Tesla Model S & X,2019-04-01,bev,1.875
+Tesla Model S & X,2019-05-01,bev,2.4
+Tesla Model S & X,2019-06-01,bev,4.475
+Tesla Model S & X,2019-07-01,bev,2.2
+Tesla Model S & X,2019-08-01,bev,2.875
+Tesla Model S & X,2019-09-01,bev,2.7750000000000004
+Tesla Model S & X,2019-10-01,bev,3.083333333333333
+Tesla Model S & X,2019-11-01,bev,3.083333333333333
+Tesla Model S & X,2019-12-01,bev,3.083333333333333
+Non-Tesla,2013-01-01,bev,1.022
+Non-Tesla,2013-01-01,phev,2.352
+Non-Tesla,2013-02-01,bev,1.216
+Non-Tesla,2013-02-01,phev,2.7889999999999997
+Non-Tesla,2013-03-01,bev,2.603
+Non-Tesla,2013-03-01,phev,3.079
+Non-Tesla,2013-04-01,bev,2.303
+Non-Tesla,2013-04-01,phev,2.735
+Non-Tesla,2013-05-01,bev,2.545
+Non-Tesla,2013-05-01,phev,3.209
+Non-Tesla,2013-06-01,bev,2.773
+Non-Tesla,2013-06-01,phev,4.169
+Non-Tesla,2013-07-01,bev,2.3930000000000002
+Non-Tesla,2013-07-01,phev,3.499
+Non-Tesla,2013-08-01,bev,3.256
+Non-Tesla,2013-08-01,phev,6.407
+Non-Tesla,2013-09-01,bev,2.5500000000000003
+Non-Tesla,2013-09-01,phev,4.477
+Non-Tesla,2013-10-01,bev,2.5239999999999996
+Non-Tesla,2013-10-01,phev,6.367
+Non-Tesla,2013-11-01,bev,2.5300000000000002
+Non-Tesla,2013-11-01,phev,4.903
+Non-Tesla,2013-12-01,bev,3.07
+Non-Tesla,2013-12-01,phev,5.02
+Non-Tesla,2014-01-01,bev,1.671
+Non-Tesla,2014-01-01,phev,2.934
+Non-Tesla,2014-02-01,bev,1.9240000000000002
+Non-Tesla,2014-02-01,phev,3.721
+Non-Tesla,2014-03-01,bev,3.278
+Non-Tesla,2014-03-01,phev,4.594
+Non-Tesla,2014-04-01,bev,2.787
+Non-Tesla,2014-04-01,phev,4.718
+Non-Tesla,2014-05-01,bev,4.402
+Non-Tesla,2014-05-01,phev,6.651
+Non-Tesla,2014-06-01,bev,3.582
+Non-Tesla,2014-06-01,phev,6.511
+Non-Tesla,2014-07-01,bev,4.293
+Non-Tesla,2014-07-01,phev,5.74
+Non-Tesla,2014-08-01,bev,5.2829999999999995
+Non-Tesla,2014-08-01,phev,5.92
+Non-Tesla,2014-09-01,bev,4.683
+Non-Tesla,2014-09-01,phev,3.3569999999999998
+Non-Tesla,2014-10-01,bev,4.518
+Non-Tesla,2014-10-01,phev,3.7350000000000003
+Non-Tesla,2014-11-01,bev,4.726
+Non-Tesla,2014-11-01,phev,3.609
+Non-Tesla,2014-12-01,bev,5.519
+Non-Tesla,2014-12-01,phev,3.867
+Non-Tesla,2015-01-01,bev,2.677
+Non-Tesla,2015-01-01,phev,2.113
+Non-Tesla,2015-02-01,bev,3.0349999999999997
+Non-Tesla,2015-02-01,phev,2.589
+Non-Tesla,2015-03-01,bev,3.715
+Non-Tesla,2015-03-01,phev,3.02
+Non-Tesla,2015-04-01,bev,4.137
+Non-Tesla,2015-04-01,phev,2.962
+Non-Tesla,2015-05-01,bev,4.757
+Non-Tesla,2015-05-01,phev,4.416
+Non-Tesla,2015-06-01,bev,4.175
+Non-Tesla,2015-06-01,phev,3.4090000000000003
+Non-Tesla,2015-07-01,bev,3.343
+Non-Tesla,2015-07-01,phev,3.836
+Non-Tesla,2015-08-01,bev,3.624
+Non-Tesla,2015-08-01,phev,3.7859999999999996
+Non-Tesla,2015-09-01,bev,4.298
+Non-Tesla,2015-09-01,phev,3.038
+Non-Tesla,2015-10-01,bev,3.63
+Non-Tesla,2015-10-01,phev,4.081
+Non-Tesla,2015-11-01,bev,2.988
+Non-Tesla,2015-11-01,phev,4.141
+Non-Tesla,2015-12-01,bev,4.277
+Non-Tesla,2015-12-01,phev,5.618
+Non-Tesla,2016-01-01,bev,1.8760000000000001
+Non-Tesla,2016-01-01,phev,3.137
+Non-Tesla,2016-02-01,bev,2.024
+Non-Tesla,2016-02-01,phev,3.909
+Non-Tesla,2016-03-01,bev,2.615
+Non-Tesla,2016-03-01,phev,5.29
+Non-Tesla,2016-04-01,bev,3.066
+Non-Tesla,2016-04-01,phev,5.842
+Non-Tesla,2016-05-01,bev,3.026
+Non-Tesla,2016-05-01,phev,5.619
+Non-Tesla,2016-06-01,bev,2.878
+Non-Tesla,2016-06-01,phev,6.094
+Non-Tesla,2016-07-01,bev,3.862
+Non-Tesla,2016-07-01,phev,6.525
+Non-Tesla,2016-08-01,bev,3.501
+Non-Tesla,2016-08-01,phev,6.372
+Non-Tesla,2016-09-01,bev,3.3320000000000003
+Non-Tesla,2016-09-01,phev,6.037
+Non-Tesla,2016-10-01,bev,3.2079999999999997
+Non-Tesla,2016-10-01,phev,5.943
+Non-Tesla,2016-11-01,bev,3.066
+Non-Tesla,2016-11-01,phev,7.8580000000000005
+Non-Tesla,2016-12-01,bev,4.477
+Non-Tesla,2016-12-01,phev,10.211
+Non-Tesla,2017-01-01,bev,3.198
+Non-Tesla,2017-01-01,phev,5.687
+Non-Tesla,2017-02-01,bev,3.3459999999999996
+Non-Tesla,2017-02-01,phev,6.247
+Non-Tesla,2017-03-01,bev,4.566
+Non-Tesla,2017-03-01,phev,7.384
+Non-Tesla,2017-04-01,bev,3.861
+Non-Tesla,2017-04-01,phev,7.095
+Non-Tesla,2017-05-01,bev,4.537
+Non-Tesla,2017-05-01,phev,8.645
+Non-Tesla,2017-06-01,bev,4.514
+Non-Tesla,2017-06-01,phev,7.787
+Non-Tesla,2017-07-01,bev,4.872
+Non-Tesla,2017-07-01,phev,7.407
+Non-Tesla,2017-08-01,bev,4.965
+Non-Tesla,2017-08-01,phev,7.668
+Non-Tesla,2017-09-01,bev,5.401
+Non-Tesla,2017-09-01,phev,7.719
+Non-Tesla,2017-10-01,bev,4.642
+Non-Tesla,2017-10-01,phev,6.665
+Non-Tesla,2017-11-01,bev,4.89
+Non-Tesla,2017-11-01,phev,8.403
+Non-Tesla,2017-12-01,bev,5.709
+Non-Tesla,2017-12-01,phev,10.19
+Non-Tesla,2018-01-01,bev,2.608
+Non-Tesla,2018-01-01,phev,6.026
+Non-Tesla,2018-02-01,bev,3.827
+Non-Tesla,2018-02-01,phev,8.433
+Non-Tesla,2018-03-01,bev,5.253
+Non-Tesla,2018-03-01,phev,11.17
+Non-Tesla,2018-04-01,bev,3.66
+Non-Tesla,2018-04-01,phev,9.938
+Non-Tesla,2018-05-01,bev,3.851
+Non-Tesla,2018-05-01,phev,11.486
+Non-Tesla,2018-06-01,bev,3.653
+Non-Tesla,2018-06-01,phev,10.174
+Non-Tesla,2018-07-01,bev,3.442
+Non-Tesla,2018-07-01,phev,9.381
+Non-Tesla,2018-08-01,bev,3.31
+Non-Tesla,2018-08-01,phev,9.862
+Non-Tesla,2018-09-01,bev,3.921
+Non-Tesla,2018-09-01,phev,10.648
+Non-Tesla,2018-10-01,bev,4.084
+Non-Tesla,2018-10-01,phev,9.665
+Non-Tesla,2018-11-01,bev,5.219
+Non-Tesla,2018-11-01,phev,12.769
+Non-Tesla,2018-12-01,bev,4.361
+Non-Tesla,2018-12-01,phev,12.939
+Non-Tesla,2019-01-01,bev,2.539
+Non-Tesla,2019-01-01,phev,6.176
+Non-Tesla,2019-02-01,bev,2.797
+Non-Tesla,2019-02-01,phev,6.819
+Non-Tesla,2019-03-01,bev,5.004
+Non-Tesla,2019-03-01,phev,8.01
+Non-Tesla,2019-04-01,bev,3.402
+Non-Tesla,2019-04-01,phev,5.928
+Non-Tesla,2019-05-01,bev,4.919
+Non-Tesla,2019-05-01,phev,7.117
+Non-Tesla,2019-06-01,bev,4.9959999999999996
+Non-Tesla,2019-06-01,phev,7.122
+Non-Tesla,2019-07-01,bev,4.008
+Non-Tesla,2019-07-01,phev,7.812
+Non-Tesla,2019-08-01,bev,5.082
+Non-Tesla,2019-08-01,phev,7.358
+Non-Tesla,2019-09-01,bev,5.332
+Non-Tesla,2019-09-01,phev,5.920999999999999
+Non-Tesla,2019-10-01,bev,4.4079999999999995
+Non-Tesla,2019-10-01,phev,7.250333333333334
+Non-Tesla,2019-11-01,bev,5.383
+Non-Tesla,2019-11-01,phev,7.827333333333334
+Non-Tesla,2019-12-01,bev,4.535666666666667
+Non-Tesla,2019-12-01,phev,7.618333333333333

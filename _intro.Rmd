@@ -11,8 +11,6 @@ library(fontawesome)
 today <- format(Sys.Date(), format="%B %d %Y")
 ```
 
-A repo of reproducible charts.
-
-by John Paul Helveston
+A repo of reproducible charts, by [John Paul Helveston](http://jhelvy.com/)
 
 Last updated: `r today`

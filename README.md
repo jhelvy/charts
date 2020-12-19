@@ -3,11 +3,10 @@
 
 # charts
 
-A repo of reproducible charts.
+A repo of reproducible charts, by [John Paul
+Helveston](http://jhelvy.com/)
 
-by John Paul Helveston
-
-Last updated: December 08 2020
+Last updated: December 19 2020
 
 # List of charts
 
@@ -22,6 +21,7 @@ Last updated: December 08 2020
   - [scotusNominations](#scotusNominations)
   - [solarPvProduction](#solarPvProduction)
   - [usHighwayFund](#usHighwayFund)
+  - [usPevSales](#usPevSales)
   - [usSolarIndustry](#usSolarIndustry)
   - [worldNuclearAssociation](#worldNuclearAssociation)
 
@@ -259,6 +259,29 @@ Years 1957-2015](https://www.fhwa.dot.gov/policyinformation/statistics/2015/fe21
 
 Federal highway fund revenues and expenditures in real dollars, 1980 -
 2015
+
+</p>
+
+</div>
+
+# usPevSales
+
+**Description**: The chart in my 2020 article in Issues in Science and
+Technology (Winter 2020). The chart shows monthly sales of plug-in
+electric vehicles in the US from 2014 to 2020.
+
+**Data**: [hybridcars.com
+(’14-’17)](https://www.hybridcars.com/june-2018-hybrid-cars-sales-dashboard/)
+and [insideEVs.com
+(’18-’19)](https://insideevs.com/news/343998/monthly-plug-in-ev-sales-scorecard/)
+
+<div class="figure">
+
+<a href="https://github.com/jhelvy/charts/tree/master/usPevSales" target="_blank"><img src="usPevSales/plots/pevMonthlySales.png" alt="U.S. Monthly Sales of Plug-in Electric Vehicles, 2014 - 2020" width="90%" /></a>
+
+<p class="caption">
+
+U.S. Monthly Sales of Plug-in Electric Vehicles, 2014 - 2020
 
 </p>
 

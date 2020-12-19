@@ -4,6 +4,8 @@ output:
   html_document:
     theme: cosmo
     highlight: textmate
+    toc: true
+    toc_float: true
 ---
 
 ```{r child = '_intro.Rmd'}
