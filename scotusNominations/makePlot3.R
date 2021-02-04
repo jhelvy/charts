@@ -14,7 +14,7 @@ library(cowplot)
 options(dplyr.width = Inf)
 
 # Load data
-source("formatData3.R")
+source("formatData2.R")
 plotColors <- c("blue", "red", "grey70")
 annFont <- "Fira Sans Condensed"
 annColor <- "grey33"
@@ -149,7 +149,7 @@ scotus_nominations <- ggplot(scotus) +
     yend = elecLine + 6
   ), color = annColor, arrow = arrow(length = unit(0.5, "cm")))
 
-ggsave(here::here("plots", "scotus_nominations.pdf"),
-  scotus_nominations,
-  width = 14, height = 24, device = cairo_pdf
-)
+ggsave(here::here("plots", "scotus_nominations_3.pdf"),
+  scotus_nominations, width = 14, height = 24, device = cairo_pdf)
+ggsave(here::here("plots", "scotus_nominations_3.png"),
+  scotus_nominations, width = 14, height = 24, dpi = 300)

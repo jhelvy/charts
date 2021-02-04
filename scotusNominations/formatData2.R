@@ -21,13 +21,12 @@ scotus <- read_csv(here::here('data', 'scotus.csv')) %>%
   ungroup() %>%
   mutate(
     number = row_number(),
-    nominee = str_to_upper(nominee),
+    # nominee = str_to_upper(nominee),
     nominee = case_when(
-      result == "rejected" ~ paste0(nominee, " *"),
-      result == "declined" ~ paste0(nominee, " †"),
-      result == "no action" ~ paste0(nominee, " ‡"),
-      TRUE ~ paste0(nominee, "   ")
-    ),
+      result == "rejected" ~ paste0("*", nominee),
+      result == "declined" ~ paste0("†", nominee),
+      result == "no action" ~ paste0("‡", nominee),
+      TRUE ~ nominee),
     dateOfNomination = mdy(dateOfNomination),
     dateOfResult = mdy(dateOfResult),
     presidentParty = case_when(

@@ -13,7 +13,7 @@ library(cowplot)
 options(dplyr.width = Inf)
 
 # Load data
-source(here::here('scotus', 'formatData.R'))
+source('formatData1.R')
 plotColors <- c("blue", "red", "grey70")
 
 # Create labels and compute metrics for labels
@@ -122,10 +122,10 @@ scotus_plot <- plot_grid(daysTilNextElection, daysTilResult,
                     labels = c('', ''), rel_widths = c(1.35, 1))
 header <- plot_grid(title, legend,
                     labels = c('', ''), rel_widths = c(1, 1))
-scotus_plot <- plot_grid(header, scotus_plot, ncol = 1,
+scotus_nominations <- plot_grid(header, scotus_plot, ncol = 1,
                          rel_heights = c(0.05, 1))
 
-ggsave(here::here('scotus', 'plots', 'scotus.pdf'),
-       scotus_plot, width = 15, height = 20, device = cairo_pdf)
-ggsave(here::here('scotus', 'plots', 'scotus.png'),
-       scotus_plot, width = 15, height = 20, dpi = 300, type = "cairo")
+ggsave(here::here("plots", "scotus_nominations_1.pdf"),
+  scotus_nominations, width = 15, height = 20, device = cairo_pdf)
+ggsave(here::here("plots", "scotus_nominations_1.png"),
+  scotus_nominations, width = 15, height = 20, dpi = 300)
