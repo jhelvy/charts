@@ -18,7 +18,7 @@ library(ggrepel)
 plotColors <- c("grey70", "#e3394a", "#399ee3")
 
 # Read in and format data
-dfPath <- here::here('solarPvProduction', 'data', 'formattedData.csv')
+dfPath <- here::here('data', 'formattedData.csv')
 solarDf <- read_csv(dfPath) %>% 
     mutate(Country = if_else(Country == "ROW", "Rest of World", Country))
 
@@ -66,14 +66,14 @@ solarLines <- ggplot(solarDf %>% filter(Year > 2000),
          fill  = 'Country')
 
 # Save using laptop screen aspect ratio (2560 X 1600)
-ggsave(here('solarPvProduction', 'plots', 'solarBars.pdf'),
+ggsave(here('plots', 'solarBars.pdf'),
        solarBars, width=8, height=5, dpi=150)
-ggsave(here('solarPvProduction', 'plots', 'solarLines.pdf'),
+ggsave(here('plots', 'solarLines.pdf'),
        solarLines, width=8, height=5, dpi=150)
 
-ggsave(here('solarPvProduction', 'plots', 'solarBars.png'),
+ggsave(here('plots', 'solarBars.png'),
        solarBars, width=8, height=5, dpi=150)
-ggsave(here('solarPvProduction', 'plots', 'solarLines.png'),
+ggsave(here('plots', 'solarLines.png'),
        solarLines, width=8, height=5, dpi=150)
 
 # Summary of China's production: Since joining the WTO in 2001,

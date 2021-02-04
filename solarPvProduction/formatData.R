@@ -15,7 +15,7 @@ library(readxl)
 
 # Read in and format 1995 to 2013 data
 solar95_13 <- read_excel(
-    here::here('solarPvProduction', 'data', 'book_tgt_solar_9.xlsx'),
+    here::here('data', 'book_tgt_solar_9.xlsx'),
     sheet = 'Cell Prod by Country', skip = 2)
 
 # Drop first two (blank) rows,
@@ -38,13 +38,13 @@ solar95_13 <- solar95_13[-c(1:2), ] %>%
 
 # Read in and format 2013 to 2018 data (Production in GW)
 total <- read.csv(
-    here::here('solarPvProduction', 'data', 'productionTotal.csv'), header=F)$V2
+    here::here('data', 'productionTotal.csv'), header=F)$V2
 china <- read.csv(
-    here::here('solarPvProduction', 'data', 'productionChina.csv'), header=F)$V2
+    here::here('data', 'productionChina.csv'), header=F)$V2
 us0 <- read.csv(
-    here::here('solarPvProduction', 'data', 'productionUS0.csv'), header=F)$V2
+    here::here('data', 'productionUS0.csv'), header=F)$V2
 us1 <- read.csv(
-    here::here('solarPvProduction', 'data', 'productionUS1.csv'), header=F)$V2
+    here::here('data', 'productionUS1.csv'), header=F)$V2
 solar05_18 <- tibble(
     Year            = c(2005, 2008, seq(2010, 2018)),
     China           = china,
@@ -59,4 +59,4 @@ solarDf <- rbind(solar95_13, filter(solar05_18, Year > 2013)) %>%
     arrange(Year, Country)
 
 # Export formatted data to "data" folder:
-write_csv(solarDf, here::here('solarPvProduction', 'data', 'formattedData.csv'))
+write_csv(solarDf, here::here('data', 'formattedData.csv'))
