@@ -184,7 +184,7 @@ Papers](https://www.thegreenpapers.com/Hx/PresidentialElectionEvents.phtml)
 
 <div class="figure">
 
-<a href="https://github.com/jhelvy/charts/tree/master/scotusNominations" target="_blank"><img src="scotusNominations/plots/scotus_nominations_4.png" alt="Time from Nomination to Result of Every US Supreme Court Justice" width="85%" /></a>
+<a href="https://github.com/jhelvy/charts/tree/master/scotusNominations" target="_blank"><img src="scotusNominations/plots/scotus_nominations_5.png" alt="Time from Nomination to Result of Every US Supreme Court Justice" width="85%" /></a>
 <p class="caption">
 Time from Nomination to Result of Every US Supreme Court Justice
 </p>

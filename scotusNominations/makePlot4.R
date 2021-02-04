@@ -6,7 +6,7 @@
 # instructions in the "README.md" file in the parent directory.
 #
 # Description:
-# Dumbbell chart of SCOTUS nominees
+# Point plot of days until nomination result
 
 set.seed(42)
 library(tidyverse)

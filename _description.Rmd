@@ -86,7 +86,7 @@ knitr::include_graphics("scienceCommentary2019/plots/figure1.png")
 **Data**: [Wikipedia](https://en.wikipedia.org/wiki/List_of_nominations_to_the_Supreme_Court_of_the_United_States) [The Green Papers](https://www.thegreenpapers.com/Hx/PresidentialElectionEvents.phtml)
 
 ```{r echo = FALSE, out.width = "85%", fig.link="https://github.com/jhelvy/charts/tree/master/scotusNominations", fig.cap="Time from Nomination to Result of Every US Supreme Court Justice"}
-knitr::include_graphics("scotusNominations/plots/scotus_nominations_4.png")
+knitr::include_graphics("scotusNominations/plots/scotus_nominations_5.png")
 ```
 
 # solarPvProduction
