@@ -13,76 +13,43 @@
 library(tidyverse)
 library(cowplot)
 library(here)
-library(ggrepel)
+library(jhelvyr)
 
-plotColors <- c("grey70", "#e3394a", "#399ee3")
+plotColors <- jColors(
+    palette = "redToGray", 
+    colors = rev(c("red", "green", "purple", "yellow", "green", "blue", "gray")))
 
 # Read in and format data
-dfPath <- here::here('data', 'formattedData.csv')
-solarDf <- read_csv(dfPath) %>% 
-    mutate(Country = if_else(Country == "ROW", "Rest of World", Country))
-
-# Reorder factors for plotting
-solarDf$Country <- factor(solarDf$Country,
-                          c('Rest of World', 'China', 'United States'))
+df <- read_csv(here::here('data', 'formattedData.csv')) %>% 
+    mutate(
+        country = str_to_title(country), 
+        country = ifelse(country == "Row", "ROW", country), 
+        country = ifelse(country == "Us", "USA", country), 
+        country = fct_relevel(country, rev(c(
+            "China", "Taiwan", "Malaysia", "Japan", "Europe", "USA", "ROW"))),
+        year = as.factor(year))
 
 # Make the bar plot
-solarBars <- ggplot(solarDf %>% filter(Year > 2000),
-    aes(x = Year, y = Production)) +
-    geom_bar(aes(fill = Country), position = 'stack', stat = 'identity') +
-    scale_x_continuous(limits = c(1999, 2019),
-                       breaks = c(seq(2000, 2015, 5), 2018)) +
-    scale_y_continuous(limits = c(0, 120), breaks=seq(0, 120, 30)) +
+solarBars <- 
+    ggplot(df,
+    aes(x = year, y = production_gw)) +
+    geom_col(aes(fill = country), width = 0.7, alpha = 0.9) +
+    scale_y_continuous(
+        limits = c(0, 140), breaks=seq(0, 140, 20), 
+        expand = expansion(mult = c(0, 0.05))) +
     scale_fill_manual(values = plotColors) +
-    theme_cowplot() +
-    background_grid(major = "y", minor = "none") +
+    theme_minimal_hgrid(font_family = "Fira Sans Condensed", font_size = 16) +
+    theme(
+        legend.position = c(0.01, 0.7),
+        legend.background = element_rect(
+            fill = "white", color = "black", size = 0.2),
+        legend.margin = margin(6, 8, 8, 6)) +
     labs(x = 'Year',
          y = 'Annual Cell Production (GW)',
          title = 'Annual Solar Voltaic Cell Production (GW)',
          fill  = 'Country')
 
-# Make the line plot
-solarLines <- ggplot(solarDf %>% filter(Year > 2000),
-                    aes(x = Year, y = Production, color = Country)) +
-    geom_line(size = 0.8) +
-    geom_point() +
-    geom_text_repel(aes(label = Country, color = Country),
-        data          = subset(solarDf, Year == max(Year)),
-        size          = 5,
-        hjust         = 0,
-        nudge_x       = 0.5,
-        nudge_y       = 2,
-        segment.color = NA) +
-    scale_x_continuous(limits = c(2000, 2022),
-                       breaks = c(seq(2000, 2015, 5), 2018)) +
-    scale_y_continuous(limits = c(0, 90), breaks=seq(0, 90, 30)) +
-    scale_color_manual(values = plotColors) +
-    theme_cowplot() +
-    background_grid(major = "y", minor = "none") +
-    theme(legend.position = 'none') +
-    labs(x = 'Year',
-         y = 'Annual Cell Production (GW)',
-         title = 'Annual Solar Voltaic Cell Production (GW)',
-         fill  = 'Country')
-
-# Save using laptop screen aspect ratio (2560 X 1600)
-ggsave(here('plots', 'solarBars.pdf'),
-       solarBars, width=8, height=5, dpi=150)
-ggsave(here('plots', 'solarLines.pdf'),
-       solarLines, width=8, height=5, dpi=150)
-
-ggsave(here('plots', 'solarBars.png'),
-       solarBars, width=8, height=5, dpi=150)
-ggsave(here('plots', 'solarLines.png'),
-       solarLines, width=8, height=5, dpi=150)
-
-# Summary of China's production: Since joining the WTO in 2001,
-# China went from producing 1% to 40% of the world’s solar panels
-solarDf %>%
-    spread(Country, Production) %>%
-    mutate(
-        world = China + `Rest of World` + `United States`,
-        chinaPercent = 100*(China / world)
-    ) %>%
-    select(Year, chinaPercent) %>%
-    as.data.frame()
+ggsave(here::here("plots", "solarBars.pdf"),
+  solarBars, width = 8, height = 6, device = cairo_pdf)
+ggsave(here::here("plots", "solarBars.png"),
+  solarBars, width = 8, height = 6, dpi = 300)
