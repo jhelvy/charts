@@ -17,7 +17,7 @@ library(jhelvyr)
 
 plotColors <- jColors(
     palette = "redToGray", 
-    colors = rev(c("red", "green", "purple", "yellow", "green", "blue", "gray")))
+    colors = rev(c("red", "green", "purple", "yellow", "orange", "blue", "gray")))
 
 # Read in and format data
 df <- read_csv(here::here('data', 'formattedData.csv')) %>% 
@@ -28,6 +28,10 @@ df <- read_csv(here::here('data', 'formattedData.csv')) %>%
         country = fct_relevel(country, rev(c(
             "China", "Taiwan", "Malaysia", "Japan", "Europe", "USA", "ROW"))),
         year = as.factor(year))
+
+captionLabel <- paste0(
+  "Data from Jäger-Waldau, A. (2020) https://doi.org/10.3390/en13040930\n",
+  "Chart CC-BY-SA 4.0 John Paul Helveston")
 
 # Make the bar plot
 solarBars <- 
@@ -43,11 +47,17 @@ solarBars <-
         legend.position = c(0.01, 0.7),
         legend.background = element_rect(
             fill = "white", color = "black", size = 0.2),
-        legend.margin = margin(6, 8, 8, 6)) +
-    labs(x = 'Year',
+        legend.margin = margin(6, 8, 8, 6), 
+        plot.caption = element_text(
+            hjust = 0, size = 12, family = "Fira Sans Condensed", 
+            face = "italic"),
+        plot.caption.position = "plot",
+        plot.title.position = "plot") +
+    labs(x = NULL,
          y = 'Annual Cell Production (GW)',
          title = 'Annual Solar Voltaic Cell Production (GW)',
-         fill  = 'Country')
+         fill  = 'Country', 
+         caption = captionLabel)
 
 ggsave(here::here("plots", "solarBars.pdf"),
   solarBars, width = 8, height = 6, device = cairo_pdf)
