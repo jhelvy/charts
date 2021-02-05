@@ -31,7 +31,7 @@ subtitleLabel <- "Only 15 justice nominations have occured during an election ye
 captionLabel <- paste0(
   "Data from Wikipedia, List of nominations to SCOTUS\n", 
   "Chart CC-BY-SA 4.0 John Paul Helveston")
-barrettLabel <- "Senate Republicans rushed to confirm Judge Amy C. Barrett just **7 days** before the 2020 presidential election - the closet confirmation to an election in U.S. history."
+barrettLabel <- "Senate Republicans rushed to confirm Judge Amy C. Barrett just **7 days** before the 2020 presidential election - the closest confirmation to an election in U.S. history."
 garlandLabel <- "In 2016, Senate Majority Leader Mitch McConnell (R) blocked the confirmation of Obama-nominated Judge Merrick Garland by refusing to hold a confirmation vote for a record-breaking **293 days** to “Let the American people decide” who should fill the seat left by the late Justice Antonin Scalia."
 
 # Create main chart

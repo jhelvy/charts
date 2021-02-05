@@ -24,7 +24,7 @@ annFace <- "italic"
 titleLabel <- "Time from Nomination to Result of Every US Supreme Court Justice"
 subtitleLabel <- "Only 15 justice nominations have occured during an election year; during the two most recent (2016 & 2020), Senate Republicans\nused unprecedented measures (with contradicting justifications) to confirm more conservative justices to the court."
 captionLabel <- paste0("*Rejected", str_dup(" ", 222), "Data from Wikipedia, List of nominations to SCOTUS\n", "†Declined", str_dup(" ", 263), "Chart by John Paul Helveston\n", "‡No Action\n", "CJ = Chief Justice")
-barrettLabel <- "Senate Republicans rushed to confirm\nJudge Amy C. Barrett just 7 days before\nthe 2020 presidential election -- the closet\nconfirmation to an election in U.S. history.\nOver 60 million Americans had already\nvoted by the day of her confirmation."
+barrettLabel <- "Senate Republicans rushed to confirm\nJudge Amy C. Barrett just 7 days before\nthe 2020 presidential election -- the closest\nconfirmation to an election in U.S. history.\nOver 60 million Americans had already\nvoted by the day of her confirmation."
 garlandLabel <- 'In 2016, Senate Majority Leader\nMitch McConnell (R) blocked the\nconfirmation of Obama-nominated\nJudge Merrick Garland by refusing\nto hold a confirmation vote for a\nrecord-breaking 293 days to,\n“Let the American people decide”\nwho should fill the seat left by\nthe late Justice Antonin Scalia.'
 inauguralLabel <- "The first five inaugural justices were\nnominated on September 24, 1789\nby President George Washington."
 # Election year line & label
