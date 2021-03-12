@@ -1,3 +1,7 @@
+This chart was published in this article:
+
+Helveston, John P. “Why the US Trails the World in Electric Vehicles,” Issues in Science and Technology 37, no. 2 (Winter 2021).
+https://issues.org/china-norway-ev-tesla/
 
 "pevSales.csv":
     Monthly PEV sales by make and model. Original data scraped from:

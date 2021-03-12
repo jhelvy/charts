@@ -6,7 +6,7 @@
 A repo of reproducible charts, by [John Paul
 Helveston](http://jhelvy.com/)
 
-Last updated: February 04 2021
+Last updated: March 12 2021
 
 # List of charts
 
@@ -236,9 +236,10 @@ Federal highway fund revenues and expenditures in real dollars, 1980 -
 
 # usPevSales
 
-**Description**: The chart in my 2020 article in Issues in Science and
-Technology (Winter 2020). The chart shows monthly sales of plug-in
-electric vehicles in the US from 2014 to 2020.
+**Description**: The chart in my 2021 article in *Issues in Science and
+Technology* titled, [“Why the US Trails the World in Electric
+Vehicles”](https://issues.org/china-norway-ev-tesla/). The chart shows
+monthly sales of plug-in electric vehicles in the US from 2014 to 2020.
 
 **Data**: [hybridcars.com
 (’14-’17)](https://www.hybridcars.com/june-2018-hybrid-cars-sales-dashboard/)
