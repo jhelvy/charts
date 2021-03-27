@@ -36,7 +36,7 @@ bars <- df %>%
     expand = expansion(mult = c(0, 0.05))) +
   scale_fill_manual(values = plotColors) +
   theme_minimal_hgrid(
-    font_size = 16, 
+    font_size = 12, 
     font_family = "Fira Sans Condensed") + 
   labs(
     x = "Date", 
