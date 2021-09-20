@@ -11,7 +11,15 @@ output:
 ```{r child = '_intro.Rmd'}
 ```
 
-[View source `r fontawesome::fa("github", height = "15", fill = "#2780e3")`](https://github.com/jhelvy/charts)
+[View source `r fontawesome::fa("github", height = "15px", fill = "#2780e3")`](https://github.com/jhelvy/charts)
 
 ```{r child = '_description.Rmd'}
 ```
+
+-----
+
+# Author and License Information
+
+- Author: *John Paul Helveston* https://www.jhelvy.com/
+- This work is licensed under a
+[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).

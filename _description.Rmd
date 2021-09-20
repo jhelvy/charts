@@ -138,9 +138,3 @@ knitr::include_graphics("usSolarIndustry/plots/moduleShipments.png")
 ```{r echo = FALSE, out.width = "60%", fig.link="https://github.com/jhelvy/charts/tree/master/worldNuclearAssociation", fig.cap="New Nuclear Energy Capacity (GW) by Country, 2008 - 2019"}
 knitr::include_graphics("worldNuclearAssociation/plots/newCapacity.png")
 ```
-
------
-
-# License
-
-![](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)  This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
