@@ -78,7 +78,7 @@ information](http://www.ncdc.noaa.gov/cag/).
 
 <div class="figure">
 
-<a href="https://github.com/jhelvy/charts/tree/master/climateChangeBarcode" target="_blank"><img src="https://raw.githubusercontent.com/jhelvy/charts/master/climateChangeBarcode/plots/climateChangeBarcode.png" alt="Global temperatures, 1880 - 2018, NASA" width="75%" /></a>
+<a href="https://github.com/jhelvy/charts/tree/master/climateChangeBarcode" target="_blank"><img src="https://raw.githubusercontent.com/jhelvy/charts/master/climateChangeBarcode/plots/nasa_global_preview.png" alt="Global temperatures, 1880 - 2018, NASA" width="75%" /></a>
 
 <p class="caption">
 
@@ -98,7 +98,7 @@ Results](https://www.britannica.com/topic/United-States-Presidential-Election-Re
 
 <div class="figure">
 
-<a href="https://github.com/jhelvy/charts/tree/master/electionMargins" target="_blank"><img src="https://raw.githubusercontent.com/jhelvy/charts/master/electionMargins/plots/electionMargins.png" alt="Bar plots of the popular vote margin by elected U.S. Presidents" width="60%" /></a>
+<a href="https://github.com/jhelvy/charts/tree/master/electionMargins" target="_blank"><img src="https://raw.githubusercontent.com/jhelvy/charts/master/electionMargins/plots/election_margins_pop.png" alt="Bar plots of the popular vote margin by elected U.S. Presidents" width="60%" /></a>
 
 <p class="caption">
 
@@ -118,7 +118,7 @@ region using EIA data.
 
 <div class="figure">
 
-<a href="https://github.com/jhelvy/charts/tree/master/electricityEIA" target="_blank"><img src="https://raw.githubusercontent.com/jhelvy/charts/master/electricityEIA/plots/electricityEIA.png" alt="Installed Wind and Nuclear Power Capacity by Country / Region, 2000 - 2016" width="75%" /></a>
+<a href="https://github.com/jhelvy/charts/tree/master/electricityEIA" target="_blank"><img src="https://raw.githubusercontent.com/jhelvy/charts/master/electricityEIA/plots/windNuclearCapacityCompare.png" alt="Installed Wind and Nuclear Power Capacity by Country / Region, 2000 - 2016" width="75%" /></a>
 
 <p class="caption">
 
@@ -139,7 +139,7 @@ Indicators](https://www.nsf.gov/statistics/2018/nsb20181/report/sections/industr
 
 <div class="figure">
 
-<a href="https://github.com/jhelvy/charts/tree/master/lcetPatenting" target="_blank"><img src="https://raw.githubusercontent.com/jhelvy/charts/master/lcetPatenting/plots/lcetPatenting.png" alt="Annual USPTO Patents in Clean Energy Technologies, 2006 - 2016" width="60%" /></a>
+<a href="https://github.com/jhelvy/charts/tree/master/lcetPatenting" target="_blank"><img src="https://raw.githubusercontent.com/jhelvy/charts/master/lcetPatenting/plots/patentPlot.png" alt="Annual USPTO Patents in Clean Energy Technologies, 2006 - 2016" width="60%" /></a>
 
 <p class="caption">
 
@@ -159,7 +159,7 @@ Finance](https://about.bnef.com/clean-energy-investment/)
 
 <div class="figure">
 
-<a href="https://github.com/jhelvy/charts/tree/master/newEnergyInvestment" target="_blank"><img src="https://raw.githubusercontent.com/jhelvy/charts/master/newEnergyInvestment/plots/newEnergyInvestment.png" alt="New Investment in Clean Energy ($USD Billion), 2005 - 2018" width="60%" /></a>
+<a href="https://github.com/jhelvy/charts/tree/master/newEnergyInvestment" target="_blank"><img src="https://raw.githubusercontent.com/jhelvy/charts/master/newEnergyInvestment/plots/countryLines.png" alt="New Investment in Clean Energy ($USD Billion), 2005 - 2018" width="60%" /></a>
 
 <p class="caption">
 
@@ -183,7 +183,7 @@ Indicators](https://www.nsf.gov/statistics/2018/nsb20181/report/sections/industr
 
 <div class="figure">
 
-<a href="https://github.com/jhelvy/charts/tree/master/scienceCommentary2019" target="_blank"><img src="https://raw.githubusercontent.com/jhelvy/charts/master/scienceCommentary2019/plots/scienceCommentary2019.png" alt="Investment and patenting in clean energy technologies by country and over time" width="60%" /></a>
+<a href="https://github.com/jhelvy/charts/tree/master/scienceCommentary2019" target="_blank"><img src="https://raw.githubusercontent.com/jhelvy/charts/master/scienceCommentary2019/plots/figure1.png" alt="Investment and patenting in clean energy technologies by country and over time" width="60%" /></a>
 
 <p class="caption">
 
@@ -206,7 +206,7 @@ Papers](https://www.thegreenpapers.com/Hx/PresidentialElectionEvents.phtml)
 
 <div class="figure">
 
-<a href="https://github.com/jhelvy/charts/tree/master/scotusNominations" target="_blank"><img src="https://raw.githubusercontent.com/jhelvy/charts/master/scotusNominations/plots/scotusNominations.png" alt="Time from Nomination to Result of Every US Supreme Court Justice" width="85%" /></a>
+<a href="https://github.com/jhelvy/charts/tree/master/scotusNominations" target="_blank"><img src="https://raw.githubusercontent.com/jhelvy/charts/master/scotusNominations/plots/scotus_nominations_5.png" alt="Time from Nomination to Result of Every US Supreme Court Justice" width="85%" /></a>
 
 <p class="caption">
 
@@ -230,7 +230,7 @@ reverse engineered from Figure 1 using
 
 <div class="figure">
 
-<a href="https://github.com/jhelvy/charts/tree/master/solarPvProduction" target="_blank"><img src="https://raw.githubusercontent.com/jhelvy/charts/master/solarPvProduction/plots/solarPvProduction.png" alt="Annual Solar Voltaic Cell Production (GW), 2000 - 2018" width="60%" /></a>
+<a href="https://github.com/jhelvy/charts/tree/master/solarPvProduction" target="_blank"><img src="https://raw.githubusercontent.com/jhelvy/charts/master/solarPvProduction/plots/solarBars.png" alt="Annual Solar Voltaic Cell Production (GW), 2000 - 2018" width="60%" /></a>
 
 <p class="caption">
 
@@ -254,7 +254,7 @@ Years 1957-2015](https://www.fhwa.dot.gov/policyinformation/statistics/2015/fe21
 
 <div class="figure">
 
-<a href="https://github.com/jhelvy/charts/tree/master/usHighwayFund" target="_blank"><img src="https://raw.githubusercontent.com/jhelvy/charts/master/usHighwayFund/plots/usHighwayFund.png" alt="Federal highway fund revenues and expenditures in real dollars, 1980 - 2015" width="60%" /></a>
+<a href="https://github.com/jhelvy/charts/tree/master/usHighwayFund" target="_blank"><img src="https://raw.githubusercontent.com/jhelvy/charts/master/usHighwayFund/plots/usHighwayFund2015.png" alt="Federal highway fund revenues and expenditures in real dollars, 1980 - 2015" width="60%" /></a>
 
 <p class="caption">
 
@@ -276,7 +276,7 @@ monthly sales of plug-in electric vehicles in the US from 2014 to 2020.
 
 <div class="figure">
 
-<a href="https://github.com/jhelvy/charts/tree/master/usPevSales" target="_blank"><img src="https://raw.githubusercontent.com/jhelvy/charts/master/usPevSales/plots/usPevSales.png" alt="[hybridcars.com ('14-'17)](https://www.hybridcars.com/june-2018-hybrid-cars-sales-dashboard/) and [insideEVs.com ('18-'19)](https://insideevs.com/news/343998/monthly-plug-in-ev-sales-scorecard/)" width="90%" /></a>
+<a href="https://github.com/jhelvy/charts/tree/master/usPevSales" target="_blank"><img src="https://raw.githubusercontent.com/jhelvy/charts/master/usPevSales/plots/pevMonthlySales.png" alt="[hybridcars.com ('14-'17)](https://www.hybridcars.com/june-2018-hybrid-cars-sales-dashboard/) and [insideEVs.com ('18-'19)](https://insideevs.com/news/343998/monthly-plug-in-ev-sales-scorecard/)" width="90%" /></a>
 
 <p class="caption">
 
@@ -302,7 +302,7 @@ EIA](https://www.eia.gov/renewable/monthly/solar_photo/)
 
 <div class="figure">
 
-<a href="https://github.com/jhelvy/charts/tree/master/usSolarIndustry" target="_blank"><img src="https://raw.githubusercontent.com/jhelvy/charts/master/usSolarIndustry/plots/usSolarIndustry.png" alt="U.S. Solar Photovoltaic Module Shipments, 2006 - 2018" width="60%" /></a>
+<a href="https://github.com/jhelvy/charts/tree/master/usSolarIndustry" target="_blank"><img src="https://raw.githubusercontent.com/jhelvy/charts/master/usSolarIndustry/plots/moduleShipments.png" alt="U.S. Solar Photovoltaic Module Shipments, 2006 - 2018" width="60%" /></a>
 
 <p class="caption">
 
@@ -321,7 +321,7 @@ Association](http://www.world-nuclear.org/information-library/facts-and-figures/
 
 <div class="figure">
 
-<a href="https://github.com/jhelvy/charts/tree/master/worldNuclearAssociation" target="_blank"><img src="https://raw.githubusercontent.com/jhelvy/charts/master/worldNuclearAssociation/plots/worldNuclearAssociation.png" alt="New Nuclear Energy Capacity (GW) by Country, 2008 - 2019" width="60%" /></a>
+<a href="https://github.com/jhelvy/charts/tree/master/worldNuclearAssociation" target="_blank"><img src="https://raw.githubusercontent.com/jhelvy/charts/master/worldNuclearAssociation/plots/newCapacity.png" alt="New Nuclear Energy Capacity (GW) by Country, 2008 - 2019" width="60%" /></a>
 
 <p class="caption">
 
