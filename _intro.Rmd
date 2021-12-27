@@ -8,12 +8,9 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 library(fontawesome)
-today <- format(Sys.Date(), format="%B %d %Y")
 ```
 
 A repo of reproducible charts, by [**John Paul Helveston** ](https://www.jhelvy.com/)
-
-Last updated: `r today`
 
 This work is licensed under a
 [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/)

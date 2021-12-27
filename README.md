@@ -4,8 +4,6 @@
 A repo of reproducible charts, by [**John Paul
 Helveston**](https://www.jhelvy.com/)
 
-Last updated: December 27 2021
-
 This work is licensed under a [Creative Commons
 Attribution-NonCommercial-ShareAlike 4.0 International
 License](http://creativecommons.org/licenses/by-nc-sa/4.0/)
