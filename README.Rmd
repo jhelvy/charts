@@ -33,23 +33,24 @@ This work is licensed under a
 # List of charts
 
 - [challengerOrings](#challengerOrings)
-- [climateChangeBarcode](#climateChangeBarcode)
-- [electionMargins](#electionMargins)
-- [electricityEIA](#electricityEIA)
-- [ggxaringan](#ggxaringan)
-- [lcetPatenting](#lcetPatenting)
-- [newEnergyInvestment](#newEnergyInvestment)
-- [scienceCommentary2019](#scienceCommentary2019)
-- [scotusNominations](#scotusNominations)
-- [solarPvProduction](#solarPvProduction)
-- [usHighwayFund](#usHighwayFund)
-- [usPevSales](#usPevSales)
-- [usSolarIndustry](#usSolarIndustry)
-- [worldNuclearAssociation](#worldNuclearAssociation)
 
 ```{r, echo=FALSE, results='asis'}
 for (i in 1:nrow(charts)) {
     chart <- charts[i,]
-    cat(knitr::knit_child('description.Rmd', quiet = TRUE), sep = '\n')
+    cat("- [", chart$name, "](#", chart$name, ")\n", sep = '')
+}
+```
+
+```{r, echo=FALSE, results='asis'}
+# Download description.Rmd as temp file
+td <- tempdir()
+tf <- tempfile(tmpdir = td, fileext = ".Rmd")
+download.file(
+    'https://raw.githubusercontent.com/jhelvy/charts/master/description.Rmd',
+    tf
+)
+for (i in 1:nrow(charts)) {
+    chart <- charts[i,]
+    cat(knitr::knit_child(tf,quiet = TRUE), sep = '\n')
 }
 ```
