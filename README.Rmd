@@ -1,18 +1,10 @@
 ---
-output: github_document
+output:
+  github_document:
+    html_preview: false
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-
-<!-- badges: start -->
-[![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
-
-[cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
-[cc-by-nc-sa-image]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
-[cc-by-nc-sa-shield]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg
-<!-- badges: end -->
-
-# charts
 
 ```{r child = '_intro.Rmd'}
 ```
@@ -36,13 +28,3 @@ output: github_document
 
 ```{r child = '_description.Rmd'}
 ```
-
------
-
-## Author and License Information
-
-- Author: *John Paul Helveston* https://www.jhelvy.com/
-- This work is licensed under a
-[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].
-
-[![CC BY-NC-SA 4.0][cc-by-nc-sa-image]][cc-by-nc-sa]

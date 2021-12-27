@@ -1,35 +1,33 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-<!-- badges: start -->
 
-[![CC BY-NC-SA
-4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-nc-sa/4.0/)
+A repo of reproducible charts, by [**John Paul
+Helveston**](https://www.jhelvy.com/)
 
-<!-- badges: end -->
+Last updated: December 27 2021
 
-# charts
+This work is licensed under a [Creative Commons
+Attribution-NonCommercial-ShareAlike 4.0 International
+License](http://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-A repo of reproducible charts, by [John Paul
-Helveston](http://jhelvy.com/)
-
-Last updated: September 20 2021
+<img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png" width=100>
 
 # List of charts
 
--   [challengerOrings](#challengerOrings)
--   [climateChangeBarcode](#climateChangeBarcode)
--   [electionMargins](#electionMargins)
--   [electricityEIA](#electricityEIA)
--   [ggxaringan](#ggxaringan)
--   [lcetPatenting](#lcetPatenting)
--   [newEnergyInvestment](#newEnergyInvestment)
--   [scienceCommentary2019](#scienceCommentary2019)
--   [scotusNominations](#scotusNominations)
--   [solarPvProduction](#solarPvProduction)
--   [usHighwayFund](#usHighwayFund)
--   [usPevSales](#usPevSales)
--   [usSolarIndustry](#usSolarIndustry)
--   [worldNuclearAssociation](#worldNuclearAssociation)
+  - [challengerOrings](#challengerOrings)
+  - [climateChangeBarcode](#climateChangeBarcode)
+  - [electionMargins](#electionMargins)
+  - [electricityEIA](#electricityEIA)
+  - [ggxaringan](#ggxaringan)
+  - [lcetPatenting](#lcetPatenting)
+  - [newEnergyInvestment](#newEnergyInvestment)
+  - [scienceCommentary2019](#scienceCommentary2019)
+  - [scotusNominations](#scotusNominations)
+  - [solarPvProduction](#solarPvProduction)
+  - [usHighwayFund](#usHighwayFund)
+  - [usPevSales](#usPevSales)
+  - [usSolarIndustry](#usSolarIndustry)
+  - [worldNuclearAssociation](#worldNuclearAssociation)
 
 # challengerOrings
 
@@ -45,8 +43,11 @@ Accident, Vol. 1, 1986: 129-131.
 <div class="figure">
 
 <a href="https://github.com/jhelvy/charts/tree/master/challengerOrings" target="_blank"><img src="challengerOrings/plots/challengerOrings.png" alt="Scatterplot of rocket o-ring damage vs. launch temperature" width="90%" /></a>
+
 <p class="caption">
+
 Scatterplot of rocket o-ring damage vs. launch temperature
+
 </p>
 
 </div>
@@ -67,8 +68,11 @@ information](http://www.ncdc.noaa.gov/cag/).
 <div class="figure">
 
 <a href="https://github.com/jhelvy/charts/tree/master/climateChangeBarcode" target="_blank"><img src="climateChangeBarcode/plots/nasa_global_preview.png" alt="Global temperatures, 1880 - 2018, NASA" width="75%" /></a>
+
 <p class="caption">
+
 Global temperatures, 1880 - 2018, NASA
+
 </p>
 
 </div>
@@ -84,8 +88,11 @@ Results](https://www.britannica.com/topic/United-States-Presidential-Election-Re
 <div class="figure">
 
 <a href="https://github.com/jhelvy/charts/tree/master/electionMargins" target="_blank"><img src="electionMargins/plots/election_margins_pop.png" alt="Bar plots of the popular vote margin by elected U.S. Presidents" width="60%" /></a>
+
 <p class="caption">
+
 Bar plots of the popular vote margin by elected U.S. Presidents
+
 </p>
 
 </div>
@@ -101,9 +108,12 @@ region using EIA data.
 <div class="figure">
 
 <a href="https://github.com/jhelvy/charts/tree/master/electricityEIA" target="_blank"><img src="electricityEIA/plots/windNuclearCapacityCompare.png" alt="Installed Wind and Nuclear Power Capacity by Country / Region, 2000 - 2016" width="75%" /></a>
+
 <p class="caption">
+
 Installed Wind and Nuclear Power Capacity by Country / Region, 2000 -
 2016
+
 </p>
 
 </div>
@@ -133,8 +143,11 @@ Indicators](https://www.nsf.gov/statistics/2018/nsb20181/report/sections/industr
 <div class="figure">
 
 <a href="https://github.com/jhelvy/charts/tree/master/lcetPatenting" target="_blank"><img src="lcetPatenting/plots/patentPlot.png" alt="Annual USPTO Patents in Clean Energy Technologies, 2006 - 2016" width="60%" /></a>
+
 <p class="caption">
+
 Annual USPTO Patents in Clean Energy Technologies, 2006 - 2016
+
 </p>
 
 </div>
@@ -150,8 +163,11 @@ Finance](https://about.bnef.com/clean-energy-investment/)
 <div class="figure">
 
 <a href="https://github.com/jhelvy/charts/tree/master/newEnergyInvestment" target="_blank"><img src="newEnergyInvestment/plots/countryLines.png" alt="New Investment in Clean Energy ($USD Billion), 2005 - 2018" width="60%" /></a>
+
 <p class="caption">
+
 New Investment in Clean Energy ($USD Billion), 2005 - 2018
+
 </p>
 
 </div>
@@ -171,9 +187,12 @@ Indicators](https://www.nsf.gov/statistics/2018/nsb20181/report/sections/industr
 <div class="figure">
 
 <a href="https://github.com/jhelvy/charts/tree/master/scienceCommentary2019" target="_blank"><img src="scienceCommentary2019/plots/figure1.png" alt="Investment and patenting in clean energy technologies by country and over time" width="60%" /></a>
+
 <p class="caption">
+
 Investment and patenting in clean energy technologies by country and
 over time
+
 </p>
 
 </div>
@@ -191,8 +210,11 @@ Papers](https://www.thegreenpapers.com/Hx/PresidentialElectionEvents.phtml)
 <div class="figure">
 
 <a href="https://github.com/jhelvy/charts/tree/master/scotusNominations" target="_blank"><img src="scotusNominations/plots/scotus_nominations_5.png" alt="Time from Nomination to Result of Every US Supreme Court Justice" width="85%" /></a>
+
 <p class="caption">
+
 Time from Nomination to Result of Every US Supreme Court Justice
+
 </p>
 
 </div>
@@ -212,8 +234,11 @@ reverse engineered from Figure 1 using
 <div class="figure">
 
 <a href="https://github.com/jhelvy/charts/tree/master/solarPvProduction" target="_blank"><img src="solarPvProduction/plots/solarBars.png" alt="Annual Solar Voltaic Cell Production (GW), 2000 - 2018" width="60%" /></a>
+
 <p class="caption">
+
 Annual Solar Voltaic Cell Production (GW), 2000 - 2018
+
 </p>
 
 </div>
@@ -227,15 +252,18 @@ no. 1 (Fall
 The chart shows federal highway fund revenues and expenditures in real
 dollars from 1980 to 2015.
 
-**Data**: [Status of the Highway Trust Fund, Fiscal Years
-1957-2015](https://www.fhwa.dot.gov/policyinformation/statistics/2015/fe210.cfm)
+**Data**: [Status of the Highway Trust Fund, Fiscal
+Years 1957-2015](https://www.fhwa.dot.gov/policyinformation/statistics/2015/fe210.cfm)
 
 <div class="figure">
 
 <a href="https://github.com/jhelvy/charts/tree/master/usHighwayFund" target="_blank"><img src="usHighwayFund/plots/usHighwayFund2015.png" alt="Federal highway fund revenues and expenditures in real dollars, 1980 - 2015" width="60%" /></a>
+
 <p class="caption">
+
 Federal highway fund revenues and expenditures in real dollars, 1980 -
 2015
+
 </p>
 
 </div>
@@ -255,8 +283,11 @@ and [insideEVs.com
 <div class="figure">
 
 <a href="https://github.com/jhelvy/charts/tree/master/usPevSales" target="_blank"><img src="usPevSales/plots/pevMonthlySales.png" alt="U.S. Monthly Sales of Plug-in Electric Vehicles, 2014 - 2020" width="90%" /></a>
+
 <p class="caption">
+
 U.S. Monthly Sales of Plug-in Electric Vehicles, 2014 - 2020
+
 </p>
 
 </div>
@@ -275,8 +306,11 @@ EIA](https://www.eia.gov/renewable/monthly/solar_photo/)
 <div class="figure">
 
 <a href="https://github.com/jhelvy/charts/tree/master/usSolarIndustry" target="_blank"><img src="usSolarIndustry/plots/moduleShipments.png" alt="U.S. Solar Photovoltaic Module Shipments, 2006 - 2018" width="60%" /></a>
+
 <p class="caption">
+
 U.S. Solar Photovoltaic Module Shipments, 2006 - 2018
+
 </p>
 
 </div>
@@ -291,20 +325,11 @@ Association](http://www.world-nuclear.org/information-library/facts-and-figures/
 <div class="figure">
 
 <a href="https://github.com/jhelvy/charts/tree/master/worldNuclearAssociation" target="_blank"><img src="worldNuclearAssociation/plots/newCapacity.png" alt="New Nuclear Energy Capacity (GW) by Country, 2008 - 2019" width="60%" /></a>
+
 <p class="caption">
+
 New Nuclear Energy Capacity (GW) by Country, 2008 - 2019
+
 </p>
 
 </div>
-
-------------------------------------------------------------------------
-
-## Author and License Information
-
--   Author: *John Paul Helveston* <https://www.jhelvy.com/>
--   This work is licensed under a [Creative Commons
-    Attribution-NonCommercial-ShareAlike 4.0 International
-    License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
-
-[![CC BY-NC-SA
-4.0](https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-nc-sa/4.0/)
