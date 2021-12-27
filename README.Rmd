@@ -19,7 +19,7 @@ library(dplyr)
 charts <- gsheet::gsheet2tbl('https://docs.google.com/spreadsheets/d/1Zj1jXqV5XsAXeIkUPzCJkvMrU5ah_y6VHb-san0Baio/edit?usp=sharing') %>% 
     mutate(
         url_repo = paste0("https://github.com/jhelvy/charts/tree/master/", name), 
-        url_image = paste0("https://raw.githubusercontent.com/jhelvy/charts/master/", name, "/plots/", name, ".png")
+        url_image = paste0("https://raw.githubusercontent.com/jhelvy/charts/master/", name, "/plots/", image, ".png")
     )
 ```
 
