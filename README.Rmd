@@ -6,8 +6,29 @@ output:
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-```{r child = '_intro.Rmd'}
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  fig.retina = 3,
+  comment = "#>"
+)
+library(fontawesome)
+library(dplyr)
+charts <- gsheet::gsheet2tbl('https://docs.google.com/spreadsheets/d/1Zj1jXqV5XsAXeIkUPzCJkvMrU5ah_y6VHb-san0Baio/edit?usp=sharing') %>% 
+    mutate(
+        url_repo = paste0("https://github.com/jhelvy/charts/tree/master/", name), 
+        url_image = paste0("https://raw.githubusercontent.com/jhelvy/charts/master/", name, "/plots/", name, ".png")
+    )
 ```
+
+A repo of reproducible charts, by [**John Paul Helveston** ](https://www.jhelvy.com/)
+
+This work is licensed under a
+[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/)
+
+<img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png" width="100px">
 
 # List of charts
 
@@ -26,5 +47,9 @@ output:
 - [usSolarIndustry](#usSolarIndustry)
 - [worldNuclearAssociation](#worldNuclearAssociation)
 
-```{r child = '_description.Rmd'}
+```{r, echo=FALSE, results='asis'}
+for (i in 1:nrow(charts)) {
+    chart <- charts[i,]
+    cat(knitr::knit_child('description.Rmd', quiet = TRUE), sep = '\n')
+}
 ```

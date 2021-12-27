@@ -1,0 +1,9 @@
+# `r chart$name`
+
+**Description**: `r chart$description`
+
+**Data**: `r chart$data`
+
+```{r echo = FALSE, out.width = chart$out_width, fig.link=chart$url_repo, fig.cap=chart$caption}
+knitr::include_graphics(chart$url_image)
+```
