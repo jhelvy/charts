@@ -13,31 +13,17 @@ License](http://creativecommons.org/licenses/by-nc-sa/4.0/)
 # List of charts
 
   - [challengerOrings](#challengerOrings)
-
-  - [challengerOrings](#challengerOrings)
-
   - [climateChangeBarcode](#climateChangeBarcode)
-
   - [electionMargins](#electionMargins)
-
   - [electricityEIA](#electricityEIA)
-
   - [lcetPatenting](#lcetPatenting)
-
   - [newEnergyInvestment](#newEnergyInvestment)
-
   - [scienceCommentary2019](#scienceCommentary2019)
-
   - [scotusNominations](#scotusNominations)
-
   - [solarPvProduction](#solarPvProduction)
-
   - [usHighwayFund](#usHighwayFund)
-
   - [usPevSales](#usPevSales)
-
   - [usSolarIndustry](#usSolarIndustry)
-
   - [worldNuclearAssociation](#worldNuclearAssociation)
 
 # challengerOrings

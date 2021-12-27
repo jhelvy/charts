@@ -32,8 +32,6 @@ This work is licensed under a
 
 # List of charts
 
-- [challengerOrings](#challengerOrings)
-
 ```{r, echo=FALSE, results='asis'}
 for (i in 1:nrow(charts)) {
     chart <- charts[i,]
