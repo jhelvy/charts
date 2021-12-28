@@ -4,9 +4,9 @@
 A repo of reproducible charts, by [**John Paul
 Helveston**](https://www.jhelvy.com/)
 
-This work is licensed under a [Creative Commons
-Attribution-NonCommercial-ShareAlike 4.0 International
-License](http://creativecommons.org/licenses/by-nc-sa/4.0/)
+All charts are licensed under a [Creative Commons
+Attribution-ShareAlike 4.0 International
+License](https://creativecommons.org/licenses/by-sa/4.0/)
 
 <img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png" width="100px">
 
@@ -23,7 +23,6 @@ License](http://creativecommons.org/licenses/by-nc-sa/4.0/)
   - [solarPvProduction](#solarPvProduction)
   - [usHighwayFund](#usHighwayFund)
   - [usPevSales](#usPevSales)
-  - [usSolarIndustry](#usSolarIndustry)
   - [worldNuclearAssociation](#worldNuclearAssociation)
 
 # challengerOrings
@@ -272,29 +271,6 @@ and [insideEVs.com
 <p class="caption">
 
 U.S. Monthly Sales of Plug-in Electric Vehicles, 2014 - 2020.
-
-</p>
-
-</div>
-
-# usSolarIndustry
-
-**Description**: Summary plots of the US solar industry, including total
-module deployment and job growth pre- and post- the 2018 Trump
-administration tariffs.
-
-**Data**: Jobs data from [Solar
-Foundation](https://www.bloomberg.com/news/articles/2019-02-12/trump-s-tariffs-took-a-bite-out-of-once-booming-solar-job-market);
-modules data from [US
-EIA](https://www.eia.gov/renewable/monthly/solar_photo/)
-
-<div class="figure">
-
-<a href="https://github.com/jhelvy/charts/tree/master/usSolarIndustry" target="_blank"><img src="https://raw.githubusercontent.com/jhelvy/charts/master/usSolarIndustry/plots/moduleShipments.png" alt="U.S. Solar Photovoltaic Module Shipments, 2006 - 2018." width="60%" /></a>
-
-<p class="caption">
-
-U.S. Solar Photovoltaic Module Shipments, 2006 - 2018.
 
 </p>
 
