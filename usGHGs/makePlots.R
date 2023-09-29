@@ -13,6 +13,7 @@ library(tidyverse)
 library(cowplot)
 library(here)
 library(jph)
+library(ggrepel)
 
 plotColors <- jph::jColors(
     'bright', 
@@ -37,7 +38,7 @@ plot_theme <- function() {
                 axis.line.x = element_blank(),
                 plot.caption.position = "plot",
                 plot.caption = element_text(
-                    hjust = 1, size = 11, face = "italic"),
+                    hjust = 1, size = 10, face = "italic"),
                 plot.title = element_text(face = "bold"),
                 legend.position = "none"
             ) 
@@ -46,7 +47,7 @@ plot_theme <- function() {
 
 # Read in data
 
-df <- read_csv(here::here('usGHGs', 'us_ghgs_by_sector.csv')) %>% 
+df <- read_csv(here::here('usGHGs', 'data', 'us_ghgs_by_sector.csv')) %>% 
     janitor::clean_names() %>% 
     rename(sector = u_s_emissions_by_economic_sector_mmt_co2_eq) %>% 
     filter(sector != 'Gross total') %>% 
@@ -73,7 +74,8 @@ fig <- df %>%
     labs(
         x = "Year", 
         y = "Million Tons CO2 Equivalent", 
-        title = "GHG Emissions by U.S. Sector"
+        title = "GHG Emissions by U.S. Sector", 
+        caption = "Data from US EPA: https://cfpub.epa.gov/ghgdata/inventoryexplorer"
     ) + 
     geom_text_repel(
         data = df %>%
@@ -87,10 +89,13 @@ fig <- df %>%
     scale_x_continuous(
         breaks = seq(1990, 2020, 10), 
         expand = expansion(add = c(0.5, 6.5))
+    ) + 
+    theme(
+        
     )
 
 ggsave(
-    here::here('usGHGs', 'figs', 'ghg_emissions.png'), fig, 
+    here::here('usGHGs', 'plots', 'ghg_emissions.png'), fig, 
     width = 6.4, height = 4
 )
 
