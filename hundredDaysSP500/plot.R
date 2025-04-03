@@ -92,7 +92,7 @@ ggplot(all_data, aes(x = day, y = percent_change, color = president, group = pre
         subtitle = "Normalized to Inauguration Day (0% = S&P 500 value on day 0)",
         x = "Days Since Inauguration",
         y = "Percent Change (%)", 
-        caption = "Data pulled using {quantmod} R package"
+        caption = "Data pulled using {quantmod} R package\nSource at https://github.com/jhelvy/charts"
     ) +
     scale_color_manual(values = c("Obama (2013)" = "blue", "Trump (2017)" = "darkred", "Biden (2021)" = "darkblue", "Trump (2025)" = "red")) +
     scale_y_continuous(labels = function(x) paste0(x, "%")) +
