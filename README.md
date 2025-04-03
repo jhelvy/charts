@@ -16,6 +16,7 @@ License](https://creativecommons.org/licenses/by-sa/4.0/)
 - [climateChangeBarcode](#climateChangeBarcode)
 - [electionMargins](#electionMargins)
 - [electricityEIA](#electricityEIA)
+- [hundredDaysSP500](#hundredDaysSP500)
 - [lcetPatenting](#lcetPatenting)
 - [newEnergyInvestment](#newEnergyInvestment)
 - [scienceCommentary2019](#scienceCommentary2019)
@@ -101,6 +102,22 @@ region using EIA data.
 <p class="caption">
 Installed Wind and Nuclear Power Capacity by Country / Region, 2000 -
 2016.
+</p>
+
+</div>
+
+# hundredDaysSP500
+
+**Description**: NA
+
+**Data**: Data pulled using {quantmod} R package
+
+<div class="figure">
+
+<a href="https://github.com/jhelvy/charts/tree/master/hundredDaysSP500" target="_blank"><img src="https://raw.githubusercontent.com/jhelvy/charts/master/hundredDaysSP500/plots/hundredDaysSP500.png" alt="S&amp;P 500 performance during first 100 days in office for past four US presidents" width="60%" /></a>
+<p class="caption">
+S&P 500 performance during first 100 days in office for past four US
+presidents
 </p>
 
 </div>
