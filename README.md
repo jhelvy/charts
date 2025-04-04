@@ -108,9 +108,10 @@ Installed Wind and Nuclear Power Capacity by Country / Region, 2000 -
 
 # hundredDaysSP500
 
-**Description**: NA
+**Description**: Comparison of the S&P performance relative to day 0 of
+the presidency for the past four US presidents.
 
-**Data**: Data pulled using {quantmod} R package
+**Data**: Yahoo Finance via {quantmod} R package
 
 <div class="figure">
 

@@ -159,7 +159,7 @@ ggplot() +
         subtitle = "Each panel shows one president (colored) against all others (gray)",
         x = "Days Since Inauguration",
         y = "Percent Change (%)",
-        caption = "Data source: Yahoo Finance via quantmod package"
+        caption = "Data source: Yahoo Finance via {quantmod} R package"
     ) +
     theme_minimal() +
     theme(
