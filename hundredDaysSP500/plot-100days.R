@@ -98,7 +98,7 @@ ggplot(all_data, aes(x = day, y = percent_change, color = president, group = pre
     scale_y_continuous(labels = function(x) paste0(x, "%")) +
     scale_x_continuous(breaks = seq(0, 100, by = 10)) +
     # Add extra space on the right for labels
-    coord_cartesian(xlim = c(0, 120)) +
+    coord_cartesian(xlim = c(0, 120), ylim = c(-20, 10)) +
     theme_minimal(base_family = 'Roboto Condensed') +
     theme(
         plot.title = element_text(face = "bold"),
@@ -110,7 +110,8 @@ ggplot(all_data, aes(x = day, y = percent_change, color = president, group = pre
     )
 
 ggsave(
-    'hundredDaysSP500.png', width = 8, height = 6
+    here::here('plots', 'hundredDaysSP500.png'), 
+    width = 8, height = 6
 )
 
 # Print summary statistics
