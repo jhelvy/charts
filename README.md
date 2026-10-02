@@ -25,6 +25,7 @@ License](https://creativecommons.org/licenses/by-sa/4.0/)
 - [usGHGs](#usGHGs)
 - [usHighwayFund](#usHighwayFund)
 - [usPevSales](#usPevSales)
+- [vehicleAdoptionUsChina](#vehicleAdoptionUsChina)
 - [worldNuclearAssociation](#worldNuclearAssociation)
 
 # challengerOrings
@@ -44,6 +45,7 @@ Accident, Vol. 1, 1986: 129-131.
 
 <a href="https://github.com/jhelvy/charts/tree/master/challengerOrings" target="_blank"><img src="https://raw.githubusercontent.com/jhelvy/charts/master/challengerOrings/plots/challengerOrings.png" alt="Scatterplot of rocket o-ring damage vs. launch temperature." width="90%" /></a>
 <p class="caption">
+
 Scatterplot of rocket o-ring damage vs. launch temperature.
 </p>
 
@@ -66,6 +68,7 @@ information](http://www.ncdc.noaa.gov/cag/).
 
 <a href="https://github.com/jhelvy/charts/tree/master/climateChangeBarcode" target="_blank"><img src="https://raw.githubusercontent.com/jhelvy/charts/master/climateChangeBarcode/plots/nasa_global_preview.png" alt="Global temperatures, 1880 - 2018, NASA." width="75%" /></a>
 <p class="caption">
+
 Global temperatures, 1880 - 2018, NASA.
 </p>
 
@@ -83,6 +86,7 @@ Results](https://www.britannica.com/topic/United-States-Presidential-Election-Re
 
 <a href="https://github.com/jhelvy/charts/tree/master/electionMargins" target="_blank"><img src="https://raw.githubusercontent.com/jhelvy/charts/master/electionMargins/plots/election_margins_pop.png" alt="Bar plots of the popular vote margin by elected U.S. Presidents." width="60%" /></a>
 <p class="caption">
+
 Bar plots of the popular vote margin by elected U.S. Presidents.
 </p>
 
@@ -100,6 +104,7 @@ region using EIA data.
 
 <a href="https://github.com/jhelvy/charts/tree/master/electricityEIA" target="_blank"><img src="https://raw.githubusercontent.com/jhelvy/charts/master/electricityEIA/plots/windNuclearCapacityCompare.png" alt="Installed Wind and Nuclear Power Capacity by Country / Region, 2000 - 2016." width="75%" /></a>
 <p class="caption">
+
 Installed Wind and Nuclear Power Capacity by Country / Region, 2000 -
 2016.
 </p>
@@ -117,6 +122,7 @@ the presidency for the past four US presidents.
 
 <a href="https://github.com/jhelvy/charts/tree/master/hundredDaysSP500" target="_blank"><img src="https://raw.githubusercontent.com/jhelvy/charts/master/hundredDaysSP500/plots/hundredDaysSP500.png" alt="S&amp;P 500 performance during first 100 days in office for past four US presidents" width="60%" /></a>
 <p class="caption">
+
 S&P 500 performance during first 100 days in office for past four US
 presidents
 </p>
@@ -135,6 +141,7 @@ Indicators](https://www.nsf.gov/statistics/2018/nsb20181/report/sections/industr
 
 <a href="https://github.com/jhelvy/charts/tree/master/lcetPatenting" target="_blank"><img src="https://raw.githubusercontent.com/jhelvy/charts/master/lcetPatenting/plots/patentPlot.png" alt="Annual USPTO Patents in Clean Energy Technologies, 2006 - 2016." width="60%" /></a>
 <p class="caption">
+
 Annual USPTO Patents in Clean Energy Technologies, 2006 - 2016.
 </p>
 
@@ -152,6 +159,7 @@ Finance](https://about.bnef.com/clean-energy-investment/).
 
 <a href="https://github.com/jhelvy/charts/tree/master/newEnergyInvestment" target="_blank"><img src="https://raw.githubusercontent.com/jhelvy/charts/master/newEnergyInvestment/plots/countryLines.png" alt="New Investment in Clean Energy ($USD Billion), 2005 - 2018." width="60%" /></a>
 <p class="caption">
+
 New Investment in Clean Energy (\$USD Billion), 2005 - 2018.
 </p>
 
@@ -173,6 +181,7 @@ Indicators](https://www.nsf.gov/statistics/2018/nsb20181/report/sections/industr
 
 <a href="https://github.com/jhelvy/charts/tree/master/scienceCommentary2019" target="_blank"><img src="https://raw.githubusercontent.com/jhelvy/charts/master/scienceCommentary2019/plots/figure1.png" alt="Investment and patenting in clean energy technologies by country and over time." width="60%" /></a>
 <p class="caption">
+
 Investment and patenting in clean energy technologies by country and
 over time.
 </p>
@@ -193,6 +202,7 @@ Papers](https://www.thegreenpapers.com/Hx/PresidentialElectionEvents.phtml).
 
 <a href="https://github.com/jhelvy/charts/tree/master/scotusNominations" target="_blank"><img src="https://raw.githubusercontent.com/jhelvy/charts/master/scotusNominations/plots/scotus_nominations_5.png" alt="Time from Nomination to Result of Every US Supreme Court Justice." width="85%" /></a>
 <p class="caption">
+
 Time from Nomination to Result of Every US Supreme Court Justice.
 </p>
 
@@ -214,6 +224,7 @@ reverse engineered from Figure 1 using
 
 <a href="https://github.com/jhelvy/charts/tree/master/solarPvProduction" target="_blank"><img src="https://raw.githubusercontent.com/jhelvy/charts/master/solarPvProduction/plots/solarBars.png" alt="Annual Solar Voltaic Cell Production (GW), 2000 - 2018." width="60%" /></a>
 <p class="caption">
+
 Annual Solar Voltaic Cell Production (GW), 2000 - 2018.
 </p>
 
@@ -231,6 +242,7 @@ Explorer](https://cfpub.epa.gov/ghgdata/inventoryexplorer/#allsectors/allsectors
 
 <a href="https://github.com/jhelvy/charts/tree/master/usGHGs" target="_blank"><img src="https://raw.githubusercontent.com/jhelvy/charts/master/usGHGs/plots/ghg_emissions.png" alt="US Greenhouse Gas Emissions by Sector, 1990 - 2021." width="60%" /></a>
 <p class="caption">
+
 US Greenhouse Gas Emissions by Sector, 1990 - 2021.
 </p>
 
@@ -252,6 +264,7 @@ dollars from 1980 to 2015.
 
 <a href="https://github.com/jhelvy/charts/tree/master/usHighwayFund" target="_blank"><img src="https://raw.githubusercontent.com/jhelvy/charts/master/usHighwayFund/plots/usHighwayFund2015.png" alt="Federal highway fund revenues and expenditures in real dollars, 1980 - 2015." width="60%" /></a>
 <p class="caption">
+
 Federal highway fund revenues and expenditures in real dollars, 1980 -
 2015.
 </p>
@@ -274,7 +287,37 @@ and [insideEVs.com
 
 <a href="https://github.com/jhelvy/charts/tree/master/usPevSales" target="_blank"><img src="https://raw.githubusercontent.com/jhelvy/charts/master/usPevSales/plots/pevMonthlySales.png" alt="U.S. Monthly Sales of Plug-in Electric Vehicles, 2014 - 2020." width="90%" /></a>
 <p class="caption">
+
 U.S. Monthly Sales of Plug-in Electric Vehicles, 2014 - 2020.
+</p>
+
+</div>
+
+# vehicleAdoptionUsChina
+
+**Description**: Annual new passenger vehicle sales vs. passenger
+vehicles in use per 1,000 people in the U.S. (1931-2024) and China
+(1995-2024). China now sells more new passenger vehicles each year than
+the U.S. ever has, while having about a quarter as many vehicles per
+person. This updates and extends a chart I first made in 2017.
+
+**Data**: U.S. light-duty vehicle registrations from
+[FHWA](https://www.fhwa.dot.gov/policyinformation/statistics.cfm) and
+[BTS](https://www.bts.gov/), population from the U.S. Census Bureau, and
+sales from WardsAuto (1931-1975) and
+[BEA](https://fred.stlouisfed.org/series/ALTSALES) (1976-2024). China
+passenger vehicle stock and population from the [National Bureau of
+Statistics](https://www.stats.gov.cn/) and sales from the China
+Statistical Yearbook (1995-2004) and the China Association of Automobile
+Manufacturers (2005-2024).
+
+<div class="figure">
+
+<a href="https://github.com/jhelvy/charts/tree/master/vehicleAdoptionUsChina" target="_blank"><img src="https://raw.githubusercontent.com/jhelvy/charts/master/vehicleAdoptionUsChina/plots/salesVsOwnership.png" alt="Passenger vehicle sales vs. vehicles per 1,000 people in the U.S. and China." width="90%" /></a>
+<p class="caption">
+
+Passenger vehicle sales vs. vehicles per 1,000 people in the U.S. and
+China.
 </p>
 
 </div>
@@ -290,6 +333,7 @@ Association](http://www.world-nuclear.org/information-library/facts-and-figures/
 
 <a href="https://github.com/jhelvy/charts/tree/master/worldNuclearAssociation" target="_blank"><img src="https://raw.githubusercontent.com/jhelvy/charts/master/worldNuclearAssociation/plots/newCapacity.png" alt="New Nuclear Energy Capacity (GW) by Country, 2008 - 2019." width="60%" /></a>
 <p class="caption">
+
 New Nuclear Energy Capacity (GW) by Country, 2008 - 2019.
 </p>
 

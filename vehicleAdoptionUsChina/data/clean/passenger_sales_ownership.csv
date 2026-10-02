@@ -1,0 +1,105 @@
+country,year,vehicles_per_1000,sales_millions,own_source,sales_source
+China,1995,3.45,0.325,NBS passenger vehicles / NBS pop.; published,China Statistical Yearbook passenger cars
+China,1996,3.99,0.479,NBS passenger vehicles / NBS pop.; published,China Statistical Yearbook passenger cars
+China,1997,4.7,0.589,NBS passenger vehicles / NBS pop.; published,China Statistical Yearbook passenger cars
+China,1998,5.25,0.6,NBS passenger vehicles / NBS pop.; published,China Statistical Yearbook passenger cars
+China,1999,5.88,0.617,NBS passenger vehicles / NBS pop.; published,China Statistical Yearbook passenger cars
+China,2000,6.74,0.71,NBS passenger vehicles / NBS pop.; published,China Statistical Yearbook passenger cars
+China,2001,7.79,0.852,NBS passenger vehicles / NBS pop.; published,China Statistical Yearbook passenger cars
+China,2002,9.36,1.1,NBS passenger vehicles / NBS pop.; published,China Statistical Yearbook passenger cars
+China,2003,11.44,2.185,NBS passenger vehicles / NBS pop.; published,China Statistical Yearbook passenger cars
+China,2004,13.35,2.512,NBS passenger vehicles / NBS pop.; published,China Statistical Yearbook passenger cars
+China,2005,16.31,3.941,NBS passenger vehicles / NBS pop.; published,CAAM passenger vehicles minus PV exports
+China,2006,19.93,5.086,NBS passenger vehicles / NBS pop.; published,CAAM passenger vehicles minus PV exports
+China,2007,24.19,6.137,NBS passenger vehicles / NBS pop.; published,CAAM passenger vehicles minus PV exports
+China,2008,28.91,6.576,NBS passenger vehicles / NBS pop.; published,CAAM passenger vehicles minus PV exports
+China,2009,36.31,10.211,NBS passenger vehicles / NBS pop.; published,CAAM passenger vehicles minus PV exports
+China,2010,45.67,13.518,NBS passenger vehicles / NBS pop.; published,CAAM passenger vehicles minus PV exports
+China,2011,55.43,14.022,NBS passenger vehicles / NBS pop.; published,CAAM passenger vehicles minus PV exports
+China,2012,65.63,14.834,NBS passenger vehicles / NBS pop.; interpolated,CAAM passenger vehicles minus PV exports
+China,2013,77.14,17.333,NBS passenger vehicles / NBS pop.; interpolated,CAAM passenger vehicles minus PV exports
+China,2014,90.04,19.281,NBS passenger vehicles / NBS pop.; interpolated,CAAM passenger vehicles minus PV exports
+China,2015,101.9,20.718,NBS passenger vehicles / NBS pop.; published,CAAM passenger vehicles minus PV exports
+China,2016,116.91,23.9,NBS passenger vehicles / NBS pop.; published,CAAM passenger vehicles minus PV exports
+China,2017,131.91,24.078,NBS passenger vehicles / NBS pop.; published,CAAM passenger vehicles minus PV exports
+China,2018,146.26,22.952,NBS passenger vehicles / NBS pop.; published,CAAM passenger vehicles minus PV exports
+China,2019,159.38,20.719,NBS passenger vehicles / NBS pop.; published,CAAM passenger vehicles minus PV exports
+China,2020,171.13,19.415,NBS passenger vehicles / NBS pop.; published,CAAM passenger vehicles minus PV exports
+China,2021,184.17,19.868,NBS passenger vehicles / NBS pop.; published,CAAM passenger vehicles minus PV exports
+China,2022,196.32,21.034,NBS passenger vehicles / NBS pop.; published,CAAM passenger vehicles minus PV exports
+China,2023,208.53,21.923,NBS passenger vehicles / NBS pop.; published,CAAM passenger vehicles minus PV exports
+China,2024,220.23,22.608,NBS passenger vehicles / NBS pop.; published,CAAM passenger vehicles minus PV exports
+U.S.,1931,200.79,2.174,FHWA/BTS light-duty vehicles / Census pop.; backcast: 1970 LDV share x FHWA total,WardsAuto cars + trucks x 0.974 (BEA/Wards 1976-1980 ratio)
+U.S.,1933,183.07,1.741,FHWA/BTS light-duty vehicles / Census pop.; backcast: 1970 LDV share x FHWA total,WardsAuto cars + trucks x 0.974 (BEA/Wards 1976-1980 ratio)
+U.S.,1935,203.25,3.332,FHWA/BTS light-duty vehicles / Census pop.; backcast: 1970 LDV share x FHWA total,WardsAuto cars + trucks x 0.974 (BEA/Wards 1976-1980 ratio)
+U.S.,1937,223.08,4.047,FHWA/BTS light-duty vehicles / Census pop.; backcast: 1970 LDV share x FHWA total,WardsAuto cars + trucks x 0.974 (BEA/Wards 1976-1980 ratio)
+U.S.,1939,226.89,3.162,FHWA/BTS light-duty vehicles / Census pop.; backcast: 1970 LDV share x FHWA total,WardsAuto cars + trucks x 0.974 (BEA/Wards 1976-1980 ratio)
+U.S.,1941,251.33,4.546,FHWA/BTS light-duty vehicles / Census pop.; backcast: 1970 LDV share x FHWA total,WardsAuto cars + trucks x 0.974 (BEA/Wards 1976-1980 ratio)
+U.S.,1951,321.61,6.114,FHWA/BTS light-duty vehicles / Census pop.; backcast: 1970 LDV share x FHWA total,WardsAuto cars + trucks x 0.974 (BEA/Wards 1976-1980 ratio)
+U.S.,1953,334.89,6.6,FHWA/BTS light-duty vehicles / Census pop.; backcast: 1970 LDV share x FHWA total,WardsAuto cars + trucks x 0.974 (BEA/Wards 1976-1980 ratio)
+U.S.,1955,363.7,8.264,FHWA/BTS light-duty vehicles / Census pop.; backcast: 1970 LDV share x FHWA total,WardsAuto cars + trucks x 0.974 (BEA/Wards 1976-1980 ratio)
+U.S.,1957,373.18,6.75,FHWA/BTS light-duty vehicles / Census pop.; backcast: 1970 LDV share x FHWA total,WardsAuto cars + trucks x 0.974 (BEA/Wards 1976-1980 ratio)
+U.S.,1959,382.45,6.884,FHWA/BTS light-duty vehicles / Census pop.; backcast: 1970 LDV share x FHWA total,WardsAuto cars + trucks x 0.974 (BEA/Wards 1976-1980 ratio)
+U.S.,1961,396.33,6.696,FHWA/BTS light-duty vehicles / Census pop.; backcast: 1970 LDV share x FHWA total,WardsAuto cars + trucks x 0.974 (BEA/Wards 1976-1980 ratio)
+U.S.,1963,420.14,8.76,FHWA/BTS light-duty vehicles / Census pop.; backcast: 1970 LDV share x FHWA total,WardsAuto cars + trucks x 0.974 (BEA/Wards 1976-1980 ratio)
+U.S.,1964,429.31,9.251,FHWA/BTS light-duty vehicles / Census pop.; backcast: 1970 LDV share x FHWA total,WardsAuto cars + trucks x 0.974 (BEA/Wards 1976-1980 ratio)
+U.S.,1965,443.7,10.607,FHWA/BTS light-duty vehicles / Census pop.; backcast: 1970 LDV share x FHWA total,WardsAuto cars + trucks x 0.974 (BEA/Wards 1976-1980 ratio)
+U.S.,1966,458.1,10.391,FHWA/BTS light-duty vehicles / Census pop.; backcast: 1970 LDV share x FHWA total,WardsAuto cars + trucks x 0.974 (BEA/Wards 1976-1980 ratio)
+U.S.,1967,467.6,9.629,FHWA/BTS light-duty vehicles / Census pop.; backcast: 1970 LDV share x FHWA total,WardsAuto cars + trucks x 0.974 (BEA/Wards 1976-1980 ratio)
+U.S.,1968,482.03,11.193,FHWA/BTS light-duty vehicles / Census pop.; backcast: 1970 LDV share x FHWA total,WardsAuto cars + trucks x 0.974 (BEA/Wards 1976-1980 ratio)
+U.S.,1969,496.25,11.256,FHWA/BTS light-duty vehicles / Census pop.; backcast: 1970 LDV share x FHWA total,WardsAuto cars + trucks x 0.974 (BEA/Wards 1976-1980 ratio)
+U.S.,1970,504.53,9.95,FHWA/BTS light-duty vehicles / Census pop.; published,WardsAuto cars + trucks x 0.974 (BEA/Wards 1976-1980 ratio)
+U.S.,1971,521.03,12.022,FHWA/BTS light-duty vehicles / Census pop.; interpolated LDV share x FHWA total,WardsAuto cars + trucks x 0.974 (BEA/Wards 1976-1980 ratio)
+U.S.,1972,542.6,13.222,FHWA/BTS light-duty vehicles / Census pop.; interpolated LDV share x FHWA total,WardsAuto cars + trucks x 0.974 (BEA/Wards 1976-1980 ratio)
+U.S.,1973,568.82,14.199,FHWA/BTS light-duty vehicles / Census pop.; interpolated LDV share x FHWA total,WardsAuto cars + trucks x 0.974 (BEA/Wards 1976-1980 ratio)
+U.S.,1974,581.3,11.246,FHWA/BTS light-duty vehicles / Census pop.; interpolated LDV share x FHWA total,WardsAuto cars + trucks x 0.974 (BEA/Wards 1976-1980 ratio)
+U.S.,1975,588.62,10.819,FHWA/BTS light-duty vehicles / Census pop.; published,WardsAuto cars + trucks x 0.974 (BEA/Wards 1976-1980 ratio)
+U.S.,1976,609.64,12.966,FHWA/BTS light-duty vehicles / Census pop.; interpolated LDV share x FHWA total,BEA ALTSALES (autos + light trucks)
+U.S.,1977,616.88,14.486,FHWA/BTS light-duty vehicles / Census pop.; interpolated LDV share x FHWA total,BEA ALTSALES (autos + light trucks)
+U.S.,1978,636.5,14.973,FHWA/BTS light-duty vehicles / Census pop.; interpolated LDV share x FHWA total,BEA ALTSALES (autos + light trucks)
+U.S.,1979,646.82,13.768,FHWA/BTS light-duty vehicles / Census pop.; interpolated LDV share x FHWA total,BEA ALTSALES (autos + light trucks)
+U.S.,1980,657.85,11.192,FHWA/BTS light-duty vehicles / Census pop.; published,BEA ALTSALES (autos + light trucks)
+U.S.,1981,659.98,10.564,FHWA/BTS light-duty vehicles / Census pop.; interpolated LDV share x FHWA total,BEA ALTSALES (autos + light trucks)
+U.S.,1982,662.25,10.363,FHWA/BTS light-duty vehicles / Census pop.; interpolated LDV share x FHWA total,BEA ALTSALES (autos + light trucks)
+U.S.,1983,672.86,12.12,FHWA/BTS light-duty vehicles / Census pop.; interpolated LDV share x FHWA total,BEA ALTSALES (autos + light trucks)
+U.S.,1984,675.45,14.197,FHWA/BTS light-duty vehicles / Census pop.; interpolated LDV share x FHWA total,BEA ALTSALES (autos + light trucks)
+U.S.,1985,693.93,15.443,FHWA/BTS light-duty vehicles / Census pop.; published,BEA ALTSALES (autos + light trucks)
+U.S.,1986,703.96,16.05,FHWA/BTS light-duty vehicles / Census pop.; interpolated LDV share x FHWA total,BEA ALTSALES (autos + light trucks)
+U.S.,1987,710.02,14.861,FHWA/BTS light-duty vehicles / Census pop.; interpolated LDV share x FHWA total,BEA ALTSALES (autos + light trucks)
+U.S.,1988,723.7,15.436,FHWA/BTS light-duty vehicles / Census pop.; interpolated LDV share x FHWA total,BEA ALTSALES (autos + light trucks)
+U.S.,1989,729.03,14.529,FHWA/BTS light-duty vehicles / Census pop.; interpolated LDV share x FHWA total,BEA ALTSALES (autos + light trucks)
+U.S.,1990,729.01,13.863,FHWA/BTS light-duty vehicles / Census pop.; published,BEA ALTSALES (autos + light trucks)
+U.S.,1991,716.79,12.314,FHWA/BTS light-duty vehicles / Census pop.; published,BEA ALTSALES (autos + light trucks)
+U.S.,1992,716.04,12.86,FHWA/BTS light-duty vehicles / Census pop.; published,BEA ALTSALES (autos + light trucks)
+U.S.,1993,720.69,13.874,FHWA/BTS light-duty vehicles / Census pop.; published,BEA ALTSALES (autos + light trucks)
+U.S.,1994,725.07,15.044,FHWA/BTS light-duty vehicles / Census pop.; published,BEA ALTSALES (autos + light trucks)
+U.S.,1995,729.03,14.728,FHWA/BTS light-duty vehicles / Census pop.; published,BEA ALTSALES (autos + light trucks)
+U.S.,1996,738.19,15.097,FHWA/BTS light-duty vehicles / Census pop.; published,BEA ALTSALES (autos + light trucks)
+U.S.,1997,733.44,15.122,FHWA/BTS light-duty vehicles / Census pop.; published,BEA ALTSALES (autos + light trucks)
+U.S.,1998,736.52,15.543,FHWA/BTS light-duty vehicles / Census pop.; published,BEA ALTSALES (autos + light trucks)
+U.S.,1999,744.65,16.894,FHWA/BTS light-duty vehicles / Census pop.; published,BEA ALTSALES (autos + light trucks)
+U.S.,2000,753.85,17.35,FHWA/BTS light-duty vehicles / Census pop.; published,BEA ALTSALES (autos + light trucks)
+U.S.,2001,778.4,17.122,FHWA/BTS light-duty vehicles / Census pop.; published,BEA ALTSALES (autos + light trucks)
+U.S.,2002,768.11,16.816,FHWA/BTS light-duty vehicles / Census pop.; published,BEA ALTSALES (autos + light trucks)
+U.S.,2003,768.18,16.639,FHWA/BTS light-duty vehicles / Census pop.; published,BEA ALTSALES (autos + light trucks)
+U.S.,2004,779.6,16.867,FHWA/BTS light-duty vehicles / Census pop.; published,BEA ALTSALES (autos + light trucks)
+U.S.,2005,784.74,16.948,FHWA/BTS light-duty vehicles / Census pop.; published,BEA ALTSALES (autos + light trucks)
+U.S.,2006,785.99,16.504,FHWA/BTS light-duty vehicles / Census pop.; published,BEA ALTSALES (autos + light trucks)
+U.S.,2007,782.39,16.089,FHWA/BTS light-duty vehicles / Census pop.; published,BEA ALTSALES (autos + light trucks)
+U.S.,2008,777.56,13.195,FHWA/BTS light-duty vehicles / Census pop.; published,BEA ALTSALES (autos + light trucks)
+U.S.,2009,764.31,10.402,FHWA/BTS light-duty vehicles / Census pop.; published,BEA ALTSALES (autos + light trucks)
+U.S.,2010,745,11.555,FHWA/BTS light-duty vehicles / Census pop.; published,BEA ALTSALES (autos + light trucks)
+U.S.,2011,750.55,12.743,FHWA/BTS light-duty vehicles / Census pop.; published,BEA ALTSALES (autos + light trucks)
+U.S.,2012,744.86,14.435,FHWA/BTS light-duty vehicles / Census pop.; published,BEA ALTSALES (autos + light trucks)
+U.S.,2013,746.89,15.53,FHWA/BTS light-duty vehicles / Census pop.; published,BEA ALTSALES (autos + light trucks)
+U.S.,2014,754.49,16.452,FHWA/BTS light-duty vehicles / Census pop.; published,BEA ALTSALES (autos + light trucks)
+U.S.,2015,757.37,17.408,FHWA/BTS light-duty vehicles / Census pop.; published,BEA ALTSALES (autos + light trucks)
+U.S.,2016,766.53,17.477,FHWA/BTS light-duty vehicles / Census pop.; published,BEA ALTSALES (autos + light trucks)
+U.S.,2017,770.64,17.15,FHWA/BTS light-duty vehicles / Census pop.; published,BEA ALTSALES (autos + light trucks)
+U.S.,2018,767.08,17.225,FHWA/BTS light-duty vehicles / Census pop.; published,BEA ALTSALES (autos + light trucks)
+U.S.,2019,773.05,16.961,FHWA/BTS light-duty vehicles / Census pop.; published,BEA ALTSALES (autos + light trucks)
+U.S.,2020,765.07,14.472,FHWA/BTS light-duty vehicles / Census pop.; published,BEA ALTSALES (autos + light trucks)
+U.S.,2021,773.85,14.947,FHWA/BTS light-duty vehicles / Census pop.; published,BEA ALTSALES (autos + light trucks)
+U.S.,2022,771.64,13.754,FHWA/BTS light-duty vehicles / Census pop.; published,BEA ALTSALES (autos + light trucks)
+U.S.,2023,769.7,15.503,FHWA/BTS light-duty vehicles / Census pop.; published,BEA ALTSALES (autos + light trucks)
+U.S.,2024,797.05,15.851,FHWA/BTS light-duty vehicles / Census pop.; published,BEA ALTSALES (autos + light trucks)

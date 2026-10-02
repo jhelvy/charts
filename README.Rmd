@@ -15,7 +15,8 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 library(dplyr)
-charts <- gsheet::gsheet2tbl('https://docs.google.com/spreadsheets/d/1Zj1jXqV5XsAXeIkUPzCJkvMrU5ah_y6VHb-san0Baio/edit?usp=sharing') %>% 
+# Chart metadata lives in charts.csv (also read by jhelvy.com/charts)
+charts <- readr::read_csv('charts.csv', show_col_types = FALSE) %>% 
     mutate(
         url_repo = paste0(
             "https://github.com/jhelvy/charts/tree/master/", name),
@@ -42,15 +43,8 @@ for (i in 1:nrow(charts)) {
 ```
 
 ```{r, echo=FALSE, results='asis'}
-# Download description.Rmd as temp file
-td <- tempdir()
-tf <- tempfile(tmpdir = td, fileext = ".Rmd")
-download.file(
-    'https://raw.githubusercontent.com/jhelvy/charts/master/description.Rmd',
-    tf
-)
 for (i in 1:nrow(charts)) {
     chart <- charts[i,]
-    cat(knitr::knit_child(tf,quiet = TRUE), sep = '\n')
+    cat(knitr::knit_child('description.Rmd', quiet = TRUE), sep = '\n')
 }
 ```

@@ -1,0 +1,22 @@
+year,pv_sales_units,pv_exports_units,pv_sales_quality,pv_exports_quality
+2005,3971000,30000,compiled from CAAM annual releases; verify,approximate; verify against CAAM/CEIC
+2006,5176000,90000,compiled from CAAM annual releases; verify,approximate; verify against CAAM/CEIC
+2007,6297000,160000,compiled from CAAM annual releases; verify,approximate; verify against CAAM/CEIC
+2008,6756000,180000,compiled from CAAM annual releases; verify,approximate; verify against CAAM/CEIC
+2009,10331000,120000,compiled from CAAM annual releases; verify,approximate; verify against CAAM/CEIC
+2010,13758000,240000,compiled from CAAM annual releases; verify,approximate; verify against CAAM/CEIC
+2011,14472000,450000,compiled from CAAM annual releases; verify,approximate; verify against CAAM/CEIC
+2012,15495200,661000,verified (SteelOrbis/CAAM),derived: 2013 value / (1-9.8%)
+2013,17928900,596300,verified (SteelOrbis/CAAM),verified (SteelOrbis/CAAM)
+2014,19701000,420000,compiled from CAAM annual releases; verify,approximate; verify against CAAM/CEIC
+2015,21146000,428000,compiled from CAAM annual releases; verify,derived: 2016 value / 1.115
+2016,24377000,477000,verified (MarkLines/CAAM),verified (MarkLines/CAAM)
+2017,24718000,640000,compiled from CAAM annual releases; verify,approximate; verify against CAAM/CEIC
+2018,23710000,758000,compiled from CAAM annual releases; verify,approximate; verify against CAAM/CEIC
+2019,21444000,725000,compiled from CAAM annual releases; verify,approximate; verify against CAAM/CEIC
+2020,20178000,763000,compiled from CAAM annual releases; verify,approximate; verify against CAAM/CEIC
+2021,21482000,1614000,compiled from CAAM annual releases; verify,approximate; verify against CAAM/CEIC
+2022,23563000,2529000,compiled from CAAM annual releases; verify,approximate; verify against CAAM/CEIC
+2023,26063000,4140000,compiled from CAAM annual releases; verify,derived: 2024 value / 1.197
+2024,27562989,4955134,"verified (Inovev/CarNewsChina, CAAM)",verified (CarNewsChina/CAAM)
+2025,30103140,6037959,verified (Inovev/CAAM),verified (Inovev/CAAM)
